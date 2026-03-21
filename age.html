@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나이 계산기 2026 — 만나이 한국나이 계산 | 캘킷</title>
+<meta name="description" content="생년월일을 입력하면 만나이, 한국식 나이, 다음 생일까지 남은 일수, 태어난 지 총 일수를 계산합니다. 무료 나이 계산기.">
+<meta name="keywords" content="나이계산기,만나이,한국나이,생년월일,나이계산">
+<link rel="canonical" href="https://calckit.wooahouse.com/age.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="나이 계산기 2026 — 만나이 한국나이 계산 | 캘킷">
+<meta property="og:description" content="생년월일 입력으로 만나이, 한국식 나이, 다음 생일까지 일수를 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/age.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"나이 계산기","url":"https://calckit.wooahouse.com/age.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">Linker Services</span><div class="our-sites-links"><a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a><a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a><a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#date">날짜 계산기</a><span>›</span>나이 계산기</div>
+<div class="tool-header"><div class="tool-icon">🎂</div><div><h1>나이 계산기 2026</h1><p>만나이, 한국식 나이, 다음 생일까지 남은 일수를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="birth">생년월일</label><input type="date" id="birth"></div>
+      <div class="form-group"><label for="baseDate">기준일</label><input type="date" id="baseDate"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcAge()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resAge"></div>
+    <div class="result-label">만 나이</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">한국식 나이</span><span class="value" id="resKorean"></span></div>
+      <div class="result-row"><span class="label">태어난 지</span><span class="value" id="resTotalDays"></span></div>
+      <div class="result-row"><span class="label">다음 생일까지</span><span class="value" id="resNextBday"></span></div>
+      <div class="result-row"><span class="label">띠</span><span class="value" id="resZodiac"></span></div>
+    </div>
+  </div>
+</div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 캘킷</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>날짜 계산기</h4><a href="dday.html">D-Day 계산기</a><a href="date-calc.html">날짜 계산기</a><a href="age.html">나이 계산기</a></div><div class="footer-col"><h4>Linker Services</h4><a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div></div></footer>
+
+<script>
+document.getElementById('baseDate').value=new Date().toISOString().split('T')[0];
+const ZODIAC=['원숭이','닭','개','돼지','쥐','소','호랑이','토끼','용','뱀','말','양'];
+function calcAge(){
+  const birthStr=document.getElementById('birth').value;
+  const baseStr=document.getElementById('baseDate').value;
+  if(!birthStr){alert('생년월일을 선택해주세요.');return;}
+  const birth=new Date(birthStr);
+  const base=new Date(baseStr);
+  // 만나이
+  let age=base.getFullYear()-birth.getFullYear();
+  const m=base.getMonth()-birth.getMonth();
+  if(m<0||(m===0&&base.getDate()<birth.getDate()))age--;
+  // 한국식 나이
+  const korAge=base.getFullYear()-birth.getFullYear()+1;
+  // 총일수
+  const totalDays=Math.round((base-birth)/(1000*60*60*24));
+  // 다음 생일
+  let nextBday=new Date(base.getFullYear(),birth.getMonth(),birth.getDate());
+  if(nextBday<=base)nextBday=new Date(base.getFullYear()+1,birth.getMonth(),birth.getDate());
+  const daysToNext=Math.round((nextBday-base)/(1000*60*60*24));
+  // 띠
+  const zodiac=ZODIAC[birth.getFullYear()%12];
+
+  document.getElementById('resAge').textContent='만 '+age+'세';
+  document.getElementById('resKorean').textContent=korAge+'세';
+  document.getElementById('resTotalDays').textContent=totalDays.toLocaleString('ko-KR')+'일';
+  document.getElementById('resNextBday').textContent=daysToNext+'일 남음';
+  document.getElementById('resZodiac').textContent=zodiac+'띠';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

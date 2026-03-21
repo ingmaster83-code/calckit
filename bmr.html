@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기초대사량 계산기 — BMR·TDEE 칼로리 계산 | 캘킷</title>
+<meta name="description" content="Mifflin-St Jeor 공식으로 기초대사량(BMR)과 활동계수 기반 총에너지소비량(TDEE)을 계산합니다. 무료 기초대사량 계산기.">
+<meta name="keywords" content="기초대사량계산기,BMR,TDEE,칼로리,다이어트,대사량">
+<link rel="canonical" href="https://calckit.wooahouse.com/bmr.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="기초대사량 계산기 — BMR·TDEE 칼로리 계산 | 캘킷">
+<meta property="og:description" content="기초대사량(BMR)과 총에너지소비량(TDEE)을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/bmr.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"기초대사량 계산기","url":"https://calckit.wooahouse.com/bmr.html","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">Linker Services</span><div class="our-sites-links"><a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a><a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a><a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#health">건강 계산기</a><span>›</span>기초대사량 계산기</div>
+<div class="tool-header"><div class="tool-icon">🔥</div><div><h1>기초대사량 계산기</h1><p>BMR(기초대사량)과 TDEE(총 에너지 소비량)를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label>성별</label><div class="radio-group"><label><input type="radio" name="gender" value="male" checked> 남성</label><label><input type="radio" name="gender" value="female"> 여성</label></div></div>
+    <div class="form-row">
+      <div class="form-group"><label for="age">나이 (세)</label><input type="number" id="age" placeholder="예: 30" min="1"></div>
+      <div class="form-group"><label for="height">키 (cm)</label><input type="number" id="height" placeholder="예: 175" min="50"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="weight">몸무게 (kg)</label><input type="number" id="weight" placeholder="예: 70" step="0.1" min="10"></div>
+      <div class="form-group"><label for="activity">활동 수준</label>
+        <select id="activity">
+          <option value="1.2">비활동적 (운동 안 함)</option>
+          <option value="1.375">가벼운 활동 (주 1~3회)</option>
+          <option value="1.55" selected>보통 활동 (주 3~5회)</option>
+          <option value="1.725">활발한 활동 (주 6~7회)</option>
+          <option value="1.9">매우 활발 (육체노동/운동선수)</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcBMR()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resBMR"></div>
+    <div class="result-label">기초대사량 (BMR)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">TDEE (총 에너지 소비량)</span><span class="value" id="resTDEE"></span></div>
+      <div class="result-row"><span class="label">체중 감량 (-500kcal)</span><span class="value" id="resLose"></span></div>
+      <div class="result-row"><span class="label">체중 유지</span><span class="value" id="resMaintain"></span></div>
+      <div class="result-row"><span class="label">체중 증가 (+500kcal)</span><span class="value" id="resGain"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 기초대사량 참고사항</h3><ul>
+  <li><strong>BMR:</strong> 아무것도 하지 않아도 생명 유지에 필요한 최소 칼로리</li>
+  <li><strong>TDEE:</strong> BMR × 활동계수, 실제 하루에 소비하는 총 칼로리</li>
+  <li>체중 감량은 하루 500kcal 적게 섭취 시 주당 약 0.5kg 감량 효과</li>
+  <li>Mifflin-St Jeor 공식 사용 (가장 정확하다고 알려진 공식)</li>
+</ul></div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 캘킷</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>건강 계산기</h4><a href="bmi.html">BMI 계산기</a><a href="bmr.html">기초대사량 계산기</a><a href="calorie.html">칼로리 소모 계산기</a></div><div class="footer-col"><h4>Linker Services</h4><a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div></div></footer>
+
+<script>
+function calcBMR(){
+  const g=document.querySelector('input[name="gender"]:checked').value;
+  const age=parseInt(document.getElementById('age').value);
+  const h=parseFloat(document.getElementById('height').value);
+  const w=parseFloat(document.getElementById('weight').value);
+  const act=parseFloat(document.getElementById('activity').value);
+  if(!age||!h||!w){alert('모든 값을 입력해주세요.');return;}
+  let bmr;
+  if(g==='male') bmr=10*w+6.25*h-5*age+5;
+  else bmr=10*w+6.25*h-5*age-161;
+  const tdee=bmr*act;
+  document.getElementById('resBMR').textContent=Math.round(bmr).toLocaleString('ko-KR')+' kcal';
+  document.getElementById('resTDEE').textContent=Math.round(tdee).toLocaleString('ko-KR')+' kcal';
+  document.getElementById('resLose').textContent=Math.round(tdee-500).toLocaleString('ko-KR')+' kcal/일';
+  document.getElementById('resMaintain').textContent=Math.round(tdee).toLocaleString('ko-KR')+' kcal/일';
+  document.getElementById('resGain').textContent=Math.round(tdee+500).toLocaleString('ko-KR')+' kcal/일';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

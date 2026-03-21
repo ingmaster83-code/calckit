@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부동산 중개수수료 계산기 — 매매·전세·월세 법정 요율 | 캘킷</title>
+<meta name="description" content="매매, 전세, 월세 거래유형별 법정 최대 중개수수료를 계산합니다. 2021년 개정 기준 부동산 중개보수 계산기.">
+<meta name="keywords" content="중개수수료계산기,부동산중개수수료,복비계산기,중개보수,매매수수료,전세수수료">
+<link rel="canonical" href="https://calckit.wooahouse.com/brokerage.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부동산 중개수수료 계산기 — 매매·전세·월세 법정 요율 | 캘킷">
+<meta property="og:description" content="매매·전세·월세 거래유형별 법정 최대 중개수수료 계산.">
+<meta property="og:url" content="https://calckit.wooahouse.com/brokerage.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"부동산 중개수수료 계산기","url":"https://calckit.wooahouse.com/brokerage.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">Linker Services</span><div class="our-sites-links"><a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a><a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a><a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#life">생활 계산기</a><span>›</span>중개수수료 계산기</div>
+<div class="tool-header"><div class="tool-icon">🏠</div><div><h1>부동산 중개수수료 계산기</h1><p>매매·전세·월세 거래유형별 법정 최대 중개수수료를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label>거래 유형</label>
+      <div class="radio-group">
+        <label><input type="radio" name="type" value="sale" checked onchange="toggleRent()"> 매매</label>
+        <label><input type="radio" name="type" value="jeonse" onchange="toggleRent()"> 전세</label>
+        <label><input type="radio" name="type" value="monthly" onchange="toggleRent()"> 월세</label>
+      </div>
+    </div>
+    <div class="form-group"><label for="price">거래금액 (만원)</label><input type="number" id="price" placeholder="예: 50000" min="0"><span class="form-hint">매매가 / 전세보증금 / 월세보증금</span></div>
+    <div class="form-group hidden" id="rentGroup"><label for="rent">월세 금액 (만원)</label><input type="number" id="rent" placeholder="예: 80" min="0"></div>
+    <button class="btn btn-primary btn-full" onclick="calcBrokerage()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resFee"></div>
+    <div class="result-label">최대 중개수수료 (VAT 별도)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">적용 요율</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">거래금액</span><span class="value" id="resPrice"></span></div>
+      <div class="result-row"><span class="label">VAT 포함 (10%)</span><span class="value" id="resVAT"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 중개수수료 참고 (2021년 개정 기준)</h3><ul>
+  <li>중개수수료는 법정 <strong>최대</strong> 요율이며, 협의로 낮출 수 있습니다</li>
+  <li>부가가치세(VAT 10%)는 중개사가 일반과세자인 경우 별도</li>
+  <li>월세의 경우 환산금액 = 보증금 + (월세 x 100)으로 구간 판단</li>
+</ul></div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 캘킷</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>생활 계산기</h4><a href="percentage.html">백분율 계산기</a><a href="fuel-economy.html">연비 계산기</a><a href="electricity.html">전기요금 계산기</a><a href="brokerage.html">중개수수료 계산기</a></div><div class="footer-col"><h4>Linker Services</h4><a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function toggleRent(){
+  const isMonthly=document.querySelector('input[name="type"]:checked').value==='monthly';
+  document.getElementById('rentGroup').classList.toggle('hidden',!isMonthly);
+}
+function calcBrokerage(){
+  const type=document.querySelector('input[name="type"]:checked').value;
+  const priceMan=parseFloat(document.getElementById('price').value);
+  if(!priceMan){alert('거래금액을 입력해주세요.');return;}
+  const price=priceMan*10000;
+  let rate=0,fee=0,baseAmount=price;
+
+  if(type==='sale'){
+    // 매매
+    if(price<50000000){rate=0.6;fee=Math.min(price*0.006,250000);}
+    else if(price<200000000){rate=0.5;fee=Math.min(price*0.005,800000);}
+    else if(price<900000000){rate=0.4;fee=price*0.004;}
+    else if(price<1200000000){rate=0.5;fee=price*0.005;}
+    else if(price<1500000000){rate=0.6;fee=price*0.006;}
+    else{rate=0.7;fee=price*0.007;}
+  } else if(type==='jeonse'){
+    // 전세
+    if(price<50000000){rate=0.5;fee=Math.min(price*0.005,200000);}
+    else if(price<100000000){rate=0.4;fee=Math.min(price*0.004,300000);}
+    else if(price<300000000){rate=0.3;fee=price*0.003;}
+    else if(price<600000000){rate=0.4;fee=price*0.004;}
+    else{rate=0.4;fee=Math.min(price*0.004,24000000);}
+  } else {
+    // 월세 (환산금액으로 구간 판단, 수수료는 환산금액 기준)
+    const rentMan=parseFloat(document.getElementById('rent').value)||0;
+    const rent=rentMan*10000;
+    const converted=price+(rent*100);
+    baseAmount=converted;
+    if(converted<50000000){rate=0.5;fee=Math.min(converted*0.005,200000);}
+    else if(converted<100000000){rate=0.4;fee=Math.min(converted*0.004,300000);}
+    else{rate=0.3;fee=converted*0.003;}
+  }
+  const vat=fee*1.1;
+  document.getElementById('resFee').textContent=fmt(fee)+'원';
+  document.getElementById('resRate').textContent=rate+'%';
+  document.getElementById('resPrice').textContent=fmt(baseAmount)+'원';
+  document.getElementById('resVAT').textContent=fmt(vat)+'원';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

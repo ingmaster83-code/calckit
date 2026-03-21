@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연봉 실수령액 계산기 2026 — 4대보험·소득세 공제 월급 계산 | 캘킷</title>
+<meta name="description" content="2026년 기준 연봉에서 4대보험, 소득세, 지방소득세를 공제한 월 실수령액을 계산합니다. 무료 연봉 실수령액 계산기.">
+<meta name="keywords" content="연봉계산기,연봉실수령액,월급계산기,4대보험,소득세,실수령액">
+<link rel="canonical" href="https://calckit.wooahouse.com/salary.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연봉 실수령액 계산기 2026 — 4대보험·소득세 공제 월급 | 캘킷">
+<meta property="og:description" content="2026년 기준 연봉에서 4대보험·소득세 공제 후 월 실수령액을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/salary.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"연봉 실수령액 계산기","url":"https://calckit.wooahouse.com/salary.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">Linker Services</span><div class="our-sites-links"><a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a><a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a><a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>연봉 실수령액 계산기</div>
+<div class="tool-header"><div class="tool-icon">💵</div><div><h1>연봉 실수령액 계산기 2026</h1><p>4대보험·소득세 공제 후 실제 월급을 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="salary">연봉 (만원)</label><input type="number" id="salary" placeholder="예: 5000" min="0"></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dependents">부양가족 수 (본인 포함)</label>
+        <select id="dependents"><option value="1">1명</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option><option value="6">6명</option><option value="7">7명</option><option value="8">8명</option><option value="9">9명</option><option value="10">10명</option></select>
+      </div>
+      <div class="form-group"><label for="taxfree">비과세액 (만원/월)</label><input type="number" id="taxfree" value="20" min="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcSalary()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resNet"></div>
+    <div class="result-label">월 실수령액</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">월 급여 (세전)</span><span class="value" id="resGross"></span></div>
+      <div class="result-row"><span class="label">국민연금 (4.5%)</span><span class="value" id="resNP"></span></div>
+      <div class="result-row"><span class="label">건강보험 (3.545%)</span><span class="value" id="resHI"></span></div>
+      <div class="result-row"><span class="label">장기요양 (건강×12.95%)</span><span class="value" id="resLTC"></span></div>
+      <div class="result-row"><span class="label">고용보험 (0.9%)</span><span class="value" id="resEI"></span></div>
+      <div class="result-row"><span class="label">소득세</span><span class="value" id="resIT"></span></div>
+      <div class="result-row"><span class="label">지방소득세 (소득세×10%)</span><span class="value" id="resLT"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">공제 합계</span><span class="value" id="resDeduction"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 연봉 실수령액 팁</h3><ul>
+  <li>비과세액(식대)은 2026년 기준 월 20만원까지 비과세 적용</li>
+  <li>국민연금은 월 소득 590만원 상한 적용 (2026년 기준 근사치)</li>
+  <li>소득세는 간이세액표 근사치로 실제와 다소 차이가 있을 수 있습니다</li>
+  <li>정확한 세액은 국세청 간이세액표를 참고하세요</li>
+</ul></div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 캘킷</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>금융 계산기</h4><a href="loan-interest.html">대출이자 계산기</a><a href="savings.html">적금이자 계산기</a><a href="salary.html">연봉 실수령액</a><a href="severance.html">퇴직금 계산기</a></div><div class="footer-col"><h4>Linker Services</h4><a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcSalary(){
+  const annual=parseFloat(document.getElementById('salary').value)*10000;
+  const dep=parseInt(document.getElementById('dependents').value);
+  const taxfree=parseFloat(document.getElementById('taxfree').value||0)*10000;
+  if(!annual){alert('연봉을 입력해주세요.');return;}
+  const monthlyGross=annual/12;
+  const taxableMonthly=monthlyGross-taxfree;
+  // 국민연금: 과세소득의 4.5%, 상한 5,900,000원
+  const npBase=Math.min(taxableMonthly,5900000);
+  const np=Math.round(npBase*0.045);
+  // 건강보험: 3.545%
+  const hi=Math.round(taxableMonthly*0.03545);
+  // 장기요양: 건강보험의 12.95%
+  const ltc=Math.round(hi*0.1295);
+  // 고용보험: 0.9%
+  const ei=Math.round(taxableMonthly*0.009);
+  // 소득세 간이세액표 근사치 (simplified bracket)
+  const annualTaxable=(taxableMonthly-np-hi-ltc-ei)*12;
+  let incomeTax=0;
+  if(annualTaxable<=14000000) incomeTax=annualTaxable*0.06;
+  else if(annualTaxable<=50000000) incomeTax=840000+(annualTaxable-14000000)*0.15;
+  else if(annualTaxable<=88000000) incomeTax=6240000+(annualTaxable-50000000)*0.24;
+  else if(annualTaxable<=150000000) incomeTax=15360000+(annualTaxable-88000000)*0.35;
+  else if(annualTaxable<=300000000) incomeTax=37060000+(annualTaxable-150000000)*0.38;
+  else if(annualTaxable<=500000000) incomeTax=94060000+(annualTaxable-300000000)*0.40;
+  else if(annualTaxable<=1000000000) incomeTax=174060000+(annualTaxable-500000000)*0.42;
+  else incomeTax=384060000+(annualTaxable-1000000000)*0.45;
+  // 부양가족 공제 근사 (인적공제 150만×가족수)
+  const personalDeduction=1500000*dep;
+  incomeTax=Math.max(0,incomeTax-personalDeduction*0.15);
+  const monthlyIT=Math.round(incomeTax/12);
+  const localIT=Math.round(monthlyIT*0.1);
+  const totalDeduction=np+hi+ltc+ei+monthlyIT+localIT;
+  const net=monthlyGross-totalDeduction;
+
+  document.getElementById('resNet').textContent=fmt(net)+'원';
+  document.getElementById('resGross').textContent=fmt(monthlyGross)+'원';
+  document.getElementById('resNP').textContent='-'+fmt(np)+'원';
+  document.getElementById('resHI').textContent='-'+fmt(hi)+'원';
+  document.getElementById('resLTC').textContent='-'+fmt(ltc)+'원';
+  document.getElementById('resEI').textContent='-'+fmt(ei)+'원';
+  document.getElementById('resIT').textContent='-'+fmt(monthlyIT)+'원';
+  document.getElementById('resLT').textContent='-'+fmt(localIT)+'원';
+  document.getElementById('resDeduction').textContent='-'+fmt(totalDeduction)+'원';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

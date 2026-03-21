@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>칼로리 소모 계산기 — 운동별 소모 칼로리 계산 | 캘킷</title>
+<meta name="description" content="운동 종류, 몸무게, 시간을 입력하면 MET 값 기반으로 소모 칼로리를 계산합니다. 무료 칼로리 소모 계산기.">
+<meta name="keywords" content="칼로리계산기,칼로리소모,운동칼로리,MET,다이어트,운동소모칼로리">
+<link rel="canonical" href="https://calckit.wooahouse.com/calorie.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="칼로리 소모 계산기 — 운동별 소모 칼로리 계산 | 캘킷">
+<meta property="og:description" content="운동 종류별 소모 칼로리를 MET 값 기반으로 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/calorie.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"칼로리 소모 계산기","url":"https://calckit.wooahouse.com/calorie.html","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">Linker Services</span><div class="our-sites-links"><a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a><a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a><a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#health">건강 계산기</a><span>›</span>칼로리 소모 계산기</div>
+<div class="tool-header"><div class="tool-icon">🏃</div><div><h1>칼로리 소모 계산기</h1><p>운동 종류별 MET 값 기반 소모 칼로리를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="weight">몸무게 (kg)</label><input type="number" id="weight" placeholder="예: 70" step="0.1" min="10"></div>
+    <div class="form-group"><label for="exercise">운동 종류</label>
+      <select id="exercise">
+        <option value="3.5">걷기 (보통 속도) - MET 3.5</option>
+        <option value="5.0">빠르게 걷기 - MET 5.0</option>
+        <option value="7.0">가볍게 달리기 - MET 7.0</option>
+        <option value="10.0">달리기 - MET 10.0</option>
+        <option value="6.0">자전거 (보통) - MET 6.0</option>
+        <option value="7.0">수영 - MET 7.0</option>
+        <option value="7.5">등산 - MET 7.5</option>
+        <option value="11.0">줄넘기 - MET 11.0</option>
+        <option value="5.0">헬스 (웨이트) - MET 5.0</option>
+        <option value="3.0">요가 - MET 3.0</option>
+        <option value="8.0">농구 - MET 8.0</option>
+        <option value="10.0">축구 - MET 10.0</option>
+      </select>
+    </div>
+    <div class="form-group"><label for="duration">운동 시간 (분)</label><input type="number" id="duration" placeholder="예: 60" min="1"></div>
+    <button class="btn btn-primary btn-full" onclick="calcCalorie()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resCal"></div>
+    <div class="result-label">소모 칼로리</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">MET 값</span><span class="value" id="resMET"></span></div>
+      <div class="result-row"><span class="label">운동 시간</span><span class="value" id="resDur"></span></div>
+      <div class="result-row"><span class="label">시간당 소모</span><span class="value" id="resPerHour"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 칼로리 소모 참고</h3><ul>
+  <li><strong>MET (Metabolic Equivalent of Task):</strong> 안정 시 대사율 대비 운동 강도 배수</li>
+  <li>계산 공식: 소모 칼로리 = MET x 체중(kg) x 시간(h)</li>
+  <li>실제 소모 칼로리는 운동 강도, 체력, 환경에 따라 다를 수 있습니다</li>
+</ul></div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 캘킷</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>건강 계산기</h4><a href="bmi.html">BMI 계산기</a><a href="bmr.html">기초대사량 계산기</a><a href="calorie.html">칼로리 소모 계산기</a></div><div class="footer-col"><h4>Linker Services</h4><a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div></div></footer>
+
+<script>
+function calcCalorie(){
+  const w=parseFloat(document.getElementById('weight').value);
+  const met=parseFloat(document.getElementById('exercise').value);
+  const dur=parseInt(document.getElementById('duration').value);
+  if(!w||!dur){alert('몸무게와 운동 시간을 입력해주세요.');return;}
+  const hours=dur/60;
+  const cal=met*w*hours;
+  const perHour=met*w;
+  document.getElementById('resCal').textContent=Math.round(cal).toLocaleString('ko-KR')+' kcal';
+  document.getElementById('resMET').textContent=met;
+  document.getElementById('resDur').textContent=dur+'분 ('+hours.toFixed(1)+'시간)';
+  document.getElementById('resPerHour').textContent=Math.round(perHour).toLocaleString('ko-KR')+' kcal/h';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대출이자 계산기 — 원리금균등·원금균등 월납입금 계산 | 캘킷</title>
+<meta name="description" content="대출금액, 연이율, 기간을 입력하면 원리금균등·원금균등 상환방식별 월납입금, 총이자, 상환스케줄을 한눈에 계산합니다. 무료 대출이자 계산기.">
+<meta name="keywords" content="대출이자계산기,대출이자,원리금균등,원금균등,월납입금,상환스케줄">
+<link rel="canonical" href="https://calckit.wooahouse.com/loan-interest.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="대출이자 계산기 — 원리금균등·원금균등 월납입금 계산 | 캘킷">
+<meta property="og:description" content="대출금액, 연이율, 기간을 입력하면 월납입금·총이자를 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/loan-interest.html">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"대출이자 계산기","url":"https://calckit.wooahouse.com/loan-interest.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar">
+  <span class="our-sites-label">Linker Services</span>
+  <div class="our-sites-links">
+    <a href="https://linker.wooahouse.com/" target="_blank" rel="noopener">🔗 Linker</a>
+    <a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 PDFKit</a>
+    <a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ ImageKit</a>
+    <a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 ColorKit</a>
+    <a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 TextKit</a>
+    <a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 QRKit</a>
+    <a href="https://steamkit.wooahouse.com/" target="_blank" rel="noopener">🎮 SteamKit</a>
+    <a href="https://chromekit.wooahouse.com/" target="_blank" rel="noopener">🧩 ChromeKit</a>
+    <a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 FontKit</a>
+    <a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 MacTools</a>
+    <a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ PCTools</a>
+    <a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 VSKit</a>
+    <a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 CalcKit</a>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a href="/" class="logo">🧮 캘킷 <span>CalcKit</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button>
+    <nav class="nav">
+      <a href="/#finance">💰 금융</a>
+      <a href="/#health">🏥 건강</a>
+      <a href="/#date">📅 날짜</a>
+      <a href="/#unit">📐 단위변환</a>
+      <a href="/#life">🏠 생활</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tool-page">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>대출이자 계산기</div>
+    <div class="tool-header">
+      <div class="tool-icon">🏦</div>
+      <div>
+        <h1>대출이자 계산기</h1>
+        <p>원리금균등·원금균등 상환 방식별 월납입금과 총이자를 계산합니다</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="calc-form">
+        <div class="form-group">
+          <label for="loanAmount">대출금액 (만원)</label>
+          <input type="number" id="loanAmount" placeholder="예: 10000" min="0">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rate">연이율 (%)</label>
+            <input type="number" id="rate" placeholder="예: 4.5" step="0.01" min="0">
+          </div>
+          <div class="form-group">
+            <label for="months">대출기간 (개월)</label>
+            <input type="number" id="months" placeholder="예: 360" min="1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>상환방식</label>
+          <div class="radio-group">
+            <label><input type="radio" name="method" value="equal_payment" checked> 원리금균등</label>
+            <label><input type="radio" name="method" value="equal_principal"> 원금균등</label>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-full" onclick="calcLoan()">계산하기</button>
+      </div>
+
+      <div class="result-box hidden" id="result">
+        <div class="result-main" id="resMonthly"></div>
+        <div class="result-label" id="resMonthlyLabel">월 납입금 (첫 달)</div>
+        <div class="result-rows">
+          <div class="result-row"><span class="label">총 납입금액</span><span class="value" id="resTotal"></span></div>
+          <div class="result-row"><span class="label">총 이자금액</span><span class="value" id="resInterest"></span></div>
+          <div class="result-row"><span class="label">이자 비율</span><span class="value" id="resRatio"></span></div>
+        </div>
+      </div>
+
+      <div id="scheduleWrap" class="hidden" style="margin-top:24px;overflow-x:auto">
+        <h3>상환 스케줄</h3>
+        <table class="data-table" id="scheduleTable">
+          <thead><tr><th>회차</th><th>납입금</th><th>원금</th><th>이자</th><th>잔액</th></tr></thead>
+          <tbody id="scheduleBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tips-panel">
+      <h3>💡 대출이자 계산 팁</h3>
+      <ul>
+        <li><strong>원리금균등:</strong> 매월 같은 금액을 납입. 초기 이자 비중이 높고 점차 원금 비중 증가</li>
+        <li><strong>원금균등:</strong> 매월 같은 원금 + 줄어드는 이자. 초기 납입금이 크지만 총이자는 적음</li>
+        <li>같은 조건이라면 원금균등이 총이자가 더 적습니다</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>🧮 캘킷</h4>
+        <p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p>
+      </div>
+      <div class="footer-col">
+        <h4>금융 계산기</h4>
+        <a href="loan-interest.html">대출이자 계산기</a>
+        <a href="savings.html">적금이자 계산기</a>
+        <a href="salary.html">연봉 실수령액</a>
+        <a href="severance.html">퇴직금 계산기</a>
+      </div>
+      <div class="footer-col">
+        <h4>Linker Services</h4>
+        <a href="https://linker.wooahouse.com/" target="_blank">🔗 Linker</a>
+        <a href="https://pdfkit.wooahouse.com/" target="_blank">📄 PDFKit</a>
+        <a href="https://textkit.wooahouse.com/" target="_blank">📝 TextKit</a>
+      </div>
+      <div class="footer-col">
+        <h4>정보</h4>
+        <a href="about.html">서비스 소개</a>
+        <a href="privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 캘킷 CalcKit. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcLoan(){
+  const P=parseFloat(document.getElementById('loanAmount').value)*10000;
+  const annualRate=parseFloat(document.getElementById('rate').value);
+  const n=parseInt(document.getElementById('months').value);
+  const method=document.querySelector('input[name="method"]:checked').value;
+  if(!P||!annualRate||!n){alert('모든 값을 입력해주세요.');return;}
+  const r=annualRate/100/12;
+  let totalPaid=0,totalInterest=0,schedule=[];
+  let balance=P;
+  if(method==='equal_payment'){
+    const M=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    for(let i=1;i<=n;i++){
+      const interest=balance*r;
+      const principal=M-interest;
+      balance-=principal;
+      if(balance<0)balance=0;
+      totalPaid+=M;
+      totalInterest+=interest;
+      schedule.push({m:i,payment:M,principal,interest,balance});
+    }
+    document.getElementById('resMonthly').textContent=fmt(M)+'원';
+    document.getElementById('resMonthlyLabel').textContent='월 납입금 (매월 동일)';
+  } else {
+    const monthlyPrincipal=P/n;
+    for(let i=1;i<=n;i++){
+      const interest=balance*r;
+      const payment=monthlyPrincipal+interest;
+      balance-=monthlyPrincipal;
+      if(balance<0)balance=0;
+      totalPaid+=payment;
+      totalInterest+=interest;
+      schedule.push({m:i,payment,principal:monthlyPrincipal,interest,balance});
+    }
+    document.getElementById('resMonthly').textContent=fmt(schedule[0].payment)+'원';
+    document.getElementById('resMonthlyLabel').textContent='월 납입금 (첫 달)';
+  }
+  document.getElementById('resTotal').textContent=fmt(totalPaid)+'원';
+  document.getElementById('resInterest').textContent=fmt(totalInterest)+'원';
+  document.getElementById('resRatio').textContent=(totalInterest/P*100).toFixed(1)+'%';
+  document.getElementById('result').classList.remove('hidden');
+  // schedule table - show first 6 + last
+  const tbody=document.getElementById('scheduleBody');
+  tbody.innerHTML='';
+  const show=schedule.length<=12?schedule:[...schedule.slice(0,6),null,schedule[schedule.length-1]];
+  show.forEach(s=>{
+    if(!s){tbody.insertAdjacentHTML('beforeend','<tr><td colspan="5" style="text-align:center;color:#9CA3AF">⋮</td></tr>');return;}
+    tbody.insertAdjacentHTML('beforeend',`<tr><td>${s.m}</td><td>${fmt(s.payment)}</td><td>${fmt(s.principal)}</td><td>${fmt(s.interest)}</td><td>${fmt(s.balance)}</td></tr>`);
+  });
+  document.getElementById('scheduleWrap').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
