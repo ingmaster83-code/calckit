@@ -626,3 +626,6 @@ button, input, select, textarea { font-family: inherit; }
   .hero h1 { font-size: 1.4rem; }
   .our-sites-bar { padding: 6px 12px; }
 }
+
+.coupang-card { background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,.07); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.adsense-card { background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,.07); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 10px; }
