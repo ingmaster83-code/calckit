@@ -688,6 +688,14 @@ button, input, select, textarea { font-family: inherit; }
   border-radius: 6px;
   margin-bottom: 8px;
 }
+/* ───── Mobile Top Ad ───── */
+.mobile-top-ad {
+  display: none;
+  text-align: center;
+  padding: 8px 16px;
+  background: #fff;
+  border-bottom: 1px solid #E5E7EB;
+}
 @media (max-width: 1024px) {
   .page-with-sidebar {
     grid-template-columns: 1fr;
@@ -698,5 +706,8 @@ button, input, select, textarea { font-family: inherit; }
     width: 100%;
     order: 3;
     padding-top: 0;
+  }
+  .mobile-top-ad {
+    display: block;
   }
 }
