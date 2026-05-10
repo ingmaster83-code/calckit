@@ -51,6 +51,18 @@
 }
 </script>
 <script src="https://ads-partners.coupang.com/g.js"></script>
+<style>
+  .index-with-sidebar { max-width:1260px; margin:0 auto; display:grid; grid-template-columns:1fr 300px; gap:24px; align-items:start; padding:0 20px; }
+  .index-with-sidebar .tools-section { max-width:100%; margin:0; padding-left:0; padding-right:0; }
+  .index-sidebar { position:sticky; top:76px; padding-top:40px; }
+  .index-ad-card { background:#fff; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,.08); padding:12px; margin-bottom:16px; }
+  .index-mobile-ad { display:none; text-align:center; padding:8px 16px; background:#fff; border-bottom:1px solid #E5E7EB; }
+  @media(max-width:1024px) {
+    .index-with-sidebar { grid-template-columns:1fr; padding:0; }
+    .index-sidebar { display:none; }
+    .index-mobile-ad { display:block; }
+  }
+</style>
 </head>
 <body>
 <header class="header">
@@ -296,13 +308,6 @@
     </div>
   </div>
 </section>
-<aside class="index-sidebar">
-  <div class="index-ad-card">
-    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-</aside>
-</div>
 
 <footer class="footer">
   <div class="footer-inner">
