@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청약 가점 계산기 — 무주택기간·부양가족·청약통장 가입기간 가점 합산 | WooaCalc</title>
+<meta name="description" content="주택청약 가점제 점수를 계산합니다. 무주택기간(최대 32점), 부양가족 수(최대 35점), 청약통장 가입기간(최대 17점) 합산 최대 84점. 무료 청약 가점 계산기.">
+<meta name="keywords" content="청약가점계산기,청약점수,주택청약가점,무주택기간점수,부양가족점수,청약통장가입기간,청약가점제">
+<link rel="canonical" href="https://calckit.wooahouse.com/apartment-score.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="청약 가점 계산기 — 무주택기간·부양가족·청약통장 가점 합산 | WooaCalc">
+<meta property="og:description" content="주택청약 가점제 점수를 계산합니다. 무주택기간, 부양가족, 청약통장 가입기간 가점 합산 최대 84점.">
+<meta property="og:url" content="https://calckit.wooahouse.com/apartment-score.html">
+<meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"청약 가점 계산기","url":"https://calckit.wooahouse.com/apartment-score.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+.score-display { text-align:center; padding:20px; }
+.score-big { font-size:4rem; font-weight:800; color:#10B981; line-height:1; }
+.score-max { font-size:1rem; color:#64748b; margin-top:4px; }
+.score-bars { margin-top:20px; display:flex; flex-direction:column; gap:12px; }
+.score-bar-item { }
+.score-bar-label { display:flex; justify-content:space-between; margin-bottom:4px; font-size:.9rem; color:#94a3b8; }
+.score-bar-label .pts { color:#10B981; font-weight:700; }
+.score-bar-bg { background:#1e293b; border-radius:999px; height:8px; overflow:hidden; }
+.score-bar-fill { height:100%; border-radius:999px; transition:width .3s; }
+.score-grade { margin-top:16px; padding:12px 16px; border-radius:8px; font-weight:600; text-align:center; font-size:1rem; }
+</style>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#life">생활 계산기</a><span>›</span>청약 가점 계산기</div>
+<div class="tool-header"><div class="tool-icon">🏠</div><div><h1>청약 가점 계산기</h1><p>무주택기간·부양가족·청약통장 가입기간 가점을 합산합니다 (최대 84점)</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+
+    <!-- 무주택기간 -->
+    <div class="form-group">
+      <label for="homelessYears">1. 무주택기간 <span style="color:#64748b;font-size:.85rem">(최대 32점)</span></label>
+      <select id="homelessYears" onchange="calcScore()">
+        <option value="2">1년 미만 — 2점</option>
+        <option value="4">1년 이상 2년 미만 — 4점</option>
+        <option value="6">2년 이상 3년 미만 — 6점</option>
+        <option value="8">3년 이상 4년 미만 — 8점</option>
+        <option value="10">4년 이상 5년 미만 — 10점</option>
+        <option value="12">5년 이상 6년 미만 — 12점</option>
+        <option value="14">6년 이상 7년 미만 — 14점</option>
+        <option value="16">7년 이상 8년 미만 — 16점</option>
+        <option value="18">8년 이상 9년 미만 — 18점</option>
+        <option value="20">9년 이상 10년 미만 — 20점</option>
+        <option value="22">10년 이상 11년 미만 — 22점</option>
+        <option value="24">11년 이상 12년 미만 — 24점</option>
+        <option value="26">12년 이상 13년 미만 — 26점</option>
+        <option value="28">13년 이상 14년 미만 — 28점</option>
+        <option value="30">14년 이상 15년 미만 — 30점</option>
+        <option value="32">15년 이상 — 32점</option>
+      </select>
+      <div style="font-size:.8rem;color:#64748b;margin-top:4px">만 30세 미만 미혼은 성년 이후 기간 적용</div>
+    </div>
+
+    <!-- 부양가족 수 -->
+    <div class="form-group">
+      <label for="dependents">2. 부양가족 수 <span style="color:#64748b;font-size:.85rem">(최대 35점, 본인 제외)</span></label>
+      <select id="dependents" onchange="calcScore()">
+        <option value="5">0명 — 5점</option>
+        <option value="10">1명 — 10점</option>
+        <option value="15">2명 — 15점</option>
+        <option value="20">3명 — 20점</option>
+        <option value="25">4명 — 25점</option>
+        <option value="30">5명 — 30점</option>
+        <option value="35">6명 이상 — 35점</option>
+      </select>
+      <div style="font-size:.8rem;color:#64748b;margin-top:4px">직계존속(부모 등) 3년 이상 동일 주민등록 시 인정</div>
+    </div>
+
+    <!-- 청약통장 가입기간 -->
+    <div class="form-group">
+      <label for="subscriptionYears">3. 청약통장 가입기간 <span style="color:#64748b;font-size:.85rem">(최대 17점)</span></label>
+      <select id="subscriptionYears" onchange="calcScore()">
+        <option value="1">6개월 미만 — 1점</option>
+        <option value="2">6개월 이상 1년 미만 — 2점</option>
+        <option value="3">1년 이상 2년 미만 — 3점</option>
+        <option value="4">2년 이상 3년 미만 — 4점</option>
+        <option value="5">3년 이상 4년 미만 — 5점</option>
+        <option value="6">4년 이상 5년 미만 — 6점</option>
+        <option value="7">5년 이상 6년 미만 — 7점</option>
+        <option value="8">6년 이상 7년 미만 — 8점</option>
+        <option value="9">7년 이상 8년 미만 — 9점</option>
+        <option value="10">8년 이상 9년 미만 — 10점</option>
+        <option value="11">9년 이상 10년 미만 — 11점</option>
+        <option value="12">10년 이상 11년 미만 — 12점</option>
+        <option value="13">11년 이상 12년 미만 — 13점</option>
+        <option value="14">12년 이상 13년 미만 — 14점</option>
+        <option value="15">13년 이상 14년 미만 — 15점</option>
+        <option value="16">14년 이상 15년 미만 — 16점</option>
+        <option value="17">15년 이상 — 17점</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="result">
+    <div class="score-display">
+      <div class="score-big" id="totalScore">8</div>
+      <div class="score-max">/ 84점 (최대)</div>
+    </div>
+    <div class="score-bars">
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>무주택기간</span><span class="pts" id="scoreHL">2점 / 32점</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barHL" style="background:#10B981;width:6.25%"></div></div>
+      </div>
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>부양가족</span><span class="pts" id="scoreDep">5점 / 35점</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barDep" style="background:#3B82F6;width:14.3%"></div></div>
+      </div>
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>청약통장 가입기간</span><span class="pts" id="scoreSub">1점 / 17점</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barSub" style="background:#F59E0B;width:5.88%"></div></div>
+      </div>
+    </div>
+    <div class="score-grade" id="scoreGrade"></div>
+    <div style="margin-top:12px;font-size:.8rem;color:#64748b;padding:8px 12px;background:#0f172a;border-radius:8px">
+      💡 점수가 높을수록 인기 단지 당첨 확률이 높습니다. 단지별 커트라인은 청약홈(applyhome.co.kr)에서 확인하세요.
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 청약 가점제 안내</h3><ul>
+  <li>가점제는 무주택 기간(32점) + 부양가족 수(35점) + 청약통장 가입기간(17점) = 최대 84점</li>
+  <li>투기과열지구·조정대상지역 85㎡ 이하는 가점제 100% 적용</li>
+  <li>무주택기간: 세대 구성원 전원이 주택을 소유하지 않은 기간</li>
+  <li>부양가족: 주민등록표상 동일 세대원 (직계존속은 3년 이상 동거 요건)</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({"id":986943,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});</script>
+  </div>
+</aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">자주 묻는 질문</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">청약 가점제란 무엇인가요?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">무주택 기간, 부양가족 수, 청약통장 가입 기간에 따라 점수를 부여하고 높은 점수 순으로 당첨자를 선정하는 방식입니다. 최대 84점입니다.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">무주택기간은 어떻게 산정하나요?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">세대 구성원 전원이 주택을 소유하지 않은 기간을 기준으로 합니다. 만 30세 미만 미혼은 만 30세부터 또는 혼인 신고일부터 산정합니다.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">가점이 낮으면 청약을 못 하나요?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">가점제 물량 외에 추첨제 물량이 있습니다. 85㎡ 초과 중대형이나 민간분양 추첨제 물량은 가점과 무관하게 청약할 수 있습니다.</p>
+  </details>
+</div>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"청약 가점제란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"무주택 기간, 부양가족 수, 청약통장 가입 기간에 따라 점수를 부여하고 높은 점수 순으로 당첨자를 선정하는 방식으로 최대 84점입니다."}},{"@type":"Question","name":"무주택기간은 어떻게 산정하나요?","acceptedAnswer":{"@type":"Answer","text":"세대 구성원 전원이 주택을 소유하지 않은 기간 기준이며, 만 30세 미만 미혼은 만 30세 또는 혼인신고일부터 산정합니다."}},{"@type":"Question","name":"가점이 낮으면 청약을 못 하나요?","acceptedAnswer":{"@type":"Answer","text":"85㎡ 초과 중대형이나 민간분양 추첨제 물량은 가점과 무관하게 청약할 수 있습니다."}}]}</script>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>생활 계산기</h4><a href="percentage.html">백분율 계산기</a><a href="brokerage.html">중개수수료 계산기</a><a href="apartment-score.html">청약 가점 계산기</a><a href="electricity.html">전기요금 계산기</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">✏️ WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div><p class="coupang-notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p></div></footer>
+
+<script>
+function calcScore(){
+  const hl = parseInt(document.getElementById('homelessYears').value);
+  const dep = parseInt(document.getElementById('dependents').value);
+  const sub = parseInt(document.getElementById('subscriptionYears').value);
+  const total = hl + dep + sub;
+
+  document.getElementById('totalScore').textContent = total;
+  document.getElementById('scoreHL').textContent = hl + '점 / 32점';
+  document.getElementById('scoreDep').textContent = dep + '점 / 35점';
+  document.getElementById('scoreSub').textContent = sub + '점 / 17점';
+
+  document.getElementById('barHL').style.width = (hl/32*100).toFixed(1) + '%';
+  document.getElementById('barDep').style.width = (dep/35*100).toFixed(1) + '%';
+  document.getElementById('barSub').style.width = (sub/17*100).toFixed(1) + '%';
+
+  const gradeEl = document.getElementById('scoreGrade');
+  let grade, color;
+  if(total >= 70){ grade = '최상위권 — 인기 단지도 도전해볼 만합니다'; color = '#10B981'; }
+  else if(total >= 55){ grade = '상위권 — 일반 분양 단지에서 경쟁력이 있습니다'; color = '#3B82F6'; }
+  else if(total >= 40){ grade = '중위권 — 외곽지역 또는 비인기 단지 청약을 고려하세요'; color = '#F59E0B'; }
+  else { grade = '하위권 — 가점 누적 후 재도전하거나 추첨제 청약을 활용하세요'; color = '#EF4444'; }
+  gradeEl.textContent = grade;
+  gradeEl.style.background = color + '22';
+  gradeEl.style.color = color;
+  gradeEl.style.border = '1px solid ' + color + '44';
+}
+
+// 초기 계산
+calcScore();
+</script>
+</body>
+</html>
