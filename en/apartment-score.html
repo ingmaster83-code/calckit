@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Housing Subscription Score Calculator | WooaCalc</title>
+<meta name="description" content="Calculate your Korean housing subscription (청약) priority score. Housing-free period (max 32pts), dependents (max 35pts), subscription period (max 17pts). Max 84 points.">
+<meta name="keywords" content="Korean housing subscription, cheongak score, apartment lottery score, housing priority calculator, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/apartment-score.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/apartment-score.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/apartment-score.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/apartment-score.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korean Housing Subscription Score | WooaCalc">
+<meta property="og:description" content="Calculate Korean housing subscription priority score — housing-free period, dependents, subscription period. Max 84 points.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/apartment-score.html">
+<meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Housing Subscription Score Calculator","url":"https://calckit.wooahouse.com/en/apartment-score.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+.score-display { text-align:center; padding:20px; }
+.score-big { font-size:4rem; font-weight:800; color:#10B981; line-height:1; }
+.score-max { font-size:1rem; color:#64748b; margin-top:4px; }
+.score-bars { margin-top:20px; display:flex; flex-direction:column; gap:12px; }
+.score-bar-item { }
+.score-bar-label { display:flex; justify-content:space-between; margin-bottom:4px; font-size:.9rem; color:#94a3b8; }
+.score-bar-label .pts { color:#10B981; font-weight:700; }
+.score-bar-bg { background:#1e293b; border-radius:999px; height:8px; overflow:hidden; }
+.score-bar-fill { height:100%; border-radius:999px; transition:width .3s; }
+.score-grade { margin-top:16px; padding:12px 16px; border-radius:8px; font-weight:600; text-align:center; font-size:1rem; }
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#life">Life Calculators</a><span>›</span>Housing Subscription Score</div>
+<div class="tool-header"><div class="tool-icon">🏠</div><div><h1>Housing Subscription Score Calculator</h1><p>Sum housing-free period, dependents, and subscription period scores (max 84 points)</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+
+    <!-- Housing-Free Period -->
+    <div class="form-group">
+      <label for="homelessYears">1. Housing-Free Period <span style="color:#64748b;font-size:.85rem">(max 32 pts)</span></label>
+      <select id="homelessYears" onchange="calcScore()">
+        <option value="2">Under 1 year — 2 pts</option>
+        <option value="4">1–2 years — 4 pts</option>
+        <option value="6">2–3 years — 6 pts</option>
+        <option value="8">3–4 years — 8 pts</option>
+        <option value="10">4–5 years — 10 pts</option>
+        <option value="12">5–6 years — 12 pts</option>
+        <option value="14">6–7 years — 14 pts</option>
+        <option value="16">7–8 years — 16 pts</option>
+        <option value="18">8–9 years — 18 pts</option>
+        <option value="20">9–10 years — 20 pts</option>
+        <option value="22">10–11 years — 22 pts</option>
+        <option value="24">11–12 years — 24 pts</option>
+        <option value="26">12–13 years — 26 pts</option>
+        <option value="28">13–14 years — 28 pts</option>
+        <option value="30">14–15 years — 30 pts</option>
+        <option value="32">15+ years — 32 pts</option>
+      </select>
+      <div style="font-size:.8rem;color:#64748b;margin-top:4px">For unmarried persons under 30, period counted from age of majority</div>
+    </div>
+
+    <!-- Number of Dependents -->
+    <div class="form-group">
+      <label for="dependents">2. Number of Dependents <span style="color:#64748b;font-size:.85rem">(max 35 pts, excluding self)</span></label>
+      <select id="dependents" onchange="calcScore()">
+        <option value="5">0 dependents — 5 pts</option>
+        <option value="10">1 dependent — 10 pts</option>
+        <option value="15">2 dependents — 15 pts</option>
+        <option value="20">3 dependents — 20 pts</option>
+        <option value="25">4 dependents — 25 pts</option>
+        <option value="30">5 dependents — 30 pts</option>
+        <option value="35">6+ dependents — 35 pts</option>
+      </select>
+      <div style="font-size:.8rem;color:#64748b;margin-top:4px">Direct ascendants (parents, etc.) recognized with 3+ years of shared residence registration</div>
+    </div>
+
+    <!-- Subscription Account Period -->
+    <div class="form-group">
+      <label for="subscriptionYears">3. Subscription Account Period <span style="color:#64748b;font-size:.85rem">(max 17 pts)</span></label>
+      <select id="subscriptionYears" onchange="calcScore()">
+        <option value="1">Under 6 months — 1 pt</option>
+        <option value="2">6–12 months — 2 pts</option>
+        <option value="3">1–2 years — 3 pts</option>
+        <option value="4">2–3 years — 4 pts</option>
+        <option value="5">3–4 years — 5 pts</option>
+        <option value="6">4–5 years — 6 pts</option>
+        <option value="7">5–6 years — 7 pts</option>
+        <option value="8">6–7 years — 8 pts</option>
+        <option value="9">7–8 years — 9 pts</option>
+        <option value="10">8–9 years — 10 pts</option>
+        <option value="11">9–10 years — 11 pts</option>
+        <option value="12">10–11 years — 12 pts</option>
+        <option value="13">11–12 years — 13 pts</option>
+        <option value="14">12–13 years — 14 pts</option>
+        <option value="15">13–14 years — 15 pts</option>
+        <option value="16">14–15 years — 16 pts</option>
+        <option value="17">15+ years — 17 pts</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="result">
+    <div class="score-display">
+      <div class="score-big" id="totalScore">8</div>
+      <div class="score-max">/ 84 points (max)</div>
+    </div>
+    <div class="score-bars">
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>Housing-Free Period</span><span class="pts" id="scoreHL">2 pts / 32</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barHL" style="background:#10B981;width:6.25%"></div></div>
+      </div>
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>Dependents</span><span class="pts" id="scoreDep">5 pts / 35</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barDep" style="background:#3B82F6;width:14.3%"></div></div>
+      </div>
+      <div class="score-bar-item">
+        <div class="score-bar-label"><span>Subscription Period</span><span class="pts" id="scoreSub">1 pt / 17</span></div>
+        <div class="score-bar-bg"><div class="score-bar-fill" id="barSub" style="background:#F59E0B;width:5.88%"></div></div>
+      </div>
+    </div>
+    <div class="score-grade" id="scoreGrade"></div>
+    <div style="margin-top:12px;font-size:.8rem;color:#64748b;padding:8px 12px;background:#0f172a;border-radius:8px">
+      💡 A higher score increases your chances for popular housing units. Check cutoff scores per project at applyhome.co.kr.
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Korean Housing Subscription Priority System</h3><ul>
+  <li>Score = Housing-free period (32 pts) + Dependents (35 pts) + Subscription period (17 pts) = max 84 pts</li>
+  <li>Speculative/regulated areas: 100% priority system applies for units 85㎡ and under</li>
+  <li>Housing-free period: period during which all household members have owned no housing</li>
+  <li>Dependents: same household members on resident registration (direct ascendants need 3+ years co-residence)</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">    
+  </div>
+</aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What is the Korean housing subscription priority system?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">A priority system that awards points based on housing-free period, number of dependents, and subscription account tenure. Winners are selected in descending score order. Maximum: 84 points.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">How is the housing-free period calculated?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">The period during which all household members have owned no housing. For unmarried persons under 30, the period starts from age 30 or marriage registration, whichever comes first.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Can I still apply with a low score?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Yes. Beyond the priority-system allocation, there is a lottery allocation. Units over 85㎡ and private-sector lottery allocations can be applied for regardless of your score.</p>
+  </details>
+</div>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Housing Subscription Score Calculator","acceptedAnswer":{"@type":"Answer","text":"A priority system awarding points for housing-free period, dependents, and subscription tenure. Winners selected by descending score. Max 84 points."}},{"@type":"Question","name":"Housing Subscription Score Calculator","acceptedAnswer":{"@type":"Answer","text":"Based on the period all household members have owned no housing. For unmarried persons under 30, the period starts from age 30 or marriage registration."}},{"@type":"Question","name":"Housing Subscription Score Calculator","acceptedAnswer":{"@type":"Answer","text":"Units over 85㎡ and private-sector lottery allocations can be applied for regardless of your score."}}]}</script>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Life Calculators</h4><a href="percentage.html">Percentage Calculator</a><a href="brokerage.html">Brokerage Fee Calculator</a><a href="apartment-score.html">Housing Subscription Score</a><a href="electricity.html">Electricity Bill Calculator</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">✏️ WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div><p class="coupang-notice">This post is part of the Coupang Partners program, and we may receive a commission.</p></div></footer>
+
+<script>
+function calcScore(){
+  const hl = parseInt(document.getElementById('homelessYears').value);
+  const dep = parseInt(document.getElementById('dependents').value);
+  const sub = parseInt(document.getElementById('subscriptionYears').value);
+  const total = hl + dep + sub;
+
+  document.getElementById('totalScore').textContent = total;
+  document.getElementById('scoreHL').textContent = hl + ' pts / 32';
+  document.getElementById('scoreDep').textContent = dep + ' pts / 35';
+  document.getElementById('scoreSub').textContent = sub + ' pts / 17';
+
+  document.getElementById('barHL').style.width = (hl/32*100).toFixed(1) + '%';
+  document.getElementById('barDep').style.width = (dep/35*100).toFixed(1) + '%';
+  document.getElementById('barSub').style.width = (sub/17*100).toFixed(1) + '%';
+
+  const gradeEl = document.getElementById('scoreGrade');
+  let grade, color;
+  if(total >= 70){ grade = 'Top tier — competitive for popular housing projects'; color = '#10B981'; }
+  else if(total >= 55){ grade = 'Upper tier — competitive for standard housing projects'; color = '#3B82F6'; }
+  else if(total >= 40){ grade = 'Middle tier — consider outer areas or less popular projects'; color = '#F59E0B'; }
+  else { grade = 'Lower tier — accumulate more points or apply via lottery allocation'; color = '#EF4444'; }
+  gradeEl.textContent = grade;
+  gradeEl.style.background = color + '22';
+  gradeEl.style.color = color;
+  gradeEl.style.border = '1px solid ' + color + '44';
+}
+
+// Initial calculation
+calcScore();
+</script>
+</body>
+</html>

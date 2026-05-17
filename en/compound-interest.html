@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator — Annual, Monthly & Quarterly | WooaCalc</title>
+<meta name="description" content="Enter principal, annual interest rate, and investment period to see compound interest results in a yearly table. Supports monthly, quarterly, and annual compounding.">
+<meta name="keywords" content="compound interest calculator, compound interest table, investment calculator, annual compounding, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/compound-interest.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/compound-interest.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/compound-interest.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/compound-interest.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compound Interest Calculator Free | WooaCalc">
+<meta property="og:description" content="Calculate compound interest with yearly table. Supports monthly, quarterly, and annual compounding.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/compound-interest.html">
+<meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator","url":"https://calckit.wooahouse.com/en/compound-interest.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+.compound-table { width:100%; border-collapse:collapse; margin-top:16px; font-size:.88rem; }
+.compound-table th { background:#0f172a; color:#94a3b8; padding:8px 12px; text-align:right; font-weight:600; border-bottom:2px solid rgba(16,185,129,.3); }
+.compound-table th:first-child { text-align:center; }
+.compound-table td { padding:7px 12px; text-align:right; border-bottom:1px solid rgba(255,255,255,.05); color:#e2e8f0; }
+.compound-table td:first-child { text-align:center; color:#94a3b8; }
+.compound-table tr:last-child td { font-weight:700; color:#10B981; background:rgba(16,185,129,.07); }
+.compound-table tr:hover td { background:rgba(16,185,129,.05); }
+.table-wrap { overflow-x:auto; border-radius:8px; border:1px solid rgba(16,185,129,.2); }
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">✏️ WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 WooaCalc</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Compound Interest Calculator</div>
+<div class="tool-header"><div class="tool-icon">📈</div><div><h1>Compound Interest Calculator</h1><p>Enter principal and annual rate to see compound interest by year</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="principal">Principal (KRW)</label>
+        <input type="number" id="principal" placeholder="e.g. 10000000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="annualRate">Annual Interest Rate (%)</label>
+        <input type="number" id="annualRate" placeholder="e.g. 5" step="0.01" min="0">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="years">Investment Period (years)</label>
+        <input type="number" id="years" placeholder="e.g. 10" min="1" max="50">
+      </div>
+      <div class="form-group">
+        <label for="compoundFreq">Compounding Frequency</label>
+        <select id="compoundFreq">
+          <option value="12">Monthly compounding</option>
+          <option value="4">Quarterly compounding</option>
+          <option value="2">Semi-annual compounding</option>
+          <option value="1" selected>Annual compounding</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcCompound()">Calculate</button>
+  </div>
+
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resFinal"></div>
+    <div class="result-label">Final Amount (Principal + Interest)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Principal</span><span class="value" id="resPrincipal"></span></div>
+      <div class="result-row"><span class="label">Total Interest</span><span class="value" id="resInterest" style="color:#10B981"></span></div>
+      <div class="result-row"><span class="label">Return Rate</span><span class="value" id="resReturn" style="color:#F59E0B"></span></div>
+    </div>
+
+    <div style="margin-top:20px">
+      <h3 style="font-size:.95rem;font-weight:700;color:#e2e8f0;margin-bottom:8px">Year-by-Year Summary</h3>
+      <div class="table-wrap">
+        <table class="compound-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Total (P+I)</th>
+              <th>Cumulative Interest</th>
+              <th>Annual Interest</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Compound Interest Tips</h3><ul>
+  <li><strong>Formula:</strong> A = P × (1 + r/n)^(n×t) — P: principal, r: annual rate, n: compounding periods/year, t: years</li>
+  <li>Monthly compounding yields slightly higher returns than annual compounding</li>
+  <li>The power of compounding grows dramatically over long time horizons</li>
+  <li>This calculator excludes tax (15.4% interest income tax)</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">    
+  </div>
+</aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What is the difference between compound and simple interest?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Simple interest applies only to the principal, while compound interest applies to both principal and accumulated interest. The longer the period, the more dramatic the difference — e.g., 5% annual compound rate over 30 years turns 1x into ~4.3x.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Is monthly compounding always better than annual?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">For the same nominal rate, more frequent compounding yields slightly higher effective returns. However, the difference is small — focus on comparing the nominal rate and terms of each product first.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What is the Rule of 72?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Years to double = 72 ÷ annual rate (%). Example: at 6% annual compound rate, 72÷6=12 years to double your money.</p>
+  </details>
+</div>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Compound Interest Calculator","acceptedAnswer":{"@type":"Answer","text":"Simple interest applies only to principal; compound interest applies to both principal and accumulated interest, growing dramatically over time."}},{"@type":"Question","name":"Compound Interest Calculator","acceptedAnswer":{"@type":"Answer","text":"For the same nominal rate, more frequent compounding yields slightly higher returns, but the difference is small."}},{"@type":"Question","name":"Compound Interest Calculator","acceptedAnswer":{"@type":"Answer","text":"Years to double your money ≈ 72 ÷ annual interest rate (%)."}}]}</script>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="loan-interest.html">Loan Interest Calculator</a><a href="savings.html">Savings Calculator</a><a href="compound-interest.html">Compound Interest Calculator</a><a href="salary.html">Salary Calculator</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">✏️ WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div><p class="coupang-notice">This post is part of the Coupang Partners program, and we may receive a commission.</p></div></footer>
+
+<script>
+function fmt(n){ return Math.round(n).toLocaleString('ko-KR'); }
+
+function calcCompound(){
+  const P = parseFloat(document.getElementById('principal').value);
+  const r = parseFloat(document.getElementById('annualRate').value) / 100;
+  const t = parseInt(document.getElementById('years').value);
+  const n = parseInt(document.getElementById('compoundFreq').value);
+
+  if(!P || !r || !t){alert('Please fill in all fields.'); return;}
+  if(t > 50){alert('Maximum investment period is 50 years.'); return;}
+
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+
+  let prevAmount = P;
+  for(let y = 1; y <= t; y++){
+    const amount = P * Math.pow(1 + r/n, n*y);
+    const cumulativeInterest = amount - P;
+    const yearlyInterest = amount - prevAmount;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${y}</td>
+      <td>${fmt(amount)} KRW</td>
+      <td>${fmt(cumulativeInterest)} KRW</td>
+      <td>${fmt(yearlyInterest)} KRW</td>
+    `;
+    tbody.appendChild(tr);
+    prevAmount = amount;
+  }
+
+  const finalAmount = P * Math.pow(1 + r/n, n*t);
+  const totalInterest = finalAmount - P;
+  const returnRate = (totalInterest / P * 100).toFixed(2);
+
+  document.getElementById('resFinal').textContent = fmt(finalAmount) + 'KRW';
+  document.getElementById('resPrincipal').textContent = fmt(P) + 'KRW';
+  document.getElementById('resInterest').textContent = '+' + fmt(totalInterest) + 'KRW';
+  document.getElementById('resReturn').textContent = '+' + returnRate + '%';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>

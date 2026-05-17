@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Calculator — Maturity Amount & After-Tax Interest | WooaCalc</title>
+<meta name="description" content="Calculate savings maturity amount and interest (before and after tax) by entering monthly deposit, annual rate, and term. Supports simple and compound interest.">
+<meta name="keywords" content="savings calculator, maturity amount, after-tax interest, compound savings, monthly deposit calculator, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/savings.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/savings.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/savings.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/savings.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Savings Calculator Free Online | WooaCalc">
+<meta property="og:description" content="Calculate savings maturity amount and after-tax interest. Simple and compound interest modes.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/savings.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Savings Calculator","url":"https://calckit.wooahouse.com/en/savings.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 WooaCalc</a>
+    <a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a>
+    <a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a>
+    <a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a></div></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6464921081676309"
+     data-ad-slot="7080296704"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Savings Calculator</div>
+<div class="tool-header"><div class="tool-icon">💰</div><div><h1>Savings Calculator</h1><p>Enter monthly deposit and interest rate to calculate maturity amount and after-tax interest</p></div></div>
+
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="monthly">Monthly Deposit (10,000 KRW units)</label><input type="number" id="monthly" placeholder="e.g. 50" min="0"></div>
+    <div class="form-row">
+      <div class="form-group"><label for="rate">Annual Interest Rate (%)</label><input type="number" id="rate" placeholder="e.g. 3.5" step="0.01" min="0"></div>
+      <div class="form-group"><label for="months">Savings Term (months)</label><input type="number" id="months" placeholder="e.g. 12" min="1"></div>
+    </div>
+    <div class="form-group">
+      <label class="checkbox-label"><input type="checkbox" id="taxApply" checked> Apply 15.4% interest income tax</label>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcSavings()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTotal"></div>
+    <div class="result-label">Maturity Amount</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Total Principal</span><span class="value" id="resPrincipal"></span></div>
+      <div class="result-row"><span class="label">Pre-tax Interest</span><span class="value" id="resInterestPre"></span></div>
+      <div class="result-row"><span class="label">Tax (15.4%)</span><span class="value" id="resTax"></span></div>
+      <div class="result-row"><span class="label">After-tax Interest</span><span class="value" id="resInterestPost"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Savings Calculator Tips</h3><ul>
+  <li><strong>Simple interest formula:</strong> Interest = Monthly deposit × term × (term+1) / 2 × (annual rate / 12 / 100)</li>
+  <li>Interest income tax 15.4% = income tax 14% + local income tax 1.4%</li>
+  <li>Uncheck tax if your savings account is tax-exempt (e.g., Youth Hope Savings)</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:250px"
+         data-ad-client="ca-pub-6464921081676309"
+         data-ad-slot="1419180025"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">    
+  </div>
+</aside>
+</div>
+
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What is the difference between simple and compound interest?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Simple interest applies only to the principal; compound interest applies to both principal and accumulated interest. Most Korean savings accounts use simple interest.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">How much interest income tax is withheld?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">General interest income is subject to 15.4% withholding tax (14% income tax + 1.4% local income tax). Tax-exempt savings products are not subject to this tax.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What happens to interest if I withdraw early?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Early withdrawal applies a lower early termination rate, significantly reducing your interest. Rates vary by institution — check beforehand.</p>
+  </details>
+</div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Savings Calculator","acceptedAnswer":{"@type":"Answer","text":"Simple interest applies only to principal; compound interest applies to both, growing more over time."}},{"@type":"Question","name":"Savings Calculator","acceptedAnswer":{"@type":"Answer","text":"General interest income is subject to 15.4% withholding tax."}},{"@type":"Question","name":"Savings Calculator","acceptedAnswer":{"@type":"Answer","text":"A lower early termination rate applies, significantly reducing your interest."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="loan-interest.html">Loan Interest Calculator</a><a href="savings.html">Savings Calculator</a><a href="salary.html">Salary Calculator</a><a href="severance.html">Severance Pay Calculator</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcSavings(){
+  const M=parseFloat(document.getElementById('monthly').value)*10000;
+  const rate=parseFloat(document.getElementById('rate').value);
+  const n=parseInt(document.getElementById('months').value);
+  const tax=document.getElementById('taxApply').checked;
+  if(!M||!rate||!n){alert('Please fill in all fields.');return;}
+  const principal=M*n;
+  const interest=M*n*(n+1)/2*(rate/12/100);
+  const taxAmt=tax?interest*0.154:0;
+  const postInterest=interest-taxAmt;
+  const total=principal+postInterest;
+  document.getElementById('resTotal').textContent=fmt(total)+'KRW';
+  document.getElementById('resPrincipal').textContent=fmt(principal)+'KRW';
+  document.getElementById('resInterestPre').textContent=fmt(interest)+'KRW';
+  document.getElementById('resTax').textContent=tax?'-'+fmt(taxAmt)+' KRW':'0 KRW';
+  document.getElementById('resInterestPost').textContent=fmt(postInterest)+'KRW';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
