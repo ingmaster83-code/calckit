@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unemployment Benefit Calculator — Korea Job Seeker Allowance | WooaCalc</title>
+<meta name="description" content="Calculate Korea's unemployment (job seeker) benefit: daily wage, benefit days, and total payout based on insured period, age, and last salary.">
+<meta name="keywords" content="unemployment benefit calculator,Korea unemployment,job seeker allowance,구직급여,실업급여">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/unemployment-benefit.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/unemployment-benefit.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/unemployment-benefit.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/unemployment-benefit.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Unemployment Benefit Calculator — Korea Job Seeker Allowance | WooaCalc">
+<meta property="og:description" content="Calculate Korea's unemployment benefit: daily benefit, benefit period, and total payout.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/unemployment-benefit.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Unemployment Benefit Calculator","url":"https://calckit.wooahouse.com/en/unemployment-benefit.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<div class="our-sites-bar"><span class="our-sites-label">WooaHouse Services</span><div class="our-sites-links"><a href="https://wooahouse.com/" target="_blank" rel="noopener">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank" rel="noopener">📄 WooaPDF</a><a href="https://imagekit.wooahouse.com/" target="_blank" rel="noopener">🖼️ WooaImage</a><a href="https://colorkit.wooahouse.com/" target="_blank" rel="noopener">🎨 WooaColor</a><a href="https://textkit.wooahouse.com/" target="_blank" rel="noopener">📝 WooaText</a><a href="https://qrkit.wooahouse.com/" target="_blank" rel="noopener">📱 WooaQR</a><a href="https://fontkit.wooahouse.com/" target="_blank" rel="noopener">🔤 WooaFont</a><a href="https://mactools.wooahouse.com/" target="_blank" rel="noopener">🍎 WooaMac</a><a href="https://pctools.wooahouse.com/" target="_blank" rel="noopener">🖥️ WooaPC</a><a href="https://vskit.wooahouse.com/" target="_blank" rel="noopener">💻 WooaVS</a><a href="https://calckit.wooahouse.com/" rel="noopener" class="active">🧮 WooaCalc</a><a href="https://wooaaudio.wooahouse.com/" target="_blank" rel="noopener">🎵 WooaAudio</a><a href="https://wooaviewer.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaViewer</a><a href="https://wooadev.wooahouse.com/" target="_blank" rel="noopener">🛠️ WooaDev</a><a href="https://wooaocr.wooahouse.com/" target="_blank" rel="noopener">🔍 WooaOCR</a></div></div>
+<header class="header"><div class="container"><a href="/en/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/en/#finance">💰 Finance</a><a href="/en/#health">🏥 Health</a><a href="/en/#date">📅 Date</a><a href="/en/#unit">📐 Unit Converter</a><a href="/en/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/en/">Home</a><span>›</span><a href="/en/#life">Life Calculators</a><span>›</span>Unemployment Benefit Calculator</div>
+<div class="tool-header"><div class="tool-icon">💼</div><div><h1>Unemployment Benefit Calculator</h1><p>Calculate Korea's job seeker allowance — daily benefit, benefit days & total payout (2024 standard)</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group">
+      <label for="salary3m">Total Pre-tax Salary (last 3 months, KRW)</label>
+      <input type="number" id="salary3m" placeholder="e.g. 9000000" min="0">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="insuredYears">Insured Period (years)</label>
+        <input type="number" id="insuredYears" placeholder="e.g. 3" min="0" step="0.5">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="e.g. 45" min="15" max="100">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Person with Disability?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="disabled" value="no" checked> No</label>
+        <label><input type="radio" name="disabled" value="yes"> Yes</label>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcUnemployment()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTotal"></div>
+    <div class="result-label">Estimated Total Benefit</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Daily Average Wage</span><span class="value" id="resDailyAvg"></span></div>
+      <div class="result-row"><span class="label">Daily Benefit Amount</span><span class="value" id="resDailyBenefit"></span></div>
+      <div class="result-row"><span class="label">Benefit Days</span><span class="value" id="resDays"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Benefit Days by Insured Period (2024)</h3>
+<table style="width:100%;border-collapse:collapse;font-size:.9rem;color:#cbd5e1">
+<thead><tr style="background:rgba(16,185,129,.15)"><th style="padding:8px;text-align:left;border-bottom:1px solid rgba(16,185,129,.2)">Insured Period</th><th style="padding:8px;text-align:center;border-bottom:1px solid rgba(16,185,129,.2)">Under 50</th><th style="padding:8px;text-align:center;border-bottom:1px solid rgba(16,185,129,.2)">50+ / Disabled</th></tr></thead>
+<tbody>
+<tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.05)">Less than 1 year</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">120 days</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">120 days</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.05)">1~3 years</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">150 days</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">180 days</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.05)">3~5 years</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">180 days</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">210 days</td></tr>
+<tr><td style="padding:8px;border-bottom:1px solid rgba(255,255,255,.05)">5~10 years</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">210 days</td><td style="padding:8px;text-align:center;border-bottom:1px solid rgba(255,255,255,.05)">240 days</td></tr>
+<tr><td style="padding:8px">10+ years</td><td style="padding:8px;text-align:center">240 days</td><td style="padding:8px;text-align:center">270 days</td></tr>
+</tbody>
+</table>
+<p style="margin-top:8px;font-size:.85rem;color:#94a3b8">Upper limit: ₩66,000/day | Lower limit: ₩61,568/day (2024 minimum wage basis)</p>
+</div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({"id":974224,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});</script>
+  </div>
+</aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Is unemployment benefit only for involuntary termination?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">In principle, voluntary resignation does not qualify. However, exceptions include recommended resignation, contract expiration, workplace closure, unpaid wages, and workplace harassment. Check with your local Employment Center for your specific situation.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What is the application deadline?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">You must apply within 12 months of leaving your job. Any remaining benefit days after this deadline are forfeited. Apply as soon as possible at your local Employment Center or via WorkNet online.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Can part-time workers receive unemployment benefit?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">If you worked 15+ hours per week and accumulated 180+ insured days in the 18 months before separation, you are eligible. Workers under 15 hours per week may be exempt from employment insurance.</p>
+  </details>
+</div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is unemployment benefit only for involuntary termination?","acceptedAnswer":{"@type":"Answer","text":"Voluntary resignation generally does not qualify, but exceptions apply for contract expiration, unpaid wages, and workplace harassment."}},{"@type":"Question","name":"What is the application deadline?","acceptedAnswer":{"@type":"Answer","text":"Apply within 12 months of leaving your job."}},{"@type":"Question","name":"Can part-time workers receive unemployment benefit?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you worked 15+ hours/week and had 180+ insured days."}}]}</script>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">Free online calculators for everyday use</p></div><div class="footer-col"><h4>Life Calculators</h4><a href="unemployment-benefit.html">Unemployment Benefit</a><a href="parental-leave.html">Parental Leave Pay</a><a href="eitc.html">EITC Calculator</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function calcUnemployment(){
+  const salary=parseFloat(document.getElementById('salary3m').value);
+  const years=parseFloat(document.getElementById('insuredYears').value);
+  const age=parseInt(document.getElementById('age').value);
+  const disabled=document.querySelector('input[name="disabled"]:checked').value==='yes';
+  if(!salary||!years||!age){alert('Please fill in all fields.');return;}
+
+  const dailyAvg=salary/92;
+  let dailyBenefit=dailyAvg*0.6;
+  const upper=66000;
+  const lower=61568;
+  dailyBenefit=Math.min(upper,Math.max(lower,dailyBenefit));
+
+  let days=120;
+  const senior=age>=50||disabled;
+  if(years<1) days=120;
+  else if(years<3) days=senior?180:150;
+  else if(years<5) days=senior?210:180;
+  else if(years<10) days=senior?240:210;
+  else days=senior?270:240;
+
+  const total=dailyBenefit*days;
+
+  document.getElementById('resDailyAvg').textContent='₩'+Math.round(dailyAvg).toLocaleString();
+  document.getElementById('resDailyBenefit').textContent='₩'+Math.round(dailyBenefit).toLocaleString();
+  document.getElementById('resDays').textContent=days+' days';
+  document.getElementById('resTotal').textContent='₩'+Math.round(total).toLocaleString();
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
