@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Financial Income Tax Calculator 2026 — Interest & Dividend Tax Free | WooaCalc</title>
+<meta name="description" content="Calculate Korean financial income tax on interest and dividends. Check the ₩20M threshold for separate taxation (15.4%) vs comprehensive taxation. Free browser tool.">
+<meta name="keywords" content="Korea financial income tax, interest dividend tax Korea, 금융소득분리과세, separate taxation Korea, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/financial-income-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/financial-income-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/financial-income-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/financial-income-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Financial Income Tax Calculator 2026 | WooaCalc">
+<meta property="og:description" content="Check the ₩20M threshold and compare separate vs comprehensive taxation on interest and dividends.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/financial-income-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Korea Financial Income Tax Calculator 2026 | WooaCalc">
+  <meta name="twitter:description" content="Check the ₩20M threshold and compare separate vs comprehensive taxation on interest and dividends.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Financial Income Tax Calculator","url":"https://calckit.wooahouse.com/en/financial-income-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6464921081676309"
+     data-ad-slot="7080296704"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Financial Income Tax</div>
+<div class="tool-header"><div class="tool-icon">💹</div><div><h1>Financial Income Tax Calculator 2026</h1><p>Compare separate (15.4%) vs comprehensive taxation on interest & dividends</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="interest">Interest Income (10,000 KRW)</label><input type="number" id="interest" placeholder="e.g. 800" min="0" value="0"></div>
+      <div class="form-group"><label for="dividend">Dividend Income (10,000 KRW)</label><input type="number" id="dividend" placeholder="e.g. 500" min="0" value="0"></div>
+    </div>
+    <div class="form-group"><label for="otherIncome">Other Comprehensive Income (10,000 KRW, employment/business)</label><input type="number" id="otherIncome" placeholder="e.g. 6000" min="0" value="0"></div>
+    <div class="form-group"><label for="personalDed">Personal Deductions (10,000 KRW, dependents × 150)</label><input type="number" id="personalDed" placeholder="e.g. 300" min="0" value="150"></div>
+    <button class="btn btn-primary btn-full" onclick="calcFinancialTax()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resStatus"></div>
+    <div class="result-label">Comprehensive Taxation Status</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Total Financial Income</span><span class="value" id="resFinTotal"></span></div>
+      <div class="result-row"><span class="label">Separate Tax Withheld (15.4%)</span><span class="value" id="resSeparate"></span></div>
+      <div class="result-row"><span class="label">Amount Subject to Comprehensive Tax</span><span class="value" id="resOverLimit"></span></div>
+      <div class="result-row"><span class="label">Comprehensive Tax Amount</span><span class="value" id="resCombined"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Estimated Additional Tax</span><span class="value" id="resExtra"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Financial Income Tax Tips</h3><ul>
+  <li>Financial income (interest + dividends) under ₩20M/year: 15.4% withholding tax — filing done</li>
+  <li>Over ₩20M: excess amount is combined with other income for progressive taxation</li>
+  <li>If total exceeds ₩20M, you must file a comprehensive income tax return in May</li>
+  <li>Tax-exempt accounts (ISA, pension savings) are NOT counted toward the ₩20M threshold</li>
+</ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><details><summary>How is the ₩20M financial income threshold calculated?</summary><p>The combined total of interest and dividend income is compared to ₩20M. Income from tax-exempt products is excluded from this calculation.</p></details><details><summary>What makes up the 15.4% withholding rate?</summary><p>It consists of 14% income tax plus 1.4% local income tax (10% of the income tax portion).</p></details><details><summary>Is my data saved?</summary><p>No. All calculations happen entirely in your browser. No data is transmitted to any server.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:250px"
+         data-ad-client="ca-pub-6464921081676309"
+         data-ad-slot="1419180025"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;"></div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the ₩20M threshold calculated?","acceptedAnswer":{"@type":"Answer","text":"Interest plus dividend income combined. Tax-exempt product income is excluded."}},{"@type":"Question","name":"What is the 15.4% withholding rate?","acceptedAnswer":{"@type":"Answer","text":"14% income tax + 1.4% local income tax (10% of income tax)."}},{"@type":"Question","name":"Does ISA income count toward ₩20M?","acceptedAnswer":{"@type":"Answer","text":"No. Tax-exempt and separately taxed ISA income is not included in the ₩20M threshold."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="salary.html">Salary Calculator</a><a href="income-tax.html">Income Tax Calculator</a><a href="financial-income-tax.html">Financial Income Tax</a><a href="mortgage-limit.html">Mortgage Limit</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'KRW';}
+function calcTaxByBracket(taxBase) {
+  if(taxBase<=0) return 0;
+  if(taxBase<=14000000)      return taxBase*0.06;
+  if(taxBase<=50000000)      return taxBase*0.15 - 1260000;
+  if(taxBase<=88000000)      return taxBase*0.24 - 5760000;
+  if(taxBase<=150000000)     return taxBase*0.35 - 15440000;
+  if(taxBase<=300000000)     return taxBase*0.38 - 19940000;
+  if(taxBase<=500000000)     return taxBase*0.40 - 25940000;
+  if(taxBase<=1000000000)    return taxBase*0.42 - 35940000;
+  return taxBase*0.45 - 65940000;
+}
+function calcFinancialTax() {
+  const interest  = parseFloat(document.getElementById('interest').value  || 0) * 10000;
+  const dividend  = parseFloat(document.getElementById('dividend').value  || 0) * 10000;
+  const other     = parseFloat(document.getElementById('otherIncome').value || 0) * 10000;
+  const ded       = parseFloat(document.getElementById('personalDed').value || 0) * 10000;
+  const finTotal = interest + dividend;
+  const LIMIT = 20000000;
+  const separateTaxBase = Math.min(finTotal, LIMIT);
+  const separateTax = separateTaxBase * 0.154;
+  const isComprehensive = finTotal > LIMIT;
+  const overLimit = isComprehensive ? finTotal - LIMIT : 0;
+  let extraTax = 0;
+  if(isComprehensive) {
+    const combinedBase = Math.max(0, LIMIT + overLimit + other - ded);
+    const baseWithoutFin = Math.max(0, other - ded);
+    const taxWithFin = calcTaxByBracket(combinedBase);
+    const taxWithout = calcTaxByBracket(baseWithoutFin);
+    const alreadyWithheld = LIMIT * 0.14;
+    extraTax = Math.max(0, (taxWithFin - taxWithout) - alreadyWithheld);
+  }
+  document.getElementById('resFinTotal').textContent = fmt(finTotal);
+  document.getElementById('resSeparate').textContent = fmt(separateTax) + ' (withheld)';
+  document.getElementById('resOverLimit').textContent = isComprehensive ? fmt(overLimit) : 'N/A';
+  document.getElementById('resCombined').textContent = isComprehensive ? fmt(extraTax) + ' (additional)' : 'N/A';
+  document.getElementById('resExtra').textContent = isComprehensive ? fmt(extraTax) : '0KRW (separate tax only)';
+  document.getElementById('resStatus').textContent = isComprehensive ? 'Comprehensive Tax Required' : 'Separate Tax (withholding final)';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+</body>
+</html>

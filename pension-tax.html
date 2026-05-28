@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연금저축·IRP 세액공제 계산기 2026 — 납입액 기준 절세 금액 무료 계산 | WooaCalc</title>
+<meta name="description" content="연금저축과 IRP 납입액에 따른 세액공제 금액을 계산합니다. 총급여 5,500만원 기준 16.5%·13.2% 공제율 자동 적용, 무료 브라우저 계산기.">
+<meta name="keywords" content="연금저축세액공제,IRP세액공제,연금저축IRP,절세계산기,퇴직연금세액공제,노후준비절세">
+<link rel="canonical" href="https://calckit.wooahouse.com/pension-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/pension-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/pension-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/pension-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연금저축·IRP 세액공제 계산기 2026 — 납입액 기준 절세 금액 무료 계산 | WooaCalc">
+<meta property="og:description" content="연금저축과 IRP 납입액에 따른 세액공제 금액을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/pension-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="연금저축·IRP 세액공제 계산기 2026 — 납입액 기준 절세 금액 무료 계산 | WooaCalc">
+  <meta name="twitter:description" content="연금저축과 IRP 납입액에 따른 세액공제 금액을 계산합니다.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"연금저축·IRP 세액공제 계산기","url":"https://calckit.wooahouse.com/pension-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6464921081676309"
+     data-ad-slot="7080296704"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>연금저축·IRP 세액공제 계산기</div>
+<div class="tool-header"><div class="tool-icon">🏦</div><div><h1>연금저축·IRP 세액공제 계산기 2026</h1><p>납입액 기준 세액공제 금액과 절세 효과를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="totalSalary">총급여 (만원/년)</label><input type="number" id="totalSalary" placeholder="예: 5000" min="0"></div>
+    <div class="form-row">
+      <div class="form-group"><label for="pensionSavings">연금저축 납입액 (만원/년)</label><input type="number" id="pensionSavings" placeholder="최대 600만원" min="0" value="0"></div>
+      <div class="form-group"><label for="irp">IRP 추가 납입액 (만원/년)</label><input type="number" id="irp" placeholder="최대 300만원 추가" min="0" value="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcPensionTax()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTaxCredit"></div>
+    <div class="result-label">세액공제 금액 (연말정산 환급 예상)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">적용 세액공제율</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">연금저축 공제 대상액</span><span class="value" id="resPensionBase"></span></div>
+      <div class="result-row"><span class="label">IRP 공제 대상액</span><span class="value" id="resIRPBase"></span></div>
+      <div class="result-row"><span class="label">총 공제 대상 납입액</span><span class="value" id="resTotalBase"></span></div>
+      <div class="result-row"><span class="label">세액공제 한도</span><span class="value" id="resLimit"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">예상 절세액 (세액공제)</span><span class="value" id="resSaving"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 연금저축·IRP 세액공제 팁</h3><ul>
+  <li>총급여 5,500만원 이하: 16.5% 공제율 / 초과: 13.2% 공제율 적용</li>
+  <li>연금저축 단독 최대 600만원, IRP 포함 합산 최대 900만원까지 공제 가능</li>
+  <li>50세 이상은 연금저축 600만원 + IRP 합산 900만원 한도 동일 적용</li>
+  <li>IRP만 있어도 900만원 한도 내 전액 세액공제 적용 가능</li>
+</ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>연금저축과 IRP 중 무엇이 더 유리한가요?</summary><p>IRP는 연금저축보다 투자 상품 선택이 제한적이지만, 연금저축 600만원 한도를 채운 후 IRP로 추가 300만원까지 세액공제를 받을 수 있어 병행이 유리합니다.</p></details><details><summary>세액공제와 소득공제의 차이는 무엇인가요?</summary><p>소득공제는 과세표준을 낮추는 방식이고, 세액공제는 계산된 세금에서 직접 차감하는 방식입니다. 연금저축·IRP는 세액공제 방식이므로 소득에 관계없이 동일한 절세 효과를 냅니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:250px"
+         data-ad-client="ca-pub-6464921081676309"
+         data-ad-slot="1419180025"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>
+      new PartnersCoupang.G({"id":974224,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});
+    </script>
+  </div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연금저축 세액공제 한도는?","acceptedAnswer":{"@type":"Answer","text":"연금저축 단독 연 600만원, IRP 포함 합산 연 900만원까지 세액공제 대상입니다."}},{"@type":"Question","name":"세액공제율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"총급여 5,500만원 이하는 16.5%, 초과는 13.2%가 적용됩니다."}},{"@type":"Question","name":"중도 해지 시 불이익이 있나요?","acceptedAnswer":{"@type":"Answer","text":"중도 해지 시 기존에 받은 세액공제액과 운용 이익에 대해 기타소득세 16.5%가 부과됩니다."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>금융 계산기</h4><a href="salary.html">연봉 실수령액</a><a href="national-pension.html">국민연금 수령액</a><a href="pension-tax.html">연금저축·IRP 세액공제</a><a href="income-tax.html">종합소득세 계산기</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcPensionTax() {
+  const salary   = parseFloat(document.getElementById('totalSalary').value) * 10000;
+  const pension  = parseFloat(document.getElementById('pensionSavings').value || 0) * 10000;
+  const irp      = parseFloat(document.getElementById('irp').value || 0) * 10000;
+  if(!salary) { alert('총급여를 입력해주세요.'); return; }
+
+  // 세액공제율
+  const rate = salary <= 55000000 ? 0.165 : 0.132;
+
+  // 연금저축 한도: 6,000,000원
+  const pensionBase = Math.min(pension, 6000000);
+  // 연금저축+IRP 합산 한도: 9,000,000원
+  const totalContrib = pension + irp;
+  const totalBase = Math.min(totalContrib, 9000000);
+  // IRP 공제 대상 (합산 한도에서 연금저축 제외)
+  const irpBase = Math.max(0, totalBase - pensionBase);
+
+  const taxCredit = totalBase * rate;
+
+  document.getElementById('resRate').textContent = (rate * 100).toFixed(1) + '%';
+  document.getElementById('resPensionBase').textContent = fmt(pensionBase) + '원';
+  document.getElementById('resIRPBase').textContent = fmt(irpBase) + '원';
+  document.getElementById('resTotalBase').textContent = fmt(totalBase) + '원';
+  document.getElementById('resLimit').textContent = '최대 ' + fmt(9000000 * rate) + '원';
+  document.getElementById('resSaving').textContent = fmt(taxCredit) + '원';
+  document.getElementById('resTaxCredit').textContent = fmt(taxCredit) + '원';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+</body>
+</html>

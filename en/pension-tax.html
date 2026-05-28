@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Pension Savings & IRP Tax Credit Calculator 2026 — Free | WooaCalc</title>
+<meta name="description" content="Calculate your Korean pension savings (연금저축) and IRP tax credit for 2026. Up to ₩9M combined deductible at 13.2%–16.5% credit rate. Free browser calculator.">
+<meta name="keywords" content="Korea pension savings tax credit, IRP tax deduction Korea, 연금저축IRP세액공제, retirement tax savings Korea, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/pension-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/pension-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/pension-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/pension-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Pension Savings & IRP Tax Credit Calculator 2026 | WooaCalc">
+<meta property="og:description" content="Calculate your pension savings and IRP tax credit at 13.2%–16.5% rates. Up to ₩9M combined deductible.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/pension-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Korea Pension Savings & IRP Tax Credit Calculator 2026 | WooaCalc">
+  <meta name="twitter:description" content="Calculate your pension savings and IRP tax credit at 13.2%–16.5% rates.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pension Savings & IRP Tax Credit Calculator","url":"https://calckit.wooahouse.com/en/pension-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6464921081676309"
+     data-ad-slot="7080296704"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Pension & IRP Tax Credit</div>
+<div class="tool-header"><div class="tool-icon">🏦</div><div><h1>Pension Savings & IRP Tax Credit Calculator 2026</h1><p>Estimate annual tax savings from Korean pension savings and IRP contributions</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="totalSalary">Total Annual Salary (10,000 KRW)</label><input type="number" id="totalSalary" placeholder="e.g. 5000" min="0"></div>
+    <div class="form-row">
+      <div class="form-group"><label for="pensionSavings">Pension Savings Contributions (10,000 KRW/yr)</label><input type="number" id="pensionSavings" placeholder="max ₩6M" min="0" value="0"></div>
+      <div class="form-group"><label for="irp">IRP Additional Contributions (10,000 KRW/yr)</label><input type="number" id="irp" placeholder="max ₩3M additional" min="0" value="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcPensionTax()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTaxCredit"></div>
+    <div class="result-label">Tax Credit (Year-end Refund Estimate)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Tax Credit Rate</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">Pension Savings Eligible Amount</span><span class="value" id="resPensionBase"></span></div>
+      <div class="result-row"><span class="label">IRP Eligible Amount</span><span class="value" id="resIRPBase"></span></div>
+      <div class="result-row"><span class="label">Total Eligible Contributions</span><span class="value" id="resTotalBase"></span></div>
+      <div class="result-row"><span class="label">Maximum Credit Available</span><span class="value" id="resLimit"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Estimated Tax Savings</span><span class="value" id="resSaving"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Pension Tax Credit Tips</h3><ul>
+  <li>Annual salary ≤ ₩55M: 16.5% credit rate / above ₩55M: 13.2% credit rate</li>
+  <li>Pension savings alone: max ₩6M eligible / combined with IRP: max ₩9M eligible</li>
+  <li>IRP-only contributions also qualify up to ₩9M combined limit</li>
+  <li>Early withdrawal triggers 16.5% miscellaneous income tax on all previous credits + earnings</li>
+</ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><details><summary>Pension savings vs IRP — which is better?</summary><p>IRP has more restricted investment options, but after maxing out pension savings at ₩6M, contributing an additional ₩3M to IRP gives you the full ₩9M combined credit — both are worth using together.</p></details><details><summary>What is the difference between tax deduction and tax credit?</summary><p>A tax deduction reduces taxable income, while a tax credit directly reduces the tax owed. Pension savings and IRP use the tax credit method, so the savings amount is the same regardless of income bracket.</p></details><details><summary>Is my data saved?</summary><p>No. All calculations happen entirely in your browser. No data is transmitted to any server.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:250px"
+         data-ad-client="ca-pub-6464921081676309"
+         data-ad-slot="1419180025"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;"></div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the pension savings contribution limit?","acceptedAnswer":{"@type":"Answer","text":"Pension savings alone: up to ₩6M. Combined with IRP: up to ₩9M eligible for tax credit."}},{"@type":"Question","name":"What is the tax credit rate?","acceptedAnswer":{"@type":"Answer","text":"16.5% for total salary ≤ ₩55M; 13.2% for above ₩55M."}},{"@type":"Question","name":"What happens if I withdraw early?","acceptedAnswer":{"@type":"Answer","text":"Early withdrawal triggers 16.5% miscellaneous income tax on previously credited amounts and investment gains."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="salary.html">Salary Calculator</a><a href="pension-tax.html">Pension & IRP Tax Credit</a><a href="income-tax.html">Income Tax</a><a href="mortgage-limit.html">Mortgage Limit</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'KRW';}
+function calcPensionTax() {
+  const salary   = parseFloat(document.getElementById('totalSalary').value) * 10000;
+  const pension  = parseFloat(document.getElementById('pensionSavings').value || 0) * 10000;
+  const irp      = parseFloat(document.getElementById('irp').value || 0) * 10000;
+  if(!salary) { alert('Please enter your total annual salary.'); return; }
+  const rate = salary <= 55000000 ? 0.165 : 0.132;
+  const pensionBase = Math.min(pension, 6000000);
+  const totalContrib = pension + irp;
+  const totalBase = Math.min(totalContrib, 9000000);
+  const irpBase = Math.max(0, totalBase - pensionBase);
+  const taxCredit = totalBase * rate;
+  document.getElementById('resRate').textContent = (rate * 100).toFixed(1) + '%';
+  document.getElementById('resPensionBase').textContent = fmt(pensionBase);
+  document.getElementById('resIRPBase').textContent = fmt(irpBase);
+  document.getElementById('resTotalBase').textContent = fmt(totalBase);
+  document.getElementById('resLimit').textContent = 'Max ' + fmt(9000000 * rate);
+  document.getElementById('resSaving').textContent = fmt(taxCredit);
+  document.getElementById('resTaxCredit').textContent = fmt(taxCredit);
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+</body>
+</html>

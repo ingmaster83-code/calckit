@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Income Tax Calculator 2026 — Comprehensive Tax Brackets Free | WooaCalc</title>
+<meta name="description" content="Calculate Korean comprehensive income tax (종합소득세) for 2026 using 6%–45% progressive brackets with personal deductions. Free browser calculator, no install.">
+<meta name="keywords" content="Korea income tax calculator, comprehensive income tax Korea, 종합소득세, Korean tax brackets 2026, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/income-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/income-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/income-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/income-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Income Tax Calculator 2026 — Comprehensive Tax Brackets Free | WooaCalc">
+<meta property="og:description" content="Calculate Korean comprehensive income tax for 2026 using progressive brackets with personal deductions.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/income-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Korea Income Tax Calculator 2026 | WooaCalc">
+  <meta name="twitter:description" content="Calculate Korean comprehensive income tax for 2026 using progressive brackets with personal deductions.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Income Tax Calculator","url":"https://calckit.wooahouse.com/en/income-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6464921081676309"
+     data-ad-slot="7080296704"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Income Tax Calculator</div>
+<div class="tool-header"><div class="tool-icon">📊</div><div><h1>Korea Income Tax Calculator 2026</h1><p>Progressive 6%–45% brackets with personal deductions</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="incomeType">Income Type</label>
+        <select id="incomeType">
+          <option value="work">Employment Income</option>
+          <option value="business">Business Income</option>
+          <option value="other">Other Comprehensive Income</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="totalIncome">Total Income (10,000 KRW)</label><input type="number" id="totalIncome" placeholder="e.g. 5000" min="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dependents">Dependents (including self)</label>
+        <select id="dependents">
+          <option value="1">1 person</option><option value="2">2 persons</option><option value="3">3 persons</option>
+          <option value="4">4 persons</option><option value="5">5 persons</option><option value="6">6 persons</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="extraDeduction">Additional Deductions (10,000 KRW)</label><input type="number" id="extraDeduction" placeholder="e.g. 200" min="0" value="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcIncomeTax()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTax"></div>
+    <div class="result-label">Estimated Income Tax (incl. local tax)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Total Income</span><span class="value" id="resIncome"></span></div>
+      <div class="result-row"><span class="label">Total Deductions</span><span class="value" id="resDeduction"></span></div>
+      <div class="result-row"><span class="label">Taxable Base</span><span class="value" id="resTaxBase"></span></div>
+      <div class="result-row"><span class="label">Marginal Rate</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">Income Tax</span><span class="value" id="resCalcTax"></span></div>
+      <div class="result-row"><span class="label">Local Income Tax (10%)</span><span class="value" id="resLocal"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Total Tax Payable</span><span class="value" id="resTotal"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Income Tax Tips</h3><ul>
+  <li>2026 brackets: 6% (under ₩14M) to 45% (over ₩1B) — 8 progressive tiers</li>
+  <li>Employment income deduction (근로소득공제) applies before calculating the taxable base</li>
+  <li>Personal deduction: ₩1.5M per dependent; additional deductions for seniors/disabled</li>
+  <li>This is a simplified estimate — confirm exact figures with Hometax or a tax accountant</li>
+</ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><details><summary>What is comprehensive income tax in Korea?</summary><p>Comprehensive income tax (종합소득세) aggregates all income types — employment, business, interest, dividends, etc. — and is filed annually in May at progressive tax rates.</p></details><details><summary>How does the employment income deduction work?</summary><p>Korea provides a tiered deduction from gross employment income before applying tax brackets. The deduction is highest for lower incomes and capped at ₩20M for high earners.</p></details><details><summary>Is my data saved?</summary><p>No. All calculations happen entirely in your browser. No data is transmitted to any server.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle"
+         style="display:block;width:100%;min-height:250px"
+         data-ad-client="ca-pub-6464921081676309"
+         data-ad-slot="1419180025"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;"></div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is comprehensive income tax in Korea?","acceptedAnswer":{"@type":"Answer","text":"It aggregates all income types and is filed in May at progressive rates from 6% to 45%."}},{"@type":"Question","name":"What is the employment income deduction?","acceptedAnswer":{"@type":"Answer","text":"A tiered deduction from gross employment income before tax brackets apply, capped at ₩20M."}},{"@type":"Question","name":"Is this an exact calculation?","acceptedAnswer":{"@type":"Answer","text":"This is a simplified estimate. Confirm exact figures with Hometax or a certified tax accountant."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">25+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="salary.html">Salary Calculator</a><a href="income-tax.html">Income Tax Calculator</a><a href="financial-income-tax.html">Financial Income Tax</a><a href="mortgage-limit.html">Mortgage Limit</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR')+'KRW';}
+function calcTaxByBracket(taxBase) {
+  if(taxBase<=14000000)      return taxBase*0.06;
+  if(taxBase<=50000000)      return taxBase*0.15 - 1260000;
+  if(taxBase<=88000000)      return taxBase*0.24 - 5760000;
+  if(taxBase<=150000000)     return taxBase*0.35 - 15440000;
+  if(taxBase<=300000000)     return taxBase*0.38 - 19940000;
+  if(taxBase<=500000000)     return taxBase*0.40 - 25940000;
+  if(taxBase<=1000000000)    return taxBase*0.42 - 35940000;
+  return taxBase*0.45 - 65940000;
+}
+function getRate(taxBase) {
+  if(taxBase<=14000000)   return '6%';
+  if(taxBase<=50000000)   return '15%';
+  if(taxBase<=88000000)   return '24%';
+  if(taxBase<=150000000)  return '35%';
+  if(taxBase<=300000000)  return '38%';
+  if(taxBase<=500000000)  return '40%';
+  if(taxBase<=1000000000) return '42%';
+  return '45%';
+}
+function workDeduction(income) {
+  if(income<=5000000)       return income*0.70;
+  if(income<=15000000)      return 3500000+(income-5000000)*0.40;
+  if(income<=45000000)      return 7500000+(income-15000000)*0.15;
+  if(income<=100000000)     return 12000000+(income-45000000)*0.05;
+  return Math.min(14750000+(income-100000000)*0.02, 20000000);
+}
+function calcIncomeTax() {
+  const incomeType = document.getElementById('incomeType').value;
+  const totalIncome = parseFloat(document.getElementById('totalIncome').value) * 10000;
+  const dep = parseInt(document.getElementById('dependents').value);
+  const extra = parseFloat(document.getElementById('extraDeduction').value || 0) * 10000;
+  if(!totalIncome) { alert('Please enter your total income.'); return; }
+  let deduction = 0;
+  if(incomeType === 'work') deduction += workDeduction(totalIncome);
+  deduction += dep * 1500000;
+  deduction += extra;
+  deduction = Math.min(deduction, totalIncome);
+  const taxBase = Math.max(0, totalIncome - deduction);
+  const incomeTax = Math.max(0, calcTaxByBracket(taxBase));
+  const localTax = incomeTax * 0.1;
+  const total = incomeTax + localTax;
+  document.getElementById('resIncome').textContent = fmt(totalIncome);
+  document.getElementById('resDeduction').textContent = '-' + fmt(deduction);
+  document.getElementById('resTaxBase').textContent = fmt(taxBase);
+  document.getElementById('resRate').textContent = getRate(taxBase);
+  document.getElementById('resCalcTax').textContent = fmt(incomeTax);
+  document.getElementById('resLocal').textContent = fmt(localTax);
+  document.getElementById('resTotal').textContent = fmt(total);
+  document.getElementById('resTax').textContent = fmt(total);
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+</body>
+</html>
