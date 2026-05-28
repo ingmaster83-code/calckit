@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Vehicle Acquisition Tax Calculator 2026 — Free | WooaCalc</title>
+<meta name="description" content="Calculate Korea's vehicle acquisition tax (취득세) by vehicle type for 2026. Passenger cars 7%, compact cars 4% (up to ₩750K discount), commercial 4%, trucks/vans 5%, motorcycles 2%.">
+<meta name="keywords" content="Korea vehicle acquisition tax, car tax Korea, 자동차취득세, compact car tax discount, vehicle purchase tax Korea, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/car-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/car-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/car-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/car-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Vehicle Acquisition Tax Calculator 2026 | WooaCalc">
+<meta property="og:description" content="Calculate vehicle acquisition tax by type. Passenger 7%, compact 4% (max ₩750K off), commercial 4%, trucks 5%, motorcycles 2%.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/car-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Korea Vehicle Acquisition Tax Calculator 2026 | WooaCalc">
+  <meta name="twitter:description" content="Calculate vehicle acquisition tax by type for 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Vehicle Acquisition Tax Calculator","url":"https://calckit.wooahouse.com/en/car-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Vehicle Acquisition Tax Calculator</div>
+<div class="tool-header"><div class="tool-icon">🚗</div><div><h1>Korea Vehicle Acquisition Tax Calculator 2026</h1><p>Calculate acquisition tax by vehicle type instantly</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="carType">Vehicle Type</label>
+        <select id="carType" onchange="updateRate()">
+          <option value="0.07">Non-commercial Passenger Car (7%)</option>
+          <option value="0.04_light">Compact Car — under 1000cc (4%, discount applies)</option>
+          <option value="0.04">Commercial Passenger Car (4%)</option>
+          <option value="0.05">Van / Truck (5%)</option>
+          <option value="0.02">Motorcycle (2%)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="carCondition">New / Used</label>
+        <select id="carCondition">
+          <option value="new">New</option>
+          <option value="used">Used</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label for="carPrice">Acquisition Price (KRW 10,000 units)</label><input type="number" id="carPrice" placeholder="e.g. 3500" min="0"></div>
+    <div class="form-group" id="stdPriceGroup" style="display:none"><label for="stdPrice">Standard Market Value (KRW 10,000 units — enter same as price if unknown)</label><input type="number" id="stdPrice" placeholder="e.g. 3000" min="0"></div>
+    <button class="btn btn-primary btn-full" onclick="calcCarTax()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTax"></div>
+    <div class="result-label">Estimated Acquisition Tax</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Acquisition Price</span><span class="value" id="resPrice"></span></div>
+      <div class="result-row"><span class="label">Tax Base</span><span class="value" id="resTaxBase"></span></div>
+      <div class="result-row"><span class="label">Tax Rate</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">Calculated Tax</span><span class="value" id="resCalc"></span></div>
+      <div class="result-row"><span class="label">Discount</span><span class="value" id="resDiscount"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Final Tax Due</span><span class="value" id="resFinal"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 Vehicle Tax Tips</h3><ul>
+  <li>Non-commercial passenger car acquisition tax rate: 7% (2026 standard)</li>
+  <li>Compact cars (under 1000cc): 4% rate with up to ₩750,000 discount for 1 personal vehicle</li>
+  <li>Used cars: the higher of actual transaction price or standard market value is used as the tax base</li>
+  <li>Electric vehicles follow the same rate structure based on vehicle category</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><details><summary>How is the compact car discount applied?</summary><p>For compact cars (under 1000cc) registered for non-commercial use under a personal name (1 vehicle limit), a 4% tax rate applies with up to ₩750,000 deducted from the calculated tax.</p></details><details><summary>How is the tax base determined for used cars?</summary><p>The higher of the actual transaction price or the Ministry of Land, Infrastructure and Transport's standard market value becomes the tax base. You can check the standard value at the Automobile365 website.</p></details><details><summary>Is my input data saved or uploaded?</summary><p>No. All calculations are performed entirely in your browser. No input data is sent to any server. Your information remains completely private.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({"id":974224,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});</script>
+  </div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are Korea's vehicle acquisition tax rates?","acceptedAnswer":{"@type":"Answer","text":"Non-commercial passenger cars 7%, compact cars 4% (up to ₩750K discount), commercial vehicles 4%, trucks/vans 5%, motorcycles 2%."}},{"@type":"Question","name":"Who qualifies for the compact car discount?","acceptedAnswer":{"@type":"Answer","text":"Individuals purchasing one compact car (under 1000cc) for non-commercial use qualify for up to ₩750,000 off the acquisition tax."}},{"@type":"Question","name":"How is the used car tax base calculated?","acceptedAnswer":{"@type":"Answer","text":"The higher of the actual transaction price or the standard market value set by the Ministry of Land, Infrastructure and Transport is used."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20+ free online calculators</p></div><div class="footer-col"><h4>Finance Calculators</h4><a href="../loan-interest.html">Loan Interest</a><a href="../acquisition-tax.html">Property Acquisition Tax</a><a href="../car-tax.html">Vehicle Acquisition Tax</a><a href="../capital-gains-tax.html">Capital Gains Tax</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>Info</h4><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+document.getElementById('carCondition').addEventListener('change', function(){
+  document.getElementById('stdPriceGroup').style.display = this.value === 'used' ? 'block' : 'none';
+});
+function updateRate(){}
+function calcCarTax(){
+  const typeVal = document.getElementById('carType').value;
+  const condition = document.getElementById('carCondition').value;
+  const price = parseFloat(document.getElementById('carPrice').value) * 10000;
+  if(!price){ alert('Please enter the acquisition price.'); return; }
+
+  let taxBase = price;
+  if(condition === 'used'){
+    const std = parseFloat(document.getElementById('stdPrice').value || 0) * 10000;
+    taxBase = std > 0 ? Math.max(price, std) : price;
+  }
+
+  const isLight = typeVal === '0.04_light';
+  const rate = isLight ? 0.04 : parseFloat(typeVal);
+  const calcTax = taxBase * rate;
+  const discount = isLight ? Math.min(calcTax, 750000) : 0;
+  const finalTax = calcTax - discount;
+
+  document.getElementById('resPrice').textContent = '₩' + fmt(price);
+  document.getElementById('resTaxBase').textContent = '₩' + fmt(taxBase);
+  document.getElementById('resRate').textContent = (rate * 100) + '%';
+  document.getElementById('resCalc').textContent = '₩' + fmt(calcTax);
+  document.getElementById('resDiscount').textContent = discount > 0 ? '-₩' + fmt(discount) + ' (compact car discount)' : 'None';
+  document.getElementById('resFinal').textContent = '₩' + fmt(finalTax);
+  document.getElementById('resTax').textContent = '₩' + fmt(finalTax);
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월세 수익률 계산기 2026 — 임대수익률·순수익률 무료 계산 | WooaCalc</title>
+<meta name="description" content="월세 수익률을 쉽게 계산합니다. 매입가, 월세, 보증금, 관리비, 대출이자 등을 입력해 총수익률과 순수익률을 즉시 산출합니다. 2026년 최신 기준.">
+<meta name="keywords" content="월세수익률계산기,임대수익률,부동산수익률,월세계산,투자수익률계산,순수익률">
+<link rel="canonical" href="https://calckit.wooahouse.com/rent-yield.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/rent-yield.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/rent-yield.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/rent-yield.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="월세 수익률 계산기 2026 — 임대수익률 무료 계산 | WooaCalc">
+<meta property="og:description" content="월세 수익률을 간편하게 계산합니다. 총수익률·순수익률 즉시 산출.">
+<meta property="og:url" content="https://calckit.wooahouse.com/rent-yield.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="월세 수익률 계산기 2026 | WooaCalc">
+  <meta name="twitter:description" content="월세 수익률을 간편하게 계산합니다.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"월세 수익률 계산기","url":"https://calckit.wooahouse.com/rent-yield.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>월세 수익률 계산기</div>
+<div class="tool-header"><div class="tool-icon">🏠</div><div><h1>월세 수익률 계산기 2026</h1><p>임대수익률과 순수익률을 간편하게 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="buyPrice">매입가 (만원)</label>
+        <input type="number" id="buyPrice" placeholder="예: 30000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="deposit">보증금 (만원)</label>
+        <input type="number" id="deposit" placeholder="예: 1000" min="0" value="0">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="monthlyRent">월세 (만원/월)</label>
+        <input type="number" id="monthlyRent" placeholder="예: 80" min="0">
+      </div>
+      <div class="form-group">
+        <label for="manageFee">관리비 부담 (만원/월, 없으면 0)</label>
+        <input type="number" id="manageFee" placeholder="예: 5" min="0" value="0">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="loanAmt">대출금액 (만원, 없으면 0)</label>
+        <input type="number" id="loanAmt" placeholder="예: 15000" min="0" value="0">
+      </div>
+      <div class="form-group">
+        <label for="loanRate">대출금리 (%, 연)</label>
+        <input type="number" id="loanRate" placeholder="예: 4.5" min="0" step="0.1" value="0">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="annualCost">연간 기타 비용 (만원/년 — 재산세·수선비 등, 없으면 0)</label>
+      <input type="number" id="annualCost" placeholder="예: 100" min="0" value="0">
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcRentYield()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resYield"></div>
+    <div class="result-label">순 임대 수익률 (연)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">실투자금 (매입가 − 보증금)</span><span class="value" id="resInvest"></span></div>
+      <div class="result-row"><span class="label">연간 월세 수입</span><span class="value" id="resGrossIncome"></span></div>
+      <div class="result-row"><span class="label">연간 대출이자</span><span class="value" id="resLoanInterest"></span></div>
+      <div class="result-row"><span class="label">연간 관리비 부담</span><span class="value" id="resManage"></span></div>
+      <div class="result-row"><span class="label">연간 기타 비용</span><span class="value" id="resCost"></span></div>
+      <div class="result-row"><span class="label">연간 순수입</span><span class="value" id="resNetIncome"></span></div>
+      <div class="result-row"><span class="label">총 수익률 (보증금 차감 전)</span><span class="value" id="resGrossYield"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">순 수익률 (비용 차감 후)</span><span class="value" id="resNetYield"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 월세 수익률 팁</h3><ul>
+  <li>실투자금 = 매입가 − 보증금. 보증금이 높을수록 수익률이 높아 보입니다.</li>
+  <li>순수익률은 대출이자·관리비·재산세 등 모든 비용을 차감한 실질 수익률입니다.</li>
+  <li>일반적으로 순수익률 3~4%면 양호, 5% 이상이면 우수한 투자로 평가됩니다.</li>
+  <li>공실 기간을 감안하면 실질 수익률은 더 낮아질 수 있습니다.</li>
+</ul></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>총 수익률과 순 수익률의 차이는?</summary><p>총 수익률은 비용을 고려하지 않고 월세 수입만으로 계산한 수익률입니다. 순 수익률은 대출이자·관리비·재산세 등 모든 지출을 차감한 실질 수익률로, 실제 투자 성과를 더 정확하게 나타냅니다.</p></details><details><summary>보증금은 어떻게 반영되나요?</summary><p>보증금은 임차인에게 받아 운용할 수 있는 자금이므로 실투자금(매입가 − 보증금)에서 차감해 수익률을 계산합니다. 단, 임대 종료 시 반환해야 하므로 자산으로 취급하지 않습니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({"id":974224,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});</script>
+  </div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"월세 수익률은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"연간 순수입(월세 × 12 − 대출이자 − 관리비 − 기타비용)을 실투자금(매입가 − 보증금)으로 나눠 계산합니다."}},{"@type":"Question","name":"좋은 월세 수익률 기준은?","acceptedAnswer":{"@type":"Answer","text":"일반적으로 순수익률 3~4%면 양호, 5% 이상이면 우수한 투자로 평가됩니다. 지역·금리·공실률에 따라 다를 수 있습니다."}},{"@type":"Question","name":"공실은 어떻게 반영하나요?","acceptedAnswer":{"@type":"Answer","text":"이 계산기는 만실(100% 임대) 기준으로 계산합니다. 공실률을 고려하려면 월세에 (1 − 공실률)을 곱해 입력하세요."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>금융 계산기</h4><a href="loan-interest.html">대출이자 계산기</a><a href="acquisition-tax.html">부동산 취득세</a><a href="rent-yield.html">월세 수익률</a><a href="jeonse-conversion.html">전·월세 전환율</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function fmtPct(n){return n.toFixed(2) + '%';}
+function calcRentYield(){
+  const buyPrice = parseFloat(document.getElementById('buyPrice').value) * 10000;
+  const deposit  = parseFloat(document.getElementById('deposit').value  || 0) * 10000;
+  const monthly  = parseFloat(document.getElementById('monthlyRent').value) * 10000;
+  const manage   = parseFloat(document.getElementById('manageFee').value  || 0) * 10000;
+  const loanAmt  = parseFloat(document.getElementById('loanAmt').value   || 0) * 10000;
+  const loanRate = parseFloat(document.getElementById('loanRate').value   || 0) / 100;
+  const otherAnnual = parseFloat(document.getElementById('annualCost').value || 0) * 10000;
+
+  if(!buyPrice){ alert('매입가를 입력해주세요.'); return; }
+  if(!monthly){  alert('월세를 입력해주세요.'); return; }
+
+  const invest = buyPrice - deposit;
+  const grossIncome = monthly * 12;
+  const loanInterest = loanAmt * loanRate;
+  const manageAnnual = manage * 12;
+  const netIncome = grossIncome - loanInterest - manageAnnual - otherAnnual;
+
+  const grossYield = invest > 0 ? (grossIncome / invest) * 100 : 0;
+  const netYield   = invest > 0 ? (netIncome   / invest) * 100 : 0;
+
+  document.getElementById('resInvest').textContent      = fmt(invest) + '원';
+  document.getElementById('resGrossIncome').textContent = fmt(grossIncome) + '원';
+  document.getElementById('resLoanInterest').textContent= fmt(loanInterest) + '원';
+  document.getElementById('resManage').textContent      = fmt(manageAnnual) + '원';
+  document.getElementById('resCost').textContent        = fmt(otherAnnual) + '원';
+  document.getElementById('resNetIncome').textContent   = fmt(netIncome) + '원';
+  document.getElementById('resGrossYield').textContent  = fmtPct(grossYield);
+  document.getElementById('resNetYield').textContent    = fmtPct(netYield);
+  document.getElementById('resYield').textContent       = fmtPct(netYield);
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+  <meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+  <meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자동차 취득세 계산기 2026 — 차량 유형별 취득세 무료 계산 | WooaCalc</title>
+<meta name="description" content="2026년 자동차 취득세를 차량 유형(비영업용·경차·영업용·이륜차)별로 계산합니다. 신차·중고차 취득가액 입력만으로 취득세를 즉시 산출합니다.">
+<meta name="keywords" content="자동차취득세계산기,차량취득세,자동차세,경차취득세,취득세계산,자동차구매세금">
+<link rel="canonical" href="https://calckit.wooahouse.com/car-tax.html">
+  <link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/car-tax.html">
+  <link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/car-tax.html">
+  <link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/car-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="자동차 취득세 계산기 2026 — 차량 유형별 취득세 무료 계산 | WooaCalc">
+<meta property="og:description" content="2026년 자동차 취득세를 차량 유형별로 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/car-tax.html">
+  <meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+  <meta property="og:site_name" content="WooaCalc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="자동차 취득세 계산기 2026 | WooaCalc">
+  <meta name="twitter:description" content="2026년 자동차 취득세를 차량 유형별로 계산합니다.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"자동차 취득세 계산기","url":"https://calckit.wooahouse.com/car-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>자동차 취득세 계산기</div>
+<div class="tool-header"><div class="tool-icon">🚗</div><div><h1>자동차 취득세 계산기 2026</h1><p>차량 유형별 취득세를 간편하게 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="carType">차량 유형</label>
+        <select id="carType" onchange="updateRate()">
+          <option value="0.07">비영업용 승용차 (7%)</option>
+          <option value="0.04_light">경차 — 1000cc 미만 (4%, 감면 적용)</option>
+          <option value="0.04">영업용 승용차 (4%)</option>
+          <option value="0.05">승합차·화물차 (5%)</option>
+          <option value="0.02">이륜차 (2%)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="carCondition">신차 / 중고차</label>
+        <select id="carCondition">
+          <option value="new">신차</option>
+          <option value="used">중고차</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label for="carPrice">취득 가액 (만원)</label><input type="number" id="carPrice" placeholder="예: 3500" min="0"></div>
+    <div class="form-group" id="stdPriceGroup" style="display:none"><label for="stdPrice">시가표준액 (만원, 중고차 — 모를 경우 취득가와 동일 입력)</label><input type="number" id="stdPrice" placeholder="예: 3000" min="0"></div>
+    <button class="btn btn-primary btn-full" onclick="calcCarTax()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTax"></div>
+    <div class="result-label">납부 예상 취득세</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">차량 취득가액</span><span class="value" id="resPrice"></span></div>
+      <div class="result-row"><span class="label">과세표준</span><span class="value" id="resTaxBase"></span></div>
+      <div class="result-row"><span class="label">취득세율</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">산출 취득세</span><span class="value" id="resCalc"></span></div>
+      <div class="result-row"><span class="label">감면액</span><span class="value" id="resDiscount"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">최종 납부 취득세</span><span class="value" id="resFinal"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 자동차 취득세 팁</h3><ul>
+  <li>비영업용 일반 승용차 취득세율: 7% (2026년 기준)</li>
+  <li>경차(1000cc 미만) 비영업용: 4% 세율, 개인 1대 한정 최대 75만원 감면</li>
+  <li>중고차는 실거래가와 시가표준액 중 높은 금액이 과세표준</li>
+  <li>전기차도 동일 세율 적용 (차종별 세율 기준)</li>
+</ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>경차 취득세 감면은 어떻게 적용되나요?</summary><p>배기량 1000cc 미만 경차를 비영업용으로 취득 시 취득세 4% 적용, 산출세액에서 최대 75만원까지 감면됩니다. 개인 명의 1대에 한해 적용됩니다.</p></details><details><summary>중고차 과세표준은 어떻게 결정되나요?</summary><p>실거래가와 국토교통부 고시 시가표준액 중 높은 금액이 과세표준이 됩니다. 시가표준액은 자동차365 사이트에서 확인할 수 있습니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+
+<aside class="tool-sidebar">
+  <div class="ad-card">
+    <ins class="adsbygoogle" style="display:block;width:100%;min-height:250px" data-ad-client="ca-pub-6464921081676309" data-ad-slot="1419180025" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  <div class="ad-card" style="margin-top:16px;overflow:hidden;">
+    <script src="https://ads-partners.coupang.com/g.js"></script>
+    <script>new PartnersCoupang.G({"id":974224,"trackingCode":"AF5600192","subId":null,"template":"carousel","width":"300","height":"250"});</script>
+  </div>
+</aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"자동차 취득세율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"비영업용 승용차 7%, 경차 4%(최대 75만원 감면), 영업용 4%, 이륜차 2%입니다."}},{"@type":"Question","name":"경차 취득세 감면 조건은?","acceptedAnswer":{"@type":"Answer","text":"배기량 1000cc 미만 비영업용 경차를 개인 명의 1대로 취득 시 최대 75만원 감면됩니다."}},{"@type":"Question","name":"중고차 취득세 과세표준은?","acceptedAnswer":{"@type":"Answer","text":"실거래가와 시가표준액 중 높은 금액이 과세표준이 됩니다."}}]}</script>
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-col"><h4>🧮 WooaCalc</h4><p style="color:#9CA3AF;font-size:.84rem;line-height:1.6">20가지 무료 온라인 계산기 모음</p></div><div class="footer-col"><h4>금융 계산기</h4><a href="loan-interest.html">대출이자 계산기</a><a href="acquisition-tax.html">부동산 취득세</a><a href="car-tax.html">자동차 취득세</a><a href="capital-gains-tax.html">양도소득세</a></div><div class="footer-col"><h4>WooaHouse Services</h4><a href="https://wooahouse.com/" target="_blank">🔗 WooaHouse</a><a href="https://pdfkit.wooahouse.com/" target="_blank">📄 WooaPDF</a><a href="https://textkit.wooahouse.com/" target="_blank">📝 WooaText</a></div><div class="footer-col"><h4>정보</h4><a href="about.html">서비스 소개</a><a href="privacy.html">개인정보처리방침</a></div></div><div class="footer-bottom">&copy; 2026 WooaCalc WooaCalc. All rights reserved.</div></div></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+document.getElementById('carCondition').addEventListener('change', function(){
+  document.getElementById('stdPriceGroup').style.display = this.value === 'used' ? 'block' : 'none';
+});
+function updateRate(){}
+function calcCarTax(){
+  const typeVal = document.getElementById('carType').value;
+  const condition = document.getElementById('carCondition').value;
+  const price = parseFloat(document.getElementById('carPrice').value) * 10000;
+  if(!price){ alert('취득 가액을 입력해주세요.'); return; }
+
+  // 과세표준: 중고차는 max(실거래가, 시가표준액)
+  let taxBase = price;
+  if(condition === 'used'){
+    const std = parseFloat(document.getElementById('stdPrice').value || 0) * 10000;
+    taxBase = std > 0 ? Math.max(price, std) : price;
+  }
+
+  const isLight = typeVal === '0.04_light';
+  const rate = isLight ? 0.04 : parseFloat(typeVal);
+  const calcTax = taxBase * rate;
+
+  // 경차 감면: 최대 75만원
+  const discount = isLight ? Math.min(calcTax, 750000) : 0;
+  const finalTax = calcTax - discount;
+
+  document.getElementById('resPrice').textContent = fmt(price) + '원';
+  document.getElementById('resTaxBase').textContent = fmt(taxBase) + '원';
+  document.getElementById('resRate').textContent = (rate * 100) + '%';
+  document.getElementById('resCalc').textContent = fmt(calcTax) + '원';
+  document.getElementById('resDiscount').textContent = discount > 0 ? '-' + fmt(discount) + '원 (경차 감면)' : '없음';
+  document.getElementById('resFinal').textContent = fmt(finalTax) + '원';
+  document.getElementById('resTax').textContent = fmt(finalTax) + '원';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+</body>
+</html>
