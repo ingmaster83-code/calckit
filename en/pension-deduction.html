@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pension Savings & IRP Tax Credit Calculator 2026 – Year-End Tax Refund | WooaCalc</title>
+<meta name="description" content="Calculate your year-end tax refund from Korean pension savings (연금저축) and IRP contributions. Tax credit rates 13.2% or 16.5% applied automatically based on income.">
+<meta name="keywords" content="pension savings tax credit, IRP tax credit, year-end tax settlement, Korean pension tax, 연금저축, IRP calculator">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/pension-deduction.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/pension-deduction.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/pension-deduction.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/pension-deduction.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pension Savings & IRP Tax Credit Calculator 2026 | WooaCalc">
+<meta property="og:description" content="Calculate your year-end tax refund from pension savings and IRP contributions in Korea.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/pension-deduction.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pension Savings & IRP Tax Credit Calculator 2026 | WooaCalc">
+<meta name="twitter:description" content="Calculate your year-end tax refund from pension savings and IRP in Korea.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pension Savings & IRP Tax Credit Calculator","url":"https://calckit.wooahouse.com/en/pension-deduction.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Pension Savings & IRP Tax Credit Calculator</div>
+<div class="tool-header"><div class="tool-icon">🏦</div><div><h1>Pension Savings & IRP Tax Credit Calculator 2026</h1><p>Estimate your year-end tax refund from pension savings and IRP contributions</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="salary">Annual Salary (10,000 KRW units)</label>
+        <input type="number" id="salary" placeholder="e.g. 5000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="ageOver50">Age</label>
+        <select id="ageOver50">
+          <option value="0">Under 50</option>
+          <option value="1">50 or older</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pensionAmt">Pension Savings Contribution (10,000 KRW)</label>
+        <input type="number" id="pensionAmt" placeholder="e.g. 600" min="0">
+      </div>
+      <div class="form-group">
+        <label for="irpAmt">IRP Contribution (10,000 KRW)</label>
+        <input type="number" id="irpAmt" placeholder="e.g. 300" min="0" value="0">
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcPension()">Calculate</button>
+  </div>
+
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resRefund"></div>
+    <div class="result-label">Estimated Year-End Tax Refund</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Annual Salary</span><span class="value" id="resSalary"></span></div>
+      <div class="result-row"><span class="label">Tax Credit Rate</span><span class="value" id="resRate"></span></div>
+      <div class="result-row"><span class="label">Pension Savings Contribution</span><span class="value" id="resPension"></span></div>
+      <div class="result-row"><span class="label">IRP Contribution</span><span class="value" id="resIrp"></span></div>
+      <div class="result-row"><span class="label">Credit Limit</span><span class="value" id="resLimit"></span></div>
+      <div class="result-row"><span class="label">Applicable Amount</span><span class="value" id="resApplied"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Tax Credit (Est. Refund)</span><span class="value" id="resFinal"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Pension Savings & IRP Tax Credit Tips</h3><ul>
+  <li>Annual salary ≤ 55 million KRW: 16.5% credit rate / Above: 13.2%</li>
+  <li>Credit limit: pension savings up to 6 million KRW + combined with IRP up to 9 million KRW (since 2023)</li>
+  <li>IRP-only contributions can receive up to 9 million KRW in credit</li>
+  <li>Early withdrawal from pension savings triggers 16.5% other income tax — maintain long-term</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>Are the limits combined when I have both pension savings and IRP?</summary><p>Yes. Pension savings (연금저축) up to 6 million KRW and combined with IRP up to 9 million KRW total can receive a tax credit. IRP alone can also receive up to 9 million KRW.</p></details>
+<details><summary>What credit rate applies at exactly 55 million KRW salary?</summary><p>At or below 55 million KRW the 16.5% rate applies. Exactly 55 million KRW falls within the 16.5% bracket.</p></details>
+<details><summary>Is my data stored or sent to any server?</summary><p>No. All calculations are performed entirely within your browser and no input data is transmitted to any server. Your information is completely safe.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the tax credit rate for pension savings and IRP?","acceptedAnswer":{"@type":"Answer","text":"16.5% for annual salary ≤ 55 million KRW, 13.2% above that."}},{"@type":"Question","name":"What is the tax credit limit?","acceptedAnswer":{"@type":"Answer","text":"Pension savings up to 6 million KRW, combined pension savings + IRP up to 9 million KRW."}}]}</script>
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcPension(){
+  const salary    = parseFloat(document.getElementById('salary').value)*10000;
+  const over50    = parseInt(document.getElementById('ageOver50').value);
+  const pensionW  = parseFloat(document.getElementById('pensionAmt').value||0)*10000;
+  const irpW      = parseFloat(document.getElementById('irpAmt').value||0)*10000;
+  if(!salary){alert('Please enter your annual salary.');return;}
+
+  const rate = salary <= 55000000 ? 0.165 : 0.132;
+
+  const pensionLimit = 6000000;
+  const totalLimit   = 9000000;
+
+  const pensionApplied = Math.min(pensionW, pensionLimit);
+  const totalInput     = pensionApplied + irpW;
+  const totalApplied   = Math.min(totalInput, totalLimit);
+  const deduction      = Math.round(totalApplied * rate);
+
+  document.getElementById('resSalary').textContent   = fmt(salary)+' KRW';
+  document.getElementById('resRate').textContent     = (rate*100).toFixed(1)+'%';
+  document.getElementById('resPension').textContent  = fmt(pensionW)+' KRW';
+  document.getElementById('resIrp').textContent      = fmt(irpW)+' KRW';
+  document.getElementById('resLimit').textContent    = 'Pension 6M / Combined 9M KRW';
+  document.getElementById('resApplied').textContent  = fmt(totalApplied)+' KRW';
+  document.getElementById('resFinal').textContent    = fmt(deduction)+' KRW';
+  document.getElementById('resRefund').textContent   = fmt(deduction)+' KRW';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

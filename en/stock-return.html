@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Return Calculator 2026 – P&L with Fees & Tax | WooaCalc</title>
+<meta name="description" content="Calculate net profit and return rate for Korean stocks including brokerage fee and securities transaction tax. Free stock profit calculator for KOSPI & KOSDAQ.">
+<meta name="keywords" content="stock return calculator, stock profit calculator, securities transaction tax, brokerage fee, KOSPI, KOSDAQ, stock investment">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/stock-return.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/stock-return.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/stock-return.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/stock-return.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Return Calculator 2026 | WooaCalc">
+<meta property="og:description" content="Calculate net profit and actual return rate including brokerage fee and securities transaction tax.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/stock-return.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stock Return Calculator 2026 | WooaCalc">
+<meta name="twitter:description" content="Calculate net profit and actual return rate including fees and tax.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Stock Return Calculator","url":"https://calckit.wooahouse.com/en/stock-return.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+    .lang-switcher { display:flex; align-items:center; gap:4px; }
+    .lang-switcher a { color:rgba(255,255,255,0.7); text-decoration:none; font-size:0.8rem; font-weight:600; padding:3px 8px; border-radius:12px; transition:background 0.15s; }
+    .lang-switcher a.active { color:white; background:rgba(255,255,255,0.25); }
+    .lang-switcher a:hover { color:white; background:rgba(255,255,255,0.18); }
+    .lang-switcher span { color:rgba(255,255,255,0.3); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Stock Return Calculator</div>
+<div class="tool-header"><div class="tool-icon">📈</div><div><h1>Stock Return Calculator 2026</h1><p>Calculate actual P&L and return rate including brokerage fees and securities transaction tax</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="market">Market</label>
+        <select id="market">
+          <option value="0.0018">KOSPI (transaction tax 0.18%)</option>
+          <option value="0.0018">KOSDAQ (transaction tax 0.18%)</option>
+          <option value="0">Overseas (tax calculated separately)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="feeRate">Brokerage Fee Rate (%)</label>
+        <input type="number" id="feeRate" value="0.015" step="0.001" min="0" placeholder="e.g. 0.015">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="buyPrice">Buy Price (KRW)</label>
+        <input type="number" id="buyPrice" placeholder="e.g. 75000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="qty">Quantity (shares)</label>
+        <input type="number" id="qty" placeholder="e.g. 10" min="1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="sellPrice">Sell Price (KRW)</label>
+      <input type="number" id="sellPrice" placeholder="e.g. 85000" min="0">
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcStock()">Calculate</button>
+  </div>
+
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resReturn" style="color:#10B981"></div>
+    <div class="result-label">Actual Return Rate (after tax)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Buy Amount</span><span class="value" id="resBuyAmt"></span></div>
+      <div class="result-row"><span class="label">Buy Fee</span><span class="value" id="resBuyFee"></span></div>
+      <div class="result-row"><span class="label">Total Buy Cost</span><span class="value" id="resBuyCost"></span></div>
+      <div class="result-row" style="border-top:1px solid #E5E7EB;margin-top:4px;padding-top:8px"><span class="label">Sell Amount</span><span class="value" id="resSellAmt"></span></div>
+      <div class="result-row"><span class="label">Sell Fee</span><span class="value" id="resSellFee"></span></div>
+      <div class="result-row"><span class="label">Transaction Tax</span><span class="value" id="resTax"></span></div>
+      <div class="result-row"><span class="label">Net Sell Proceeds</span><span class="value" id="resNetSell"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Net Profit/Loss</span><span class="value" id="resProfit"></span></div>
+      <div class="result-row" style="font-weight:700"><span class="label">Return Rate</span><span class="value" id="resReturnRow"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Stock Return Calculator Tips</h3><ul>
+  <li>Securities transaction tax: 0.18% for both KOSPI and KOSDAQ (unified since 2024)</li>
+  <li>Brokerage fees vary by broker; MTS apps typically charge 0.015–0.1%</li>
+  <li>Korean capital gains tax abolished for small investors in 2025 (금투세 폐지)</li>
+  <li>Overseas stocks: 22% capital gains tax applies on annual gains above 2.5 million KRW</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>Is the securities transaction tax charged only on selling?</summary><p>Yes, the transaction tax is applied only when selling. Both KOSPI and KOSDAQ are unified at 0.18% from 2024.</p></details>
+<details><summary>Is there capital gains tax on Korean stocks?</summary><p>The Financial Investment Income Tax (금투세) was abolished in 2025. General retail investors (minority shareholders) are not subject to capital gains tax on domestic Korean stocks. Major shareholders (holding over 1 billion KRW per stock) have separate tax rates.</p></details>
+<details><summary>Is my data stored or sent to any server?</summary><p>No. All calculations are performed entirely within your browser and no input data is transmitted to any server. Your information is completely safe.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When is the securities transaction tax charged?","acceptedAnswer":{"@type":"Answer","text":"Only on selling. KOSPI and KOSDAQ are both 0.18% from 2024."}},{"@type":"Question","name":"Is there capital gains tax on Korean stocks?","acceptedAnswer":{"@type":"Answer","text":"The 금투세 was abolished in 2025 — retail investors pay no capital gains tax on domestic stocks."}}]}</script>
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function fmtF(n){return n.toLocaleString('ko-KR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calcStock(){
+  const taxRate = parseFloat(document.getElementById('market').value);
+  const feeRate = parseFloat(document.getElementById('feeRate').value)/100;
+  const buyPrice = parseFloat(document.getElementById('buyPrice').value);
+  const qty = parseFloat(document.getElementById('qty').value);
+  const sellPrice = parseFloat(document.getElementById('sellPrice').value);
+  if(!buyPrice||!qty||!sellPrice){alert('Please fill in all fields.');return;}
+
+  const buyAmt   = buyPrice * qty;
+  const buyFee   = buyAmt * feeRate;
+  const buyCost  = buyAmt + buyFee;
+
+  const sellAmt  = sellPrice * qty;
+  const sellFee  = sellAmt * feeRate;
+  const sellTax  = sellAmt * taxRate;
+  const netSell  = sellAmt - sellFee - sellTax;
+
+  const profit   = netSell - buyCost;
+  const retRate  = (profit / buyCost) * 100;
+
+  document.getElementById('resBuyAmt').textContent   = fmt(buyAmt)+' KRW';
+  document.getElementById('resBuyFee').textContent   = '-'+fmt(buyFee)+' KRW';
+  document.getElementById('resBuyCost').textContent  = fmt(buyCost)+' KRW';
+  document.getElementById('resSellAmt').textContent  = fmt(sellAmt)+' KRW';
+  document.getElementById('resSellFee').textContent  = '-'+fmt(sellFee)+' KRW';
+  document.getElementById('resTax').textContent      = '-'+fmt(sellTax)+' KRW';
+  document.getElementById('resNetSell').textContent  = fmt(netSell)+' KRW';
+
+  const profitEl = document.getElementById('resProfit');
+  const color = profit >= 0 ? '#10B981' : '#EF4444';
+  profitEl.textContent = (profit>=0?'+':'')+fmt(profit)+' KRW';
+  profitEl.style.color = color;
+
+  const rateEl = document.getElementById('resReturnRow');
+  rateEl.textContent = (retRate>=0?'+':'')+fmtF(retRate)+'%';
+  rateEl.style.color = color;
+
+  const mainEl = document.getElementById('resReturn');
+  mainEl.textContent = (retRate>=0?'+':'')+fmtF(retRate)+'%';
+  mainEl.style.color = color;
+
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

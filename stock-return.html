@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9ZGENFSXWC');</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식 수익률 계산기 2026 — 매수·매도 수수료·세금 포함 손익 계산 | WooaCalc</title>
+<meta name="description" content="주식 매수가·매도가·수수료·증권거래세를 입력해 순수익과 수익률을 즉시 계산합니다. 코스피·코스닥 국내주식 수익률 무료 계산기.">
+<meta name="keywords" content="주식수익률계산기,주식손익계산,증권거래세,주식수수료계산,주식투자계산기">
+<link rel="canonical" href="https://calckit.wooahouse.com/stock-return.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/stock-return.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/stock-return.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/stock-return.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="주식 수익률 계산기 2026 | WooaCalc">
+<meta property="og:description" content="주식 매수·매도 수수료·세금 포함 순수익과 수익률을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/stock-return.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="주식 수익률 계산기 2026 | WooaCalc">
+<meta name="twitter:description" content="주식 수수료·증권거래세 포함 실제 수익률을 계산합니다.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"주식 수익률 계산기","url":"https://calckit.wooahouse.com/stock-return.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#finance">금융 계산기</a><span>›</span>주식 수익률 계산기</div>
+<div class="tool-header"><div class="tool-icon">📈</div><div><h1>주식 수익률 계산기 2026</h1><p>수수료·증권거래세 포함 실제 손익과 수익률을 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="market">시장</label>
+        <select id="market">
+          <option value="0.0018">코스피 (증권거래세 0.18%)</option>
+          <option value="0.0018">코스닥 (증권거래세 0.18%)</option>
+          <option value="0">해외주식 (세금 별도)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="feeRate">수수료율 (%)</label>
+        <input type="number" id="feeRate" value="0.015" step="0.001" min="0" placeholder="예: 0.015">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="buyPrice">매수 단가 (원)</label>
+        <input type="number" id="buyPrice" placeholder="예: 75000" min="0">
+      </div>
+      <div class="form-group">
+        <label for="qty">매수 수량 (주)</label>
+        <input type="number" id="qty" placeholder="예: 10" min="1">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="sellPrice">매도 단가 (원)</label>
+      <input type="number" id="sellPrice" placeholder="예: 85000" min="0">
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcStock()">계산하기</button>
+  </div>
+
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resReturn" style="color:#10B981"></div>
+    <div class="result-label">실제 수익률 (세후)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">매수금액</span><span class="value" id="resBuyAmt"></span></div>
+      <div class="result-row"><span class="label">매수 수수료</span><span class="value" id="resBuyFee"></span></div>
+      <div class="result-row"><span class="label">총 매수비용</span><span class="value" id="resBuyCost"></span></div>
+      <div class="result-row" style="border-top:1px solid #E5E7EB;margin-top:4px;padding-top:8px"><span class="label">매도금액</span><span class="value" id="resSellAmt"></span></div>
+      <div class="result-row"><span class="label">매도 수수료</span><span class="value" id="resSellFee"></span></div>
+      <div class="result-row"><span class="label">증권거래세</span><span class="value" id="resTax"></span></div>
+      <div class="result-row"><span class="label">실수령 매도금액</span><span class="value" id="resNetSell"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">순손익</span><span class="value" id="resProfit"></span></div>
+      <div class="result-row" style="font-weight:700"><span class="label">수익률</span><span class="value" id="resReturnRow"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 주식 수익률 계산 팁</h3><ul>
+  <li>증권거래세는 2024년부터 코스피·코스닥 모두 0.18% 적용</li>
+  <li>수수료는 증권사마다 다르며 MTS 기준 보통 0.015~0.1% 수준</li>
+  <li>국내주식은 2025년 금투세 폐지로 대주주 외 양도소득세 없음</li>
+  <li>해외주식은 연간 250만원 초과 수익에 양도소득세 22% 별도 적용</li>
+</ul></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2>
+<details><summary>증권거래세는 매도할 때만 내나요?</summary><p>네, 증권거래세는 매도 시에만 부과됩니다. 코스피·코스닥 모두 2024년부터 0.18%로 통일되었습니다.</p></details>
+<details><summary>국내주식에 양도소득세가 있나요?</summary><p>2025년 금융투자소득세(금투세)가 폐지되어 일반 투자자(소액주주)는 국내주식 양도소득세가 없습니다. 대주주(종목당 10억원 이상 보유)는 별도 세율이 적용됩니다.</p></details>
+<details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"증권거래세는 언제 내나요?","acceptedAnswer":{"@type":"Answer","text":"매도 시에만 부과되며 코스피·코스닥 모두 0.18%입니다."}},{"@type":"Question","name":"국내주식 양도소득세가 있나요?","acceptedAnswer":{"@type":"Answer","text":"2025년 금투세 폐지로 소액주주는 국내주식 양도소득세가 없습니다."}}]}</script>
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function fmtF(n){return n.toLocaleString('ko-KR',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calcStock(){
+  const taxRate = parseFloat(document.getElementById('market').value);
+  const feeRate = parseFloat(document.getElementById('feeRate').value)/100;
+  const buyPrice = parseFloat(document.getElementById('buyPrice').value);
+  const qty = parseFloat(document.getElementById('qty').value);
+  const sellPrice = parseFloat(document.getElementById('sellPrice').value);
+  if(!buyPrice||!qty||!sellPrice){alert('모든 항목을 입력해주세요.');return;}
+
+  const buyAmt   = buyPrice * qty;
+  const buyFee   = buyAmt * feeRate;
+  const buyCost  = buyAmt + buyFee;
+
+  const sellAmt  = sellPrice * qty;
+  const sellFee  = sellAmt * feeRate;
+  const sellTax  = sellAmt * taxRate;
+  const netSell  = sellAmt - sellFee - sellTax;
+
+  const profit   = netSell - buyCost;
+  const retRate  = (profit / buyCost) * 100;
+
+  document.getElementById('resBuyAmt').textContent   = fmt(buyAmt)+'원';
+  document.getElementById('resBuyFee').textContent   = '-'+fmt(buyFee)+'원';
+  document.getElementById('resBuyCost').textContent  = fmt(buyCost)+'원';
+  document.getElementById('resSellAmt').textContent  = fmt(sellAmt)+'원';
+  document.getElementById('resSellFee').textContent  = '-'+fmt(sellFee)+'원';
+  document.getElementById('resTax').textContent      = '-'+fmt(sellTax)+'원';
+  document.getElementById('resNetSell').textContent  = fmt(netSell)+'원';
+
+  const profitEl = document.getElementById('resProfit');
+  const color = profit >= 0 ? '#10B981' : '#EF4444';
+  profitEl.textContent = (profit>=0?'+':'')+fmt(profit)+'원';
+  profitEl.style.color = color;
+
+  const rateEl = document.getElementById('resReturnRow');
+  rateEl.textContent = (retRate>=0?'+':'')+fmtF(retRate)+'%';
+  rateEl.style.color = color;
+
+  const mainEl = document.getElementById('resReturn');
+  mainEl.textContent = (retRate>=0?'+':'')+fmtF(retRate)+'%';
+  mainEl.style.color = color;
+
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
