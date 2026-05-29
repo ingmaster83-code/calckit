@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Military Discharge Date Calculator 2026 — D-Day Countdown Free | WooaCalc</title>
+<meta name="description" content="Calculate your Korean military discharge date and D-Day countdown from your enlistment date. Supports Army, Navy, Air Force, Marines, and social service workers. Free, no install.">
+<meta name="keywords" content="Korea military discharge calculator, 전역일 calculator, Korean conscription end date, military service countdown, army discharge date Korea">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/military-discharge.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/military-discharge.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/military-discharge.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/military-discharge.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Military Discharge Date Calculator 2026 — D-Day Countdown Free | WooaCalc">
+<meta property="og:description" content="Calculate your Korean military discharge date and D-Day countdown. Army, Navy, Air Force, Marines, social service workers and more.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/military-discharge.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korea Military Discharge Date Calculator 2026 — D-Day Countdown Free | WooaCalc">
+<meta name="twitter:description" content="Calculate your Korean military discharge date and D-Day countdown. Supports all service types.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Military Discharge Date Calculator","url":"https://calckit.wooahouse.com/en/military-discharge.html","applicationCategory":"UtilitiesApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<style>
+.progress-bar-wrap { background:#E5E7EB; border-radius:99px; height:14px; overflow:hidden; margin:12px 0 4px; }
+.progress-bar { height:100%; border-radius:99px; background:linear-gradient(90deg,#3B82F6,#10B981); transition:width .6s; }
+.dday-big { font-size:2rem; font-weight:800; }
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#date">Date Calculators</a><span>›</span>Military Discharge Date Calculator</div>
+<div class="tool-header"><div class="tool-icon">🪖</div><div><h1>Korea Military Discharge Calculator 2026</h1><p>Calculate discharge date and D-Day countdown from enlistment date</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-group"><label for="enlistDate">Enlistment Date</label><input type="date" id="enlistDate"></div>
+    <div class="form-group">
+      <label for="serviceType">Service Type</label>
+      <select id="serviceType">
+        <option value="18">Army (18 months)</option>
+        <option value="20">Navy (20 months)</option>
+        <option value="21">Air Force (21 months)</option>
+        <option value="18b">Marines (18 months)</option>
+        <option value="21s">Social Service Worker (21 months)</option>
+        <option value="18p">Military Police (18 months)</option>
+        <option value="20c">Coast Guard (20 months)</option>
+        <option value="18f">Fire Service (18 months)</option>
+        <option value="36d">Public Health Doctor (36 months)</option>
+        <option value="36l">Public Legal Officer (36 months)</option>
+        <option value="36r">Research Expert (36 months)</option>
+        <option value="36i">Industrial Technician (36 months)</option>
+      </select>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcDischarge()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resDischarge"></div>
+    <div class="result-label">Discharge Date</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Service Type</span><span class="value" id="resServicePeriod"></span></div>
+      <div class="result-row"><span class="label">D-Day</span><span class="value dday-big" id="resDday"></span></div>
+      <div class="result-row"><span class="label">Days Served</span><span class="value" id="resElapsed"></span></div>
+      <div class="result-row"><span class="label">Days Remaining</span><span class="value" id="resRemain"></span></div>
+    </div>
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+    <p style="text-align:center;font-size:.8rem;color:#9CA3AF;margin:4px 0 0" id="progressText"></p>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul>
+  <li>The discharge date is calculated by adding the service months to the enlistment date</li>
+  <li>The Air Force has the longest active duty (21 months); Army and Marines serve 18 months (2026 standard)</li>
+  <li>Alternative service types (public health doctor, research expert, etc.) serve 36 months</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>How is the discharge date calculated?</summary><p>The discharge date is the enlistment date plus the number of service months. For example, enlisting on January 1 with 18 months of service gives a discharge date of July 1 the following year.</p></details>
+<details><summary>Can service periods change?</summary><p>Yes. Korean military service durations may change based on government policy. This calculator reflects the 2026 standard service periods. Verify your exact discharge date with your unit.</p></details>
+<details><summary>Is my data saved anywhere?</summary><p>No. All calculations run entirely in your browser. No data is sent to any server.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script>
+const SERVICE_MONTHS = {
+  '18':18,'20':20,'21':21,'18b':18,'21s':21,'18p':18,'20c':20,'18f':18,
+  '36d':36,'36l':36,'36r':36,'36i':36
+};
+
+function fmtDate(d){ return d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); }
+
+function calcDischarge(){
+  const enlistStr=document.getElementById('enlistDate').value;
+  const svcKey=document.getElementById('serviceType').value;
+  if(!enlistStr){alert('Please enter your enlistment date.');return;}
+
+  const months=SERVICE_MONTHS[svcKey];
+  const enlist=new Date(enlistStr);
+  const discharge=new Date(enlist);
+  discharge.setMonth(discharge.getMonth()+months);
+
+  const today=new Date();
+  today.setHours(0,0,0,0);
+
+  const totalMs=discharge-enlist;
+  const elapsedMs=Math.max(0,today-enlist);
+  const remainMs=Math.max(0,discharge-today);
+
+  const totalDays=Math.round(totalMs/(1000*60*60*24));
+  const elapsedDays=Math.min(totalDays,Math.round(elapsedMs/(1000*60*60*24)));
+  const remainDays=Math.round(remainMs/(1000*60*60*24));
+  const pct=Math.min(100,Math.round(elapsedDays/totalDays*100));
+
+  const ddaySign=today>=discharge ? 'Discharged!' : ('D-'+remainDays);
+
+  const svcLabel=document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+  document.getElementById('resDischarge').textContent=fmtDate(discharge);
+  document.getElementById('resServicePeriod').textContent=svcLabel;
+  document.getElementById('resDday').textContent=ddaySign;
+  document.getElementById('resDday').style.color=today>=discharge?'#10B981':'#3B82F6';
+  document.getElementById('resElapsed').textContent=elapsedDays+' days';
+  document.getElementById('resRemain').textContent=remainDays>0?remainDays+' days remaining':'Discharged!';
+  document.getElementById('progressBar').style.width=pct+'%';
+  document.getElementById('progressText').textContent='Service progress: '+pct+'%';
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

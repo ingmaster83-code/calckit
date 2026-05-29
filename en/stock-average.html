@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Average Cost Calculator — Dollar Cost Averaging Free Tool | WooaCalc</title>
+<meta name="description" content="Calculate your average stock purchase price instantly. Enter multiple buy orders to get total shares, total investment, average cost basis, and P&amp;L at current price. Free, no install.">
+<meta name="keywords" content="stock average cost calculator, average share price, dollar cost averaging, cost basis calculator, stock DCA calculator">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/stock-average.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/stock-average.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/stock-average.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/stock-average.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Average Cost Calculator — Dollar Cost Averaging Free Tool | WooaCalc">
+<meta property="og:description" content="Calculate your average stock purchase price instantly. Enter multiple buy orders to get total shares, total investment, average cost basis, and P&L.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/stock-average.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stock Average Cost Calculator — Dollar Cost Averaging Free Tool | WooaCalc">
+<meta name="twitter:description" content="Calculate your average stock purchase price instantly. Enter multiple buy orders to get total shares, total investment, average cost basis, and P&L.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Stock Average Cost Calculator","url":"https://calckit.wooahouse.com/en/stock-average.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+.buy-row { display:grid; grid-template-columns:1fr 1fr auto; gap:8px; align-items:end; margin-bottom:8px; }
+.buy-row input { width:100%; }
+.remove-btn { background:#EF4444; color:#fff; border:none; border-radius:8px; padding:10px 14px; cursor:pointer; font-size:1rem; line-height:1; flex-shrink:0; }
+.remove-btn:hover { background:#DC2626; }
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Stock Average Cost Calculator</div>
+<div class="tool-header"><div class="tool-icon">📊</div><div><h1>Stock Average Cost Calculator</h1><p>Instantly calculate average cost basis for multiple buy orders</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <p style="font-size:.85rem;color:#6B7280;margin-bottom:12px">Add your buy orders and click <strong>Calculate</strong>. Up to 10 rows supported.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:4px;">
+      <span style="font-size:.8rem;color:#6B7280;font-weight:600">Shares</span>
+      <span style="font-size:.8rem;color:#6B7280;font-weight:600">Price per Share</span>
+      <span></span>
+    </div>
+    <div id="rows"></div>
+    <button class="btn btn-secondary" id="addRow" onclick="addRow()" style="margin-bottom:12px">+ Add Buy Order</button>
+    <div class="form-group">
+      <label for="currentPrice">Current Price (optional)</label>
+      <input type="number" id="currentPrice" placeholder="Enter to calculate P&L" min="0">
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcAvg()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resAvg"></div>
+    <div class="result-label">Average Cost Basis</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Total Shares</span><span class="value" id="resTotalShares"></span></div>
+      <div class="result-row"><span class="label">Total Investment</span><span class="value" id="resTotalCost"></span></div>
+      <div class="result-row hidden" id="rowCurrent"><span class="label">Current Value</span><span class="value" id="resCurrentVal"></span></div>
+      <div class="result-row hidden" id="rowPnl"><span class="label">Profit / Loss</span><span class="value" id="resPnl"></span></div>
+      <div class="result-row hidden" id="rowRate"><span class="label">Return Rate</span><span class="value" id="resRate"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul>
+  <li>Average cost = Total investment ÷ Total shares. Adding shares at a lower price (DCA) reduces your average cost basis.</li>
+  <li>Enter a current price to instantly see your unrealised profit or loss across the whole position.</li>
+  <li>You can mix buy orders at different prices to simulate adding to a position over time.</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>How is the average cost calculated?</summary><p>Average cost = Total Investment ÷ Total Shares. Each buy order contributes (shares × price) to the total investment and shares tally.</p></details>
+<details><summary>What is dollar-cost averaging (DCA)?</summary><p>DCA means buying additional shares at lower prices to reduce your average cost basis. This calculator lets you see exactly how much each new purchase moves your average.</p></details>
+<details><summary>Is my data saved anywhere?</summary><p>No. All calculations run entirely in your browser. No data is sent to any server.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script>
+function fmtF(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+let rowCount=0;
+function addRow(){
+  if(rowCount>=10){alert('Maximum 10 buy orders.');return;}
+  rowCount++;
+  const id=rowCount;
+  const div=document.createElement('div');
+  div.className='buy-row';
+  div.id='row-'+id;
+  div.innerHTML=`<input type="number" id="qty-${id}" placeholder="Shares" min="0" step="1"><input type="number" id="price-${id}" placeholder="Price" min="0"><button class="remove-btn" onclick="removeRow(${id})">✕</button>`;
+  document.getElementById('rows').appendChild(div);
+}
+function removeRow(id){
+  const el=document.getElementById('row-'+id);
+  if(el) el.remove();
+}
+function calcAvg(){
+  const rows=document.querySelectorAll('.buy-row');
+  let totalShares=0, totalCost=0;
+  for(const row of rows){
+    const id=row.id.split('-')[1];
+    const qty=parseFloat(document.getElementById('qty-'+id).value)||0;
+    const price=parseFloat(document.getElementById('price-'+id).value)||0;
+    if(qty<=0||price<=0) continue;
+    totalShares+=qty;
+    totalCost+=qty*price;
+  }
+  if(totalShares===0){alert('Please enter at least one valid buy order.');return;}
+  const avg=totalCost/totalShares;
+  document.getElementById('resAvg').textContent=fmtF(avg,4);
+  document.getElementById('resTotalShares').textContent=fmtF(totalShares,0)+' shares';
+  document.getElementById('resTotalCost').textContent=fmtF(totalCost,2);
+
+  const cp=parseFloat(document.getElementById('currentPrice').value)||0;
+  if(cp>0){
+    const curVal=cp*totalShares;
+    const pnl=curVal-totalCost;
+    const rate=(pnl/totalCost)*100;
+    document.getElementById('resCurrentVal').textContent=fmtF(curVal,2);
+    document.getElementById('resPnl').textContent=(pnl>=0?'+':'')+fmtF(pnl,2);
+    document.getElementById('resPnl').style.color=pnl>=0?'#10B981':'#EF4444';
+    document.getElementById('resRate').textContent=(rate>=0?'+':'')+fmtF(rate,2)+'%';
+    document.getElementById('resRate').style.color=rate>=0?'#10B981':'#EF4444';
+    ['rowCurrent','rowPnl','rowRate'].forEach(id=>document.getElementById(id).classList.remove('hidden'));
+  } else {
+    ['rowCurrent','rowPnl','rowRate'].forEach(id=>document.getElementById(id).classList.add('hidden'));
+  }
+  document.getElementById('result').classList.remove('hidden');
+}
+addRow(); addRow();
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

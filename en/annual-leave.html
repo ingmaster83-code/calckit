@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Annual Leave Calculator 2026 — Accrued Days by Start Date | WooaCalc</title>
+<meta name="description" content="Calculate accrued annual leave days under the Korean Labor Standards Act. Enter your start date and see how many leave days you have earned, used, and remaining. Free, no install.">
+<meta name="keywords" content="Korea annual leave calculator, Korean labor law leave, paid leave days Korea, 연차 계산기 English, accrued leave calculator">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/annual-leave.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/annual-leave.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/annual-leave.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/annual-leave.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea Annual Leave Calculator 2026 — Accrued Days by Start Date | WooaCalc">
+<meta property="og:description" content="Calculate accrued annual leave days under the Korean Labor Standards Act. Enter your start date to see earned, used, and remaining leave days.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/annual-leave.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korea Annual Leave Calculator 2026 — Accrued Days by Start Date | WooaCalc">
+<meta name="twitter:description" content="Calculate accrued annual leave days under the Korean Labor Standards Act.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korea Annual Leave Calculator","url":"https://calckit.wooahouse.com/en/annual-leave.html","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#life">Life Calculators</a><span>›</span>Annual Leave Calculator</div>
+<div class="tool-header"><div class="tool-icon">📅</div><div><h1>Korea Annual Leave Calculator 2026</h1><p>Accrued paid leave days under the Korean Labor Standards Act</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="joinDate">Employment Start Date</label><input type="date" id="joinDate"></div>
+      <div class="form-group"><label for="baseDate">Reference Date (today)</label><input type="date" id="baseDate"></div>
+    </div>
+    <div class="form-group"><label for="usedLeave">Leave Days Used (optional)</label><input type="number" id="usedLeave" placeholder="0" min="0" step="0.5"></div>
+    <div class="form-group"><label for="dailyWage">Daily Wage (KRW, optional — for unused leave pay)</label><input type="number" id="dailyWage" placeholder="Enter to calculate unused leave allowance" min="0"></div>
+    <button class="btn btn-primary btn-full" onclick="calcLeave()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTotalLeave"></div>
+    <div class="result-label">Accrued Leave Days</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Tenure</span><span class="value" id="resTenure"></span></div>
+      <div class="result-row"><span class="label">Accrual Rule Applied</span><span class="value" id="resMethod"></span></div>
+      <div class="result-row"><span class="label">Days Used</span><span class="value" id="resUsed"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Remaining Leave</span><span class="value" id="resRemaining"></span></div>
+      <div class="result-row hidden" id="rowAllowance"><span class="label">Unused Leave Allowance (est.)</span><span class="value" id="resAllowance"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul>
+  <li>Under 1 year of employment: 1 day per completed month (max 11 days). These days are separate from the 15-day annual allowance.</li>
+  <li>1+ year: 15 days base. From 3 years onward, 1 extra day is added every 2 years, up to a maximum of 25 days.</li>
+  <li>Unused leave allowance = remaining days × daily wage (통상임금). It is paid upon resignation or year-end.</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>How does Korean annual leave accrue in the first year?</summary><p>For the first 12 months, employees earn 1 day per completed month of service (up to 11 days). After completing one full year, a fresh 15-day entitlement is granted.</p></details>
+<details><summary>What is the maximum annual leave in Korea?</summary><p>25 days per year. The base is 15 days from year 1. From year 3 onward, 1 additional day is added every 2 years, reaching 25 days after 21+ years of service.</p></details>
+<details><summary>Is my data saved anywhere?</summary><p>No. All calculations run entirely in your browser. No data is sent to any server.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script>
+document.getElementById('baseDate').valueAsDate = new Date();
+
+function calcLeave(){
+  const joinStr=document.getElementById('joinDate').value;
+  const baseStr=document.getElementById('baseDate').value;
+  const used=parseFloat(document.getElementById('usedLeave').value)||0;
+  const dailyWage=parseFloat(document.getElementById('dailyWage').value)||0;
+  if(!joinStr||!baseStr){alert('Please enter both dates.');return;}
+
+  const join=new Date(joinStr);
+  const base=new Date(baseStr);
+  if(base<join){alert('Reference date cannot be before start date.');return;}
+
+  const diffMs=base-join;
+  const diffDays=Math.floor(diffMs/(1000*60*60*24));
+  const totalMonths=(base.getFullYear()-join.getFullYear())*12+(base.getMonth()-join.getMonth());
+  const years=Math.floor(totalMonths/12);
+  const months=totalMonths%12;
+
+  let totalLeave=0, method='';
+  if(totalMonths<12){
+    totalLeave=Math.min(11,totalMonths);
+    method='Under 1 year — 1 day/month (max 11)';
+  } else {
+    const baseDays=15;
+    const extraYears=Math.max(0,years-1);
+    const extra=Math.floor(extraYears/2);
+    totalLeave=Math.min(25,baseDays+extra);
+    method='Year '+(years===1?'1–2':years)+' — '+totalLeave+' days'+(years>=3?' (incl. seniority bonus)':'');
+  }
+
+  const remaining=Math.max(0,totalLeave-used);
+  document.getElementById('resTotalLeave').textContent=totalLeave+' days';
+  document.getElementById('resTenure').textContent=years+' yr '+months+' mo ('+diffDays+' days)';
+  document.getElementById('resMethod').textContent=method;
+  document.getElementById('resUsed').textContent=used+' days';
+  document.getElementById('resRemaining').textContent=remaining+' days';
+
+  if(dailyWage>0){
+    const allowance=remaining*dailyWage;
+    document.getElementById('resAllowance').textContent=allowance.toLocaleString('en-US')+' KRW';
+    document.getElementById('rowAllowance').classList.remove('hidden');
+  } else {
+    document.getElementById('rowAllowance').classList.add('hidden');
+  }
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

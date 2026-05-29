@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연차 계산기 2026 — 입사일 기준 연차 발생일수·잔여 연차 무료 계산 | WooaCalc</title>
+<meta name="description" content="입사일을 입력하면 근로기준법 기준 발생 연차 일수를 자동으로 계산합니다. 1년 미만 월차, 1년 이상 15일, 3년 이상 가산 등 2026년 기준 연차 계산기 무료 무설치.">
+<meta name="keywords" content="연차 계산기,연차 발생일수,연차 계산,입사일 연차,근로기준법 연차,연차수당 계산기">
+<link rel="canonical" href="https://calckit.wooahouse.com/annual-leave.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/annual-leave.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/annual-leave.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/annual-leave.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연차 계산기 2026 — 입사일 기준 연차 발생일수·잔여 연차 무료 계산 | WooaCalc">
+<meta property="og:description" content="입사일을 입력하면 근로기준법 기준 발생 연차 일수를 자동으로 계산합니다. 2026년 기준 연차 계산기.">
+<meta property="og:url" content="https://calckit.wooahouse.com/annual-leave.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="연차 계산기 2026 — 입사일 기준 연차 발생일수·잔여 연차 무료 계산 | WooaCalc">
+<meta name="twitter:description" content="입사일을 입력하면 근로기준법 기준 발생 연차 일수를 자동으로 계산합니다.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"연차 계산기","url":"https://calckit.wooahouse.com/annual-leave.html","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/#life">생활 계산기</a><span>›</span>연차 계산기</div>
+<div class="tool-header"><div class="tool-icon">📅</div><div><h1>연차 계산기 2026</h1><p>근로기준법 기준 입사일별 연차 발생일수를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="joinDate">입사일</label><input type="date" id="joinDate"></div>
+      <div class="form-group"><label for="baseDate">기준일 (오늘)</label><input type="date" id="baseDate"></div>
+    </div>
+    <div class="form-group"><label for="usedLeave">사용한 연차 (일, 선택)</label><input type="number" id="usedLeave" placeholder="0" min="0" step="0.5"></div>
+    <div class="form-group"><label for="dailyWage">일급 (원, 연차수당 계산 선택)</label><input type="number" id="dailyWage" placeholder="입력 시 미사용 연차수당 계산" min="0"></div>
+    <button class="btn btn-primary btn-full" onclick="calcLeave()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTotalLeave"></div>
+    <div class="result-label">발생 연차 일수</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">근속 기간</span><span class="value" id="resTenure"></span></div>
+      <div class="result-row"><span class="label">연차 산정 방식</span><span class="value" id="resMethod"></span></div>
+      <div class="result-row"><span class="label">사용한 연차</span><span class="value" id="resUsed"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">잔여 연차</span><span class="value" id="resRemaining"></span></div>
+      <div class="result-row hidden" id="rowAllowance"><span class="label">미사용 연차수당 (추정)</span><span class="value" id="resAllowance"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 연차 계산 팁</h3><ul>
+  <li>입사 1년 미만: 매월 개근 시 1일씩 발생 (최대 11일). 이 연차는 다음 해 15일 연차에서 차감하지 않습니다</li>
+  <li>입사 1년 이상: 15일 기본 발생, 3년 이상부터 2년마다 1일 가산 (최대 25일)</li>
+  <li>연차수당은 미사용 연차에 통상임금 1일분을 곱한 금액입니다</li>
+</ul></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2>
+<details><summary>1년 미만 월차와 1년 이상 연차는 별개인가요?</summary><p>네. 입사 1년 미만에 발생하는 월 1일 연차(최대 11일)는 별도로 발생하며, 1년이 지나면 15일의 연차가 새로 발생합니다. 단, 회사에 따라 1년 미만 연차를 15일에서 차감하는 경우도 있습니다.</p></details>
+<details><summary>연차 최대 일수는 몇 일인가요?</summary><p>근로기준법 상 최대 25일입니다. 입사 3년차부터 2년마다 1일씩 가산되며, 입사 21년 이상이면 25일에 도달합니다.</p></details>
+<details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1년 미만 월차와 1년 이상 연차는 별개인가요?","acceptedAnswer":{"@type":"Answer","text":"네. 입사 1년 미만에 발생하는 월 1일 연차(최대 11일)는 별도로 발생하며, 1년이 지나면 15일의 연차가 새로 발생합니다."}},{"@type":"Question","name":"연차 최대 일수는 몇 일인가요?","acceptedAnswer":{"@type":"Answer","text":"근로기준법 상 최대 25일입니다. 입사 3년차부터 2년마다 1일씩 가산되며, 입사 21년 이상이면 25일에 도달합니다."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력 데이터는 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+
+<script>
+// 오늘 날짜 자동 세팅
+document.getElementById('baseDate').valueAsDate = new Date();
+
+function calcLeave(){
+  const joinStr=document.getElementById('joinDate').value;
+  const baseStr=document.getElementById('baseDate').value;
+  const used=parseFloat(document.getElementById('usedLeave').value)||0;
+  const dailyWage=parseFloat(document.getElementById('dailyWage').value)||0;
+  if(!joinStr||!baseStr){alert('입사일과 기준일을 모두 입력해주세요.');return;}
+
+  const join=new Date(joinStr);
+  const base=new Date(baseStr);
+  if(base<join){alert('기준일이 입사일보다 앞설 수 없습니다.');return;}
+
+  // 근속 개월수
+  const diffMs=base-join;
+  const diffDays=Math.floor(diffMs/(1000*60*60*24));
+  const totalMonths=(base.getFullYear()-join.getFullYear())*12+(base.getMonth()-join.getMonth());
+  const years=Math.floor(totalMonths/12);
+  const months=totalMonths%12;
+
+  let totalLeave=0, method='';
+
+  if(totalMonths<12){
+    // 1년 미만: 매월 개근 시 1일 (입사 후 완성된 달 수)
+    totalLeave=totalMonths;
+    if(totalLeave>11) totalLeave=11;
+    method='1년 미만 — 매월 1일 (최대 11일)';
+  } else {
+    // 1년 이상: 15일 + 3년 이상 2년마다 1일 가산
+    const baseDays=15;
+    const extraYears=Math.max(0,years-1);
+    const extra=Math.floor(extraYears/2);
+    totalLeave=Math.min(25,baseDays+extra);
+    if(years===1) method='1~2년 차 — 15일';
+    else if(years<3) method='2년 차 — 15일';
+    else method=years+'년 차 — '+(baseDays+extra)+'일 (3년 이상 가산 포함)';
+  }
+
+  const remaining=Math.max(0,totalLeave-used);
+
+  document.getElementById('resTotalLeave').textContent=totalLeave+'일';
+  document.getElementById('resTenure').textContent=years+'년 '+months+'개월 ('+diffDays+'일)';
+  document.getElementById('resMethod').textContent=method;
+  document.getElementById('resUsed').textContent=used+'일';
+  document.getElementById('resRemaining').textContent=remaining+'일';
+
+  if(dailyWage>0){
+    const allowance=remaining*dailyWage;
+    document.getElementById('resAllowance').textContent=allowance.toLocaleString('ko-KR')+'원';
+    document.getElementById('rowAllowance').classList.remove('hidden');
+  } else {
+    document.getElementById('rowAllowance').classList.add('hidden');
+  }
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Period & Ovulation Calculator — Next Period, Fertile Window Free | WooaCalc</title>
+<meta name="description" content="Enter your last period date and cycle length to calculate your next period, ovulation date, and fertile window. 3-month forecast included. Free, no install, no account.">
+<meta name="keywords" content="period calculator, ovulation calculator, fertile window calculator, menstrual cycle calculator, next period date, ovulation tracker">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/menstrual-cycle.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/menstrual-cycle.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/menstrual-cycle.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/menstrual-cycle.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Period & Ovulation Calculator — Next Period, Fertile Window Free | WooaCalc">
+<meta property="og:description" content="Enter your last period date and cycle length to calculate your next period, ovulation date, and fertile window. 3-month forecast included.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/menstrual-cycle.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Period & Ovulation Calculator — Next Period, Fertile Window Free | WooaCalc">
+<meta name="twitter:description" content="Enter your last period date and cycle length to calculate your next period, ovulation date, and fertile window.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Period & Ovulation Calculator","url":"https://calckit.wooahouse.com/en/menstrual-cycle.html","applicationCategory":"HealthApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<style>
+.cycle-table { width:100%; border-collapse:collapse; margin-top:12px; font-size:.875rem; }
+.cycle-table th { background:#F3F4F6; color:#374151; font-weight:700; padding:8px 10px; text-align:left; border-bottom:2px solid #E5E7EB; }
+.cycle-table td { padding:8px 10px; border-bottom:1px solid #E5E7EB; color:#374151; }
+.cycle-table tr:last-child td { border-bottom:none; }
+.tag-period { background:#FEE2E2; color:#DC2626; border-radius:4px; padding:2px 6px; font-size:.75rem; font-weight:700; }
+.tag-ovulation { background:#DCFCE7; color:#16A34A; border-radius:4px; padding:2px 6px; font-size:.75rem; font-weight:700; }
+.tag-fertile { background:#FEF9C3; color:#CA8A04; border-radius:4px; padding:2px 6px; font-size:.75rem; font-weight:700; }
+.notice { background:#FFF7ED; border:1px solid #FED7AA; border-radius:10px; padding:12px 16px; font-size:.82rem; color:#9A3412; margin-top:16px; line-height:1.6; }
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script></div>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit Converter</a><a href="/#life">🏠 Life</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#health">Health Calculators</a><span>›</span>Period & Ovulation Calculator</div>
+<div class="tool-header"><div class="tool-icon">🌸</div><div><h1>Period & Ovulation Calculator</h1><p>Next period date, ovulation day, and fertile window — 3-month forecast</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="lastPeriod">Last Period Start Date</label><input type="date" id="lastPeriod"></div>
+      <div class="form-group"><label for="cycleLength">Cycle Length (days)</label><input type="number" id="cycleLength" value="28" min="21" max="45"></div>
+    </div>
+    <div class="form-group"><label for="periodLength">Period Duration (days)</label><input type="number" id="periodLength" value="5" min="2" max="10"></div>
+    <button class="btn btn-primary btn-full" onclick="calcCycle()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resNextPeriod"></div>
+    <div class="result-label">Next Period Date</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Ovulation Date</span><span class="value" id="resOvulation"></span></div>
+      <div class="result-row"><span class="label">Fertile Window</span><span class="value" id="resFertile"></span></div>
+      <div class="result-row"><span class="label">Relatively Safe Period (est.)</span><span class="value" id="resSafe"></span></div>
+    </div>
+    <div id="scheduleWrap" style="margin-top:16px">
+      <p style="font-weight:700;font-size:.9rem;margin-bottom:4px">📅 3-Month Forecast</p>
+      <table class="cycle-table">
+        <thead><tr><th>#</th><th>Period Date</th><th>Ovulation</th><th>Fertile Window</th></tr></thead>
+        <tbody id="scheduleBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="notice">⚠️ This tool is for informational purposes only and should not be used as a medical diagnosis or contraception method. Consult a healthcare professional for accurate guidance.</div>
+</div>
+
+<div class="wooa-orig-anchor"></div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul>
+  <li>Ovulation is estimated as cycle length − 14 days (based on a fixed 14-day luteal phase)</li>
+  <li>The fertile window spans 5 days before ovulation to 1 day after, when conception is most likely</li>
+  <li>Irregular cycles can cause larger prediction errors — use average cycle length from recent months</li>
+</ul></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2>
+<details><summary>How is ovulation date calculated?</summary><p>The luteal phase (ovulation to next period) is typically a fixed 14 days. So ovulation = next period date − 14 days. Cycle length affects when ovulation occurs relative to the last period.</p></details>
+<details><summary>Can I use this if my cycle is irregular?</summary><p>You can use an average of your recent cycles as input, but predictions will be less accurate. For irregular cycles, we recommend consulting a doctor or using a dedicated period-tracking app.</p></details>
+<details><summary>Is my data saved anywhere?</summary><p>No. All calculations run entirely in your browser. No data is sent to any server.</p></details>
+</div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+<footer class="footer"></footer>
+
+<script>
+document.getElementById('lastPeriod').valueAsDate = new Date();
+
+function addDays(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
+function fmtDate(d){ return d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); }
+function fmtDateShort(d){ return d.toLocaleDateString('en-US',{month:'short',day:'numeric'}); }
+
+function calcCycle(){
+  const lastStr=document.getElementById('lastPeriod').value;
+  const cycle=parseInt(document.getElementById('cycleLength').value)||28;
+  const periodLen=parseInt(document.getElementById('periodLength').value)||5;
+  if(!lastStr){alert('Please enter your last period start date.');return;}
+  if(cycle<21||cycle>45){alert('Cycle length must be between 21 and 45 days.');return;}
+
+  const last=new Date(lastStr);
+  const nextPeriod=addDays(last,cycle);
+  const ovulation=addDays(nextPeriod,-14);
+  const fertileStart=addDays(ovulation,-5);
+  const fertileEnd=addDays(ovulation,1);
+  const safeEnd=addDays(fertileStart,-1);
+
+  document.getElementById('resNextPeriod').textContent=fmtDate(nextPeriod);
+  document.getElementById('resOvulation').textContent=fmtDate(ovulation);
+  document.getElementById('resFertile').textContent=fmtDate(fertileStart)+' – '+fmtDate(fertileEnd);
+  document.getElementById('resSafe').textContent='After period ends – '+fmtDate(safeEnd)+' (est.)';
+
+  const tbody=document.getElementById('scheduleBody');
+  tbody.innerHTML='';
+  for(let i=1;i<=3;i++){
+    const periodStart=addDays(last,cycle*i);
+    const ov=addDays(periodStart,-14);
+    const fs=addDays(ov,-5);
+    const fe=addDays(ov,1);
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${i}</td><td><span class="tag-period">${fmtDate(periodStart)}</span></td><td><span class="tag-ovulation">${fmtDate(ov)}</span></td><td><span class="tag-fertile">${fmtDateShort(fs)} – ${fmtDateShort(fe)}</span></td>`;
+    tbody.appendChild(tr);
+  }
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>
