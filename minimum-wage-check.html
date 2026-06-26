@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>최저임금 위반 판단 계산기 — 2025년 기준 | WooaCalc</title>
+<meta name="description" content="2025년 최저임금 10,030원 기준으로 시급·일급·월급이 최저임금을 충족하는지 판단합니다.">
+<meta name="keywords" content="최저임금계산기,최저임금위반,2025최저임금,시급계산기,월급최저임금,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/minimum-wage-check.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/minimum-wage-check.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/minimum-wage-check.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/minimum-wage-check.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="최저임금 위반 판단 계산기 — 2025년 기준 | WooaCalc">
+<meta property="og:description" content="2025년 최저임금 10,030원 기준으로 시급·일급·월급이 최저임금을 충족하는지 판단합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/minimum-wage-check.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="최저임금 위반 판단 계산기 — 2025년 기준 | WooaCalc">
+<meta name="twitter:description" content="2025년 최저임금 10,030원 기준으로 시급·일급·월급이 최저임금을 충족하는지 판단합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"최저임금 위반 판단 계산기","url":"https://calckit.wooahouse.com/minimum-wage-check.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"급여·노동 계산기","item":"https://calckit.wooahouse.com/#life"},{"@type":"ListItem","position":3,"name":"최저임금 위반 판단 계산기","item":"https://calckit.wooahouse.com/minimum-wage-check.html"}]}</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#life">급여·노동 계산기</a><span>›</span>최저임금 위반 판단 계산기</div>
+<div class="tool-header"><div class="tool-icon">⚖️</div><div><h1>최저임금 위반 판단 계산기</h1><p>2025년 최저임금(10,030원) 기준으로 위반 여부를 확인합니다</p></div></div>
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="mwType">급여 유형</label>
+        <select id="mwType" onchange="toggleMw()">
+          <option value="hourly">시급</option>
+          <option value="daily">일급</option>
+          <option value="monthly">월급</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="mwAmount" id="mwAmtLabel">시급 (원)</label><input type="number" id="mwAmount" placeholder="예: 10000" min="0"></div>
+    </div>
+    <div class="form-row" id="mwHoursRow" style="display:none">
+      <div class="form-group"><label for="mwDailyHours">일 근무시간 (시간)</label><input type="number" id="mwDailyHours" placeholder="예: 8" min="1" max="24" value="8"></div>
+      <div class="form-group" id="mwWeeklyGroup"><label for="mwWeeklyHours">주간 소정근로시간 (시간)</label><input type="number" id="mwWeeklyHours" placeholder="예: 40" min="1" max="52" value="40"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcMw()">판단하기</button>
+  </div>
+  <div class="result-box hidden" id="mwResult">
+    <div class="result-main" id="mwHourly"></div>
+    <div class="result-label">시급 환산</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">입력 금액</span><span class="value" id="mwInput"></span></div>
+      <div class="result-row"><span class="label">시급 환산액</span><span class="value" id="mwHourly2"></span></div>
+      <div class="result-row"><span class="label">2025년 최저임금</span><span class="value">10,030원</span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">판정</span><span class="value" id="mwVerdict"></span></div>
+    </div>
+    <div id="mwMsg" style="margin-top:12px;padding:10px 14px;border-radius:8px;font-size:.88rem;line-height:1.6"></div>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>2025년 최저임금은 시간당 10,030원입니다 (전년 대비 1.7% 인상).</li><li>월급제는 주휴수당 포함 환산이 필요합니다. 주 40시간 기준 월 환산 근로시간은 약 209시간입니다.</li><li>최저임금 미달 시 사용자는 3년 이하 징역 또는 2천만원 이하 벌금을 받을 수 있습니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>수습기간에도 최저임금이 적용되나요?</summary><p>3개월 이내 수습기간에는 최저임금의 90%까지 감액 적용이 가능합니다. 단, 단순노무직은 감액 불가합니다.</p></details><details><summary>주휴수당이란 무엇인가요?</summary><p>주 15시간 이상 근무 시 유급으로 주어지는 하루치 수당입니다. 월급에 포함되어 있는지 확인하세요.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"수습기간에도 최저임금이 적용되나요?","acceptedAnswer":{"@type":"Answer","text":"3개월 이내 수습기간에는 최저임금의 90%까지 감액 적용이 가능합니다. 단, 단순노무직은 감액 불가합니다."}},{"@type":"Question","name":"주휴수당이란 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"주 15시간 이상 근무 시 유급으로 주어지는 하루치 수당입니다. 월급에 포함되어 있는지 확인하세요."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+<script>
+var MIN_WAGE=10030;
+var labels={hourly:'시급 (원)',daily:'일급 (원)',monthly:'월급 (원)'};
+function toggleMw(){
+  var t=document.getElementById('mwType').value;
+  document.getElementById('mwAmtLabel').textContent=labels[t];
+  document.getElementById('mwHoursRow').style.display=(t==='daily'||t==='monthly')?'':'none';
+  document.getElementById('mwWeeklyGroup').style.display=(t==='monthly')?'':'none';
+}
+function fmt(n){return Math.round(n).toLocaleString();}
+function calcMw(){
+  var t=document.getElementById('mwType').value;
+  var amt=parseFloat(document.getElementById('mwAmount').value)||0;
+  var dh=parseFloat(document.getElementById('mwDailyHours').value)||8;
+  var wh=parseFloat(document.getElementById('mwWeeklyHours').value)||40;
+  if(!amt){alert('금액을 입력해주세요.');return;}
+  var hourly;
+  if(t==='hourly') hourly=amt;
+  else if(t==='daily') hourly=amt/dh;
+  else {
+    var weeklyHoliday=Math.min(wh/5,8);
+    var monthlyHours=(wh+weeklyHoliday)*4.345;
+    hourly=amt/monthlyHours;
+  }
+  var diff=hourly-MIN_WAGE;
+  var ok=hourly>=MIN_WAGE;
+  document.getElementById('mwInput').textContent=fmt(amt)+'원';
+  document.getElementById('mwHourly').textContent=fmt(hourly)+'원';
+  document.getElementById('mwHourly2').textContent=fmt(hourly)+'원';
+  document.getElementById('mwVerdict').textContent=ok?'✅ 충족':'❌ 위반';
+  document.getElementById('mwVerdict').style.color=ok?'#10B981':'#F87171';
+  var msg=document.getElementById('mwMsg');
+  if(ok){
+    msg.style.background='rgba(16,185,129,.1)';msg.style.color='#10B981';
+    msg.textContent='최저임금을 충족합니다. 최저임금보다 '+fmt(diff)+'원 높습니다.';
+  } else {
+    msg.style.background='rgba(248,113,113,.1)';msg.style.color='#F87171';
+    msg.textContent='최저임금 위반입니다. 시급을 최소 '+fmt(MIN_WAGE-hourly)+'원 인상해야 합니다.';
+  }
+  document.getElementById('mwResult').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
