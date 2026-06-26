@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine Interval Calculator — Next Dose Time | WooaCalc</title>
+<meta name="description" content="Enter your last dose time and daily frequency to calculate when you can take your next dose and the time remaining.">
+<meta name="keywords" content="medicine interval calculator,next dose time,medication schedule,pill reminder,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/medicine-interval.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/medicine-interval.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/medicine-interval.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/medicine-interval.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Medicine Interval Calculator — Next Dose Time | WooaCalc">
+<meta property="og:description" content="Enter your last dose time and daily frequency to calculate when you can take your next dose and the time remaining.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/medicine-interval.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medicine Interval Calculator — Next Dose Time | WooaCalc">
+<meta name="twitter:description" content="Enter your last dose time and daily frequency to calculate when you can take your next dose and the time remaining.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Medicine Interval Calculator","url":"https://calckit.wooahouse.com/en/medicine-interval.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"Health Calculators","item":"https://calckit.wooahouse.com/#health"},{"@type":"ListItem","position":3,"name":"Medicine Interval Calculator","item":"https://calckit.wooahouse.com/en/medicine-interval.html"}]}</script>
+<style>.lang-switcher{display:flex;align-items:center;gap:4px}.lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s}.lang-switcher a.active{color:white;background:rgba(255,255,255,0.25)}.lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18)}.lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem}</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit</a><a href="/#life">🏠 Life</a></nav><div class="lang-switcher"><a href="../medicine-interval.html">KO</a><span>|</span><a href="medicine-interval.html" class="active">EN</a></div></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="#health">Health Calculators</a><span>›</span>Medicine Interval Calculator</div>
+<div class="tool-header"><div class="tool-icon">💊</div><div><h1>Medicine Interval Calculator</h1><p>Calculate your next dose time based on last intake and daily frequency</p></div></div>
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="miLast">Last Dose Time</label><input type="datetime-local" id="miLast"></div>
+      <div class="form-group"><label for="miFreq">Daily Frequency</label>
+        <select id="miFreq">
+          <option value="1">Once daily (every 24 hrs)</option>
+          <option value="2">Twice daily (every 12 hrs)</option>
+          <option value="3" selected>3x daily (every 8 hrs)</option>
+          <option value="4">4x daily (every 6 hrs)</option>
+          <option value="6">6x daily (every 4 hrs)</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcMi()">Calculate</button>
+  </div>
+  <div class="result-box hidden" id="miResult">
+    <div class="result-main" id="miNextTime"></div>
+    <div class="result-label">Next Dose Time</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Last Dose</span><span class="value" id="miLastShow"></span></div>
+      <div class="result-row"><span class="label">Interval</span><span class="value" id="miInterval"></span></div>
+      <div class="result-row"><span class="label">Next Dose</span><span class="value" id="miNext2"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Time Remaining</span><span class="value" id="miRemain"></span></div>
+    </div>
+    <div id="miMsg" style="margin-top:12px;padding:10px 14px;border-radius:8px;font-size:.88rem"></div>
+    <div id="miSchedule" style="margin-top:14px"></div>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>3x daily = every 8 hours (e.g. 7am → 3pm → 11pm). 2x daily = every 12 hours.</li><li>If prescribed 'after meals', the interval is still calculated from dose time, not meal time.</li><li>Minor delays are fine for most medications, but antibiotics and anticonvulsants require precise timing.</li></ul></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px"><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What if I miss a dose by 1–2 hours?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">For most medications, take it as soon as you remember and shift subsequent doses accordingly. If the next dose is almost due, skip and resume the regular schedule. Always confirm with your doctor or pharmacist.</p></details><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Why is exact timing important for antibiotics?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Maintaining steady blood concentration is essential to suppress bacteria effectively. Irregular intervals can lead to antibiotic resistance.</p></details><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Is my data stored?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">No. All calculations run locally in your browser. No data is sent to any server.</p></details></div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What if I miss a dose by 1–2 hours?","acceptedAnswer":{"@type":"Answer","text":"For most medications, take it as soon as you remember and shift subsequent doses accordingly. If the next dose is almost due, skip and resume the regular schedule. Always confirm with your doctor or pharmacist."}},{"@type":"Question","name":"Why is exact timing important for antibiotics?","acceptedAnswer":{"@type":"Answer","text":"Maintaining steady blood concentration is essential to suppress bacteria effectively. Irregular intervals can lead to antibiotic resistance."}},{"@type":"Question","name":"Is my data stored?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations run locally in your browser. No data is sent to any server."}}]}</script>
+<div class="wooa-orig-anchor"></div>
+<footer class="footer"></footer>
+<script>
+function pad(n){return String(n).padStart(2,'0');}
+function fmtDt(d){var h=d.getHours();var ampm=h>=12?'PM':'AM';h=h%12||12;return (d.getMonth()+1)+'/'+d.getDate()+' '+h+':'+pad(d.getMinutes())+' '+ampm;}
+function calcMi(){
+  var lastVal=document.getElementById('miLast').value;
+  if(!lastVal){alert('Please enter the last dose time.');return;}
+  var last=new Date(lastVal);
+  var freq=parseInt(document.getElementById('miFreq').value);
+  var intervalHours=24/freq;
+  var next=new Date(last.getTime()+intervalHours*3600000);
+  var now=new Date();
+  var diffMs=next-now;
+  var canTake=diffMs<=0;
+  document.getElementById('miLastShow').textContent=fmtDt(last);
+  document.getElementById('miInterval').textContent=intervalHours+' hours';
+  document.getElementById('miNextTime').textContent=fmtDt(next);
+  document.getElementById('miNext2').textContent=fmtDt(next);
+  var msg=document.getElementById('miMsg');
+  if(canTake){
+    var overMs=-diffMs;
+    var overH=Math.floor(overMs/3600000);
+    var overM=Math.floor((overMs%3600000)/60000);
+    document.getElementById('miRemain').textContent='Ready to take now';
+    document.getElementById('miRemain').style.color='#10B981';
+    msg.style.background='rgba(16,185,129,.1)';msg.style.color='#10B981';
+    msg.textContent='You can take your dose now. It became available '+(overH>0?overH+'h ':'')+overM+'m ago.';
+  } else {
+    var h=Math.floor(diffMs/3600000);
+    var m=Math.floor((diffMs%3600000)/60000);
+    document.getElementById('miRemain').textContent=(h>0?h+'h ':'')+m+'m remaining';
+    document.getElementById('miRemain').style.color='#F59E0B';
+    msg.style.background='rgba(245,158,11,.1)';msg.style.color='#F59E0B';
+    msg.textContent='Not yet. Wait '+(h>0?h+' hour'+(h>1?'s':'')+' and ':'')+m+' more minute'+(m!==1?'s':'')+'.';
+  }
+  var sched='<div style="color:#94a3b8;font-size:.84rem;margin-bottom:8px">Next '+freq+' doses today</div>';
+  sched+='<div style="display:flex;flex-direction:column;gap:6px">';
+  for(var i=1;i<=freq;i++){
+    var t=new Date(last.getTime()+i*intervalHours*3600000);
+    var isPast=t<=now;
+    var isNext=i===1&&!canTake;
+    var color=isPast?'#6B7280':(isNext?'#10B981':'#94a3b8');
+    sched+='<div style="display:flex;align-items:center;gap:10px">'
+      +'<span style="width:20px;height:20px;border-radius:50%;background:'+(isPast?'#374151':'rgba(16,185,129,.2)')+';border:2px solid '+(isPast?'#4B5563':'#10B981')+';display:flex;align-items:center;justify-content:center;font-size:.72rem;color:'+color+'">'+(isPast?'✓':i)+'</span>'
+      +'<span style="color:'+color+';font-size:.88rem">'+fmtDt(t)+(isPast?' (done)':isNext?' ← next':'')+'</span>'
+      +'</div>';
+  }
+  sched+='</div>';
+  document.getElementById('miSchedule').innerHTML=sched;
+  document.getElementById('miResult').classList.remove('hidden');
+}
+(function(){var now=new Date();var offset=now.getTimezoneOffset()*60000;var local=new Date(now-offset);document.getElementById('miLast').value=local.toISOString().slice(0,16);})();
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

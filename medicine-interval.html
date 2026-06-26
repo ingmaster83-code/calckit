@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>약 복용 간격 계산기 — 다음 복용 시간 계산 | WooaCalc</title>
+<meta name="description" content="마지막 복용 시각과 하루 복용 횟수를 입력하면 다음 복용 가능 시각과 남은 시간을 계산합니다.">
+<meta name="keywords" content="약복용간격계산기,다음복용시간,약먹는시간계산,1일3회복용간격,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/medicine-interval.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/medicine-interval.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/medicine-interval.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/medicine-interval.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="약 복용 간격 계산기 — 다음 복용 시간 계산 | WooaCalc">
+<meta property="og:description" content="마지막 복용 시각과 하루 복용 횟수를 입력하면 다음 복용 가능 시각과 남은 시간을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/medicine-interval.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="약 복용 간격 계산기 — 다음 복용 시간 계산 | WooaCalc">
+<meta name="twitter:description" content="마지막 복용 시각과 하루 복용 횟수를 입력하면 다음 복용 가능 시각과 남은 시간을 계산합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"약 복용 간격 계산기","url":"https://calckit.wooahouse.com/medicine-interval.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"건강 계산기","item":"https://calckit.wooahouse.com/#health"},{"@type":"ListItem","position":3,"name":"약 복용 간격 계산기","item":"https://calckit.wooahouse.com/medicine-interval.html"}]}</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#health">건강 계산기</a><span>›</span>약 복용 간격 계산기</div>
+<div class="tool-header"><div class="tool-icon">💊</div><div><h1>약 복용 간격 계산기</h1><p>마지막 복용 시각을 입력하면 다음 복용 가능 시간을 알려드립니다</p></div></div>
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="miLast">마지막 복용 시각</label><input type="datetime-local" id="miLast"></div>
+      <div class="form-group"><label for="miFreq">1일 복용 횟수</label>
+        <select id="miFreq">
+          <option value="1">1일 1회 (24시간 간격)</option>
+          <option value="2">1일 2회 (12시간 간격)</option>
+          <option value="3" selected>1일 3회 (8시간 간격)</option>
+          <option value="4">1일 4회 (6시간 간격)</option>
+          <option value="6">1일 6회 (4시간 간격)</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcMi()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="miResult">
+    <div class="result-main" id="miNextTime"></div>
+    <div class="result-label">다음 복용 가능 시각</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">마지막 복용</span><span class="value" id="miLastShow"></span></div>
+      <div class="result-row"><span class="label">복용 간격</span><span class="value" id="miInterval"></span></div>
+      <div class="result-row"><span class="label">다음 복용 시각</span><span class="value" id="miNext2"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">남은 시간</span><span class="value" id="miRemain"></span></div>
+    </div>
+    <div id="miMsg" style="margin-top:12px;padding:10px 14px;border-radius:8px;font-size:.88rem"></div>
+    <div id="miSchedule" style="margin-top:14px"></div>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>1일 3회는 8시간 간격(예: 오전 7시 → 오후 3시 → 오후 11시), 1일 2회는 12시간 간격입니다.</li><li>식후 30분 복용 처방이라도 간격은 복용 시각 기준으로 계산합니다.</li><li>복용 시각이 조금 늦어도 대부분의 약은 괜찮지만, 항생제·항경련제 등은 정확한 간격이 중요합니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>복용 시간을 1~2시간 놓쳤을 때 어떻게 하나요?</summary><p>대부분의 약은 생각난 즉시 복용하고 다음 복용 시각을 그에 맞춰 조정합니다. 다음 복용이 거의 됐다면 건너뛰고 평소 시간에 복용하세요. 의사나 약사에게 확인하는 것이 가장 정확합니다.</p></details><details><summary>항생제는 왜 정확한 간격이 중요한가요?</summary><p>혈중 약물 농도를 일정하게 유지해야 세균을 효과적으로 억제할 수 있습니다. 간격이 불규칙하면 내성이 생길 수 있습니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"복용 시간을 1~2시간 놓쳤을 때 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"대부분의 약은 생각난 즉시 복용하고 다음 복용 시각을 그에 맞춰 조정합니다. 다음 복용이 거의 됐다면 건너뛰고 평소 시간에 복용하세요. 의사나 약사에게 확인하는 것이 가장 정확합니다."}},{"@type":"Question","name":"항생제는 왜 정확한 간격이 중요한가요?","acceptedAnswer":{"@type":"Answer","text":"혈중 약물 농도를 일정하게 유지해야 세균을 효과적으로 억제할 수 있습니다. 간격이 불규칙하면 내성이 생길 수 있습니다."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+<script>
+function pad(n){return String(n).padStart(2,'0');}
+function fmtDt(d){return (d.getMonth()+1)+'/'+d.getDate()+' '+pad(d.getHours())+':'+pad(d.getMinutes());}
+function calcMi(){
+  var lastVal=document.getElementById('miLast').value;
+  if(!lastVal){alert('마지막 복용 시각을 입력해주세요.');return;}
+  var last=new Date(lastVal);
+  var freq=parseInt(document.getElementById('miFreq').value);
+  var intervalHours=24/freq;
+  var next=new Date(last.getTime()+intervalHours*3600000);
+  var now=new Date();
+  var diffMs=next-now;
+  var canTake=diffMs<=0;
+  document.getElementById('miLastShow').textContent=fmtDt(last);
+  document.getElementById('miInterval').textContent=intervalHours+'시간';
+  document.getElementById('miNextTime').textContent=fmtDt(next);
+  document.getElementById('miNext2').textContent=fmtDt(next);
+  var msg=document.getElementById('miMsg');
+  if(canTake){
+    var overMs=-diffMs;
+    var overH=Math.floor(overMs/3600000);
+    var overM=Math.floor((overMs%3600000)/60000);
+    document.getElementById('miRemain').textContent='지금 복용 가능';
+    document.getElementById('miRemain').style.color='#10B981';
+    msg.style.background='rgba(16,185,129,.1)';msg.style.color='#10B981';
+    msg.textContent='지금 복용 가능합니다. '+(overH>0?overH+'시간 ':'')+overM+'분 전에 복용 가능했습니다.';
+  } else {
+    var h=Math.floor(diffMs/3600000);
+    var m=Math.floor((diffMs%3600000)/60000);
+    document.getElementById('miRemain').textContent=(h>0?h+'시간 ':'')+m+'분 후';
+    document.getElementById('miRemain').style.color='#F59E0B';
+    msg.style.background='rgba(245,158,11,.1)';msg.style.color='#F59E0B';
+    msg.textContent='아직 복용하면 안 됩니다. '+(h>0?h+'시간 ':'')+m+'분 후 복용하세요.';
+  }
+  var sched='<div style="color:#94a3b8;font-size:.84rem;margin-bottom:8px">오늘 복용 일정 (다음 ' +freq+ '회)</div>';
+  sched+='<div style="display:flex;flex-direction:column;gap:6px">';
+  for(var i=1;i<=freq;i++){
+    var t=new Date(last.getTime()+i*intervalHours*3600000);
+    var isPast=t<=now;
+    var isNext=i===1&&!canTake;
+    var color=isPast?'#6B7280':(isNext?'#10B981':'#94a3b8');
+    sched+='<div style="display:flex;align-items:center;gap:10px">'
+      +'<span style="width:20px;height:20px;border-radius:50%;background:'+(isPast?'#374151':'rgba(16,185,129,.2)')+';border:2px solid '+(isPast?'#4B5563':'#10B981')+';display:flex;align-items:center;justify-content:center;font-size:.72rem;color:'+color+'">'+(isPast?'✓':i)+'</span>'
+      +'<span style="color:'+color+';font-size:.88rem">'+fmtDt(t)+(isPast?' (완료)':isNext?' ← 다음':'')+'</span>'
+      +'</div>';
+  }
+  sched+='</div>';
+  document.getElementById('miSchedule').innerHTML=sched;
+  document.getElementById('miResult').classList.remove('hidden');
+}
+// 기본값: 현재 시각
+(function(){var now=new Date();var offset=now.getTimezoneOffset()*60000;var local=new Date(now-offset);document.getElementById('miLast').value=local.toISOString().slice(0,16);})();
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
