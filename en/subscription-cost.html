@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Cost Calculator — Annual Subscription Tracker | WooaCalc</title>
+<meta name="description" content="Add your subscriptions (Netflix, YouTube Premium, etc.) and instantly see total monthly, annual, and daily costs.">
+<meta name="keywords" content="subscription cost calculator,monthly subscription tracker,annual subscription cost,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/subscription-cost.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/subscription-cost.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/subscription-cost.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/subscription-cost.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Subscription Cost Calculator — Annual Subscription Tracker | WooaCalc">
+<meta property="og:description" content="Add your subscriptions (Netflix, YouTube Premium, etc.) and instantly see total monthly, annual, and daily costs.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/subscription-cost.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Subscription Cost Calculator — Annual Subscription Tracker | WooaCalc">
+<meta name="twitter:description" content="Add your subscriptions (Netflix, YouTube Premium, etc.) and instantly see total monthly, annual, and daily costs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Subscription Cost Calculator","url":"https://calckit.wooahouse.com/en/subscription-cost.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"Life Calculators","item":"https://calckit.wooahouse.com/#life"},{"@type":"ListItem","position":3,"name":"Subscription Cost Calculator","item":"https://calckit.wooahouse.com/en/subscription-cost.html"}]}</script>
+<style>.lang-switcher{display:flex;align-items:center;gap:4px}.lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s}.lang-switcher a.active{color:white;background:rgba(255,255,255,0.25)}.lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18)}.lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem}</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit</a><a href="/#life">🏠 Life</a></nav><div class="lang-switcher"><a href="../subscription-cost.html">KO</a><span>|</span><a href="subscription-cost.html" class="active">EN</a></div></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="#life">Life Calculators</a><span>›</span>Subscription Cost Calculator</div>
+<div class="tool-header"><div class="tool-icon">📱</div><div><h1>Subscription Cost Calculator</h1><p>Track all your subscriptions and see the true annual cost</p></div></div>
+<div class="panel">
+  <div id="subList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px"></div>
+  <button class="btn" onclick="addRow()" style="width:100%;background:rgba(255,255,255,.06);margin-bottom:12px">+ Add Subscription</button>
+  <button class="btn btn-primary btn-full" onclick="calcSub()">Calculate</button>
+  <div class="result-box hidden" id="subResult" style="margin-top:16px">
+    <div class="result-main" id="subAnnual"></div>
+    <div class="result-label">Annual Subscription Total</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Monthly Total</span><span class="value" id="subMonthly"></span></div>
+      <div class="result-row"><span class="label">Daily Average</span><span class="value" id="subDaily"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Annual Total</span><span class="value" id="subAnnual2"></span></div>
+    </div>
+    <div id="subBreakdown" style="margin-top:14px"></div>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>Seeing the annual total often surprises people. Review whether you're actually using each service.</li><li>Switching to annual billing typically saves 10–20%. Worth it if you plan to keep the subscription.</li><li>Family plans shared with household members can cut the per-person cost significantly.</li></ul></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px"><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Should I include free trials?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Yes — if the trial auto-converts to paid, include it now so you can budget accurately before the charge hits.</p></details><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">How do I decide which to cancel?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">List only services you actually used in the past month. Anything you haven't touched is the top cancellation candidate.</p></details><details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235"><summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Is my data stored?</summary><p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">No. All calculations run locally in your browser. No data is sent to any server.</p></details></div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I include free trials?","acceptedAnswer":{"@type":"Answer","text":"Yes — if the trial auto-converts to paid, include it now so you can budget accurately before the charge hits."}},{"@type":"Question","name":"How do I decide which to cancel?","acceptedAnswer":{"@type":"Answer","text":"List only services you actually used in the past month. Anything you haven't touched is the top cancellation candidate."}},{"@type":"Question","name":"Is my data stored?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations run locally in your browser. No data is sent to any server."}}]}</script>
+<div class="wooa-orig-anchor"></div>
+<footer class="footer"></footer>
+<script>
+var rowId=0;
+var PRESETS=[
+  {name:'Netflix (Standard)',price:15},
+  {name:'YouTube Premium',price:14},
+  {name:'Spotify',price:11},
+  {name:'Apple Music',price:11},
+  {name:'Disney+',price:10},
+  {name:'Amazon Prime',price:9},
+  {name:'Custom',price:0}
+];
+function addRow(name,price){
+  var id='sr'+(rowId++);
+  var opts=PRESETS.map(function(p,i){return '<option value="'+i+'"'+(p.name===(name||'Custom')?' selected':'')+'>'+p.name+'</option>';}).join('');
+  var html='<div id="'+id+'" style="display:flex;gap:8px;align-items:center">'
+    +'<select onchange="applyPreset(this,\''+id+'\')" style="flex:2;background:#1a2235;border:1px solid #2d3748;color:#e2e8f0;padding:8px;border-radius:6px;font-size:.88rem">'+opts+'</select>'
+    +'<input type="number" id="'+id+'p" placeholder="Monthly cost" value="'+(price||0)+'" min="0" step="0.01" style="flex:1;background:#1a2235;border:1px solid #2d3748;color:#e2e8f0;padding:8px;border-radius:6px;font-size:.88rem">'
+    +'<button onclick="document.getElementById(\''+id+'\').remove()" style="background:rgba(239,68,68,.15);color:#F87171;border:none;border-radius:6px;padding:8px 12px;cursor:pointer;font-size:.9rem">\u2715</button>'
+    +'</div>';
+  document.getElementById('subList').insertAdjacentHTML('beforeend',html);
+}
+function applyPreset(sel,id){
+  var p=PRESETS[sel.value];
+  if(p.price>0) document.getElementById(id+'p').value=p.price;
+}
+function fmt(n){return n.toFixed(2);}
+function calcSub(){
+  var rows=document.querySelectorAll('#subList > div');
+  if(!rows.length){alert('Please add at least one subscription.');return;}
+  var items=[];var total=0;
+  rows.forEach(function(r){
+    var sel=r.querySelector('select');
+    var inp=r.querySelector('input');
+    var name=sel?sel.options[sel.selectedIndex].text:'Service';
+    var price=parseFloat(inp?inp.value:0)||0;
+    if(price>0){items.push({name:name,price:price});total+=price;}
+  });
+  if(!total){alert('Please enter monthly costs.');return;}
+  var annual=total*12;
+  var daily=annual/365;
+  document.getElementById('subAnnual').textContent='$'+fmt(annual);
+  document.getElementById('subMonthly').textContent='$'+fmt(total);
+  document.getElementById('subDaily').textContent='$'+fmt(daily);
+  document.getElementById('subAnnual2').textContent='$'+fmt(annual);
+  items.sort(function(a,b){return b.price-a.price;});
+  var breakdown='<div style="color:#94a3b8;font-size:.84rem;margin-bottom:8px">Cost per service (monthly)</div>';
+  var barMax=items[0].price;
+  items.forEach(function(it){
+    var pct=(it.price/total*100).toFixed(1);
+    var barW=(it.price/barMax*100).toFixed(0);
+    breakdown+='<div style="margin-bottom:10px">'
+      +'<div style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px">'
+      +'<span style="color:#e2e8f0">'+it.name+'</span>'
+      +'<span style="color:#10B981">$'+fmt(it.price)+' ('+pct+'%)</span>'
+      +'</div>'
+      +'<div style="background:#1F2937;border-radius:4px;height:6px">'
+      +'<div style="background:#10B981;height:6px;border-radius:4px;width:'+barW+'%"></div>'
+      +'</div></div>';
+  });
+  document.getElementById('subBreakdown').innerHTML=breakdown;
+  document.getElementById('subResult').classList.remove('hidden');
+}
+addRow('Netflix (Standard)',15);
+addRow('YouTube Premium',14);
+addRow('Custom',0);
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

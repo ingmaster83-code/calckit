@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구독 서비스 비용 계산기 — 연간 구독료 합산 | WooaCalc</title>
+<meta name="description" content="넷플릭스·유튜브 프리미엄 등 구독 서비스 월정액을 입력하면 총 월비용·연비용·일비용을 한눈에 계산합니다.">
+<meta name="keywords" content="구독비용계산기,구독서비스연간비용,넷플릭스유튜브구독료,구독료합산,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/subscription-cost.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/subscription-cost.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/subscription-cost.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/subscription-cost.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="구독 서비스 비용 계산기 — 연간 구독료 합산 | WooaCalc">
+<meta property="og:description" content="넷플릭스·유튜브 프리미엄 등 구독 서비스 월정액을 입력하면 총 월비용·연비용·일비용을 한눈에 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/subscription-cost.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="구독 서비스 비용 계산기 — 연간 구독료 합산 | WooaCalc">
+<meta name="twitter:description" content="넷플릭스·유튜브 프리미엄 등 구독 서비스 월정액을 입력하면 총 월비용·연비용·일비용을 한눈에 계산합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"구독 서비스 비용 계산기","url":"https://calckit.wooahouse.com/subscription-cost.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"생활 계산기","item":"https://calckit.wooahouse.com/#life"},{"@type":"ListItem","position":3,"name":"구독 서비스 비용 계산기","item":"https://calckit.wooahouse.com/subscription-cost.html"}]}</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#life">생활 계산기</a><span>›</span>구독 서비스 비용 계산기</div>
+<div class="tool-header"><div class="tool-icon">📱</div><div><h1>구독 서비스 비용 계산기</h1><p>구독 서비스를 모두 입력해 연간 총 비용을 확인하세요</p></div></div>
+<div class="panel">
+  <div id="subList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px"></div>
+  <button class="btn" onclick="addRow()" style="width:100%;background:rgba(255,255,255,.06);margin-bottom:12px">+ 구독 서비스 추가</button>
+  <button class="btn btn-primary btn-full" onclick="calcSub()">계산하기</button>
+  <div class="result-box hidden" id="subResult" style="margin-top:16px">
+    <div class="result-main" id="subAnnual"></div>
+    <div class="result-label">연간 구독료 합계</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">월 합계</span><span class="value" id="subMonthly"></span></div>
+      <div class="result-row"><span class="label">일 평균</span><span class="value" id="subDaily"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">연 합계</span><span class="value" id="subAnnual2"></span></div>
+    </div>
+    <div id="subBreakdown" style="margin-top:14px"></div>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>연간 구독료 합계를 보면 생각보다 큰 금액에 놀랄 수 있습니다. 실제로 잘 쓰는 서비스인지 돌아보세요.</li><li>같은 서비스를 연간 결제로 전환하면 보통 10~20% 절약됩니다. 장기 이용 예정이라면 연간 플랜을 고려하세요.</li><li>가족·지인과 패밀리 플랜을 공유하면 1인당 비용을 크게 줄일 수 있습니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>무료 체험 중인 서비스도 포함해야 하나요?</summary><p>무료 체험 기간 이후 자동 결제되는 서비스는 미리 포함해 두면 예산 계획에 도움이 됩니다.</p></details><details><summary>어떤 구독을 해지해야 할지 어떻게 알 수 있나요?</summary><p>최근 1개월간 실제로 사용한 서비스만 남겨보세요. 한 번도 안 쓴 서비스는 해지 대상 1순위입니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"무료 체험 중인 서비스도 포함해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"무료 체험 기간 이후 자동 결제되는 서비스는 미리 포함해 두면 예산 계획에 도움이 됩니다."}},{"@type":"Question","name":"어떤 구독을 해지해야 할지 어떻게 알 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"최근 1개월간 실제로 사용한 서비스만 남겨보세요. 한 번도 안 쓴 서비스는 해지 대상 1순위입니다."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+<script>
+var rowId=0;
+var PRESETS=[
+  {name:'넷플릭스 (스탠다드)',price:13500},
+  {name:'유튜브 프리미엄',price:14900},
+  {name:'스포티파이',price:10900},
+  {name:'멜론',price:10900},
+  {name:'왓챠',price:7900},
+  {name:'쿠팡플레이',price:4990},
+  {name:'네이버 플러스',price:4900},
+  {name:'카카오 이모티콘 플러스',price:3300},
+  {name:'직접 입력',price:0}
+];
+function addRow(name,price){
+  var id='sr'+(rowId++);
+  var opts=PRESETS.map(function(p,i){return '<option value="'+i+'"'+(p.name===(name||'직접 입력')?' selected':'')+'>'+p.name+'</option>';}).join('');
+  var html='<div id="'+id+'" style="display:flex;gap:8px;align-items:center">'
+    +'<select onchange="applyPreset(this,\''+id+'\')" style="flex:2;background:#1a2235;border:1px solid #2d3748;color:#e2e8f0;padding:8px;border-radius:6px;font-size:.88rem">'+opts+'</select>'
+    +'<input type="number" id="'+id+'p" placeholder="월정액(원)" value="'+(price||0)+'" min="0" style="flex:1;background:#1a2235;border:1px solid #2d3748;color:#e2e8f0;padding:8px;border-radius:6px;font-size:.88rem">'
+    +'<button onclick="document.getElementById(\''+id+'\').remove()" style="background:rgba(239,68,68,.15);color:#F87171;border:none;border-radius:6px;padding:8px 12px;cursor:pointer;font-size:.9rem">✕</button>'
+    +'</div>';
+  document.getElementById('subList').insertAdjacentHTML('beforeend',html);
+}
+function applyPreset(sel,id){
+  var p=PRESETS[sel.value];
+  if(p.price>0) document.getElementById(id+'p').value=p.price;
+}
+function fmt(n){return Math.round(n).toLocaleString();}
+function calcSub(){
+  var rows=document.querySelectorAll('#subList > div');
+  if(!rows.length){alert('구독 서비스를 추가해주세요.');return;}
+  var items=[];var total=0;
+  rows.forEach(function(r){
+    var sel=r.querySelector('select');
+    var inp=r.querySelector('input');
+    var name=sel?sel.options[sel.selectedIndex].text:'서비스';
+    var price=parseFloat(inp?inp.value:0)||0;
+    if(price>0){items.push({name:name,price:price});total+=price;}
+  });
+  if(!total){alert('월정액을 입력해주세요.');return;}
+  var annual=total*12;
+  var daily=annual/365;
+  document.getElementById('subAnnual').textContent=fmt(annual)+'원';
+  document.getElementById('subMonthly').textContent=fmt(total)+'원';
+  document.getElementById('subDaily').textContent=fmt(daily)+'원';
+  document.getElementById('subAnnual2').textContent=fmt(annual)+'원';
+  items.sort(function(a,b){return b.price-a.price;});
+  var breakdown='<div style="color:#94a3b8;font-size:.84rem;margin-bottom:8px">서비스별 비용 (월)</div>';
+  var barMax=items[0].price;
+  items.forEach(function(it){
+    var pct=(it.price/total*100).toFixed(1);
+    var barW=(it.price/barMax*100).toFixed(0);
+    breakdown+='<div style="margin-bottom:10px">'
+      +'<div style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:4px">'
+      +'<span style="color:#e2e8f0">'+it.name+'</span>'
+      +'<span style="color:#10B981">'+fmt(it.price)+'원 ('+pct+'%)</span>'
+      +'</div>'
+      +'<div style="background:#1F2937;border-radius:4px;height:6px">'
+      +'<div style="background:#10B981;height:6px;border-radius:4px;width:'+barW+'%"></div>'
+      +'</div></div>';
+  });
+  document.getElementById('subBreakdown').innerHTML=breakdown;
+  document.getElementById('subResult').classList.remove('hidden');
+}
+// 기본 3개 추가
+addRow('넷플릭스 (스탠다드)',13500);
+addRow('유튜브 프리미엄',14900);
+addRow('직접 입력',0);
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
