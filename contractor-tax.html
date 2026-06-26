@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도급·용역 세금 계산기 — 원천징수 유형별 세액 | WooaCalc</title>
+<meta name="description" content="사업소득(3.3%), 기타소득(22%), 인적용역(8.8%) 등 용역대금 유형별 원천징수세액과 실수령액을 계산합니다.">
+<meta name="keywords" content="도급세금계산기,용역세금,원천징수계산기,기타소득세,사업소득3.3%,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/contractor-tax.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/contractor-tax.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/contractor-tax.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/contractor-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="도급·용역 세금 계산기 — 원천징수 유형별 세액 | WooaCalc">
+<meta property="og:description" content="사업소득(3.3%), 기타소득(22%), 인적용역(8.8%) 등 용역대금 유형별 원천징수세액과 실수령액을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/contractor-tax.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="도급·용역 세금 계산기 — 원천징수 유형별 세액 | WooaCalc">
+<meta name="twitter:description" content="사업소득(3.3%), 기타소득(22%), 인적용역(8.8%) 등 용역대금 유형별 원천징수세액과 실수령액을 계산합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"도급·용역 세금 계산기","url":"https://calckit.wooahouse.com/contractor-tax.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"금융·세금 계산기","item":"https://calckit.wooahouse.com/#finance"},{"@type":"ListItem","position":3,"name":"도급·용역 세금 계산기","item":"https://calckit.wooahouse.com/contractor-tax.html"}]}</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#finance">금융·세금 계산기</a><span>›</span>도급·용역 세금 계산기</div>
+<div class="tool-header"><div class="tool-icon">🔨</div><div><h1>도급·용역 세금 계산기</h1><p>용역대금 유형별 원천징수세액과 실수령액을 계산합니다</p></div></div>
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="ctAmount">용역대금 (원)</label><input type="number" id="ctAmount" placeholder="예: 5000000" min="0"></div>
+      <div class="form-group"><label for="ctType">원천징수 유형</label>
+        <select id="ctType" onchange="calcCt()">
+          <option value="biz">사업소득 — 3.3% (소득세3% + 지방0.3%)</option>
+          <option value="other">기타소득 — 실질 8.8% (필요경비 60% 적용)</option>
+          <option value="service">인적용역 기타소득 — 명목 22%</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcCt()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="ctResult">
+    <div class="result-main" id="ctNet"></div>
+    <div class="result-label">실수령액</div>
+    <div class="result-rows" id="ctRows"></div>
+    <p style="color:#94a3b8;font-size:.82rem;margin-top:12px" id="ctNote"></p>
+  </div>
+</div>
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>사업소득(3.3%)과 기타소득(8.8%)의 차이: 계속적·반복적 활동은 사업소득, 일시적 활동은 기타소득입니다.</li><li>기타소득은 연간 300만원 이하이면 분리과세(원천징수로 종결)가 가능해 종합소득세 신고 불필요할 수 있습니다.</li><li>3.3% 사업소득은 종합소득세 신고 시 다른 소득과 합산되어 실제 세금이 달라질 수 있습니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>사업소득과 기타소득 중 어떤 것을 적용해야 하나요?</summary><p>같은 종류의 일을 반복적으로 하면 사업소득(3.3%), 일시적이고 불규칙한 활동은 기타소득(8.8%)을 적용합니다. 계약서 내용과 실질에 따라 달라집니다.</p></details><details><summary>원천징수 영수증은 어디서 받나요?</summary><p>지급자(발주처)가 발행해야 합니다. 다음 해 2월까지 발행 요청이 가능하며, 홈택스에서 조회도 가능합니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"사업소득과 기타소득 중 어떤 것을 적용해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"같은 종류의 일을 반복적으로 하면 사업소득(3.3%), 일시적이고 불규칙한 활동은 기타소득(8.8%)을 적용합니다. 계약서 내용과 실질에 따라 달라집니다."}},{"@type":"Question","name":"원천징수 영수증은 어디서 받나요?","acceptedAnswer":{"@type":"Answer","text":"지급자(발주처)가 발행해야 합니다. 다음 해 2월까지 발행 요청이 가능하며, 홈택스에서 조회도 가능합니다."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+<script>
+function fmt(n){return Math.round(n).toLocaleString();}
+function row(label,value){return '<div class="result-row"><span class="label">'+label+'</span><span class="value">'+value+'</span></div>';}
+function calcCt(){
+  var amt=parseFloat(document.getElementById('ctAmount').value)||0;
+  var type=document.getElementById('ctType').value;
+  if(!amt){document.getElementById('ctResult').classList.add('hidden');return;}
+  var rows='';var note='';var tax=0;var net=0;
+  if(type==='biz'){
+    var it=amt*0.03;var lt=amt*0.003;tax=it+lt;net=amt-tax;
+    rows=row('용역대금',fmt(amt)+'원')+row('소득세 (3%)','-'+fmt(it)+'원')+row('지방소득세 (0.3%)','-'+fmt(lt)+'원');
+    rows+='<div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">실수령액</span><span class="value">'+fmt(net)+'원</span></div>';
+    note='사업소득 원천징수율 3.3%. 다음해 5월 종합소득세 신고 시 정산합니다.';
+  } else if(type==='other'){
+    var expense=amt*0.6;var taxable=amt*0.4;var it2=taxable*0.20;var lt2=taxable*0.02;tax=it2+lt2;net=amt-tax;
+    rows=row('용역대금',fmt(amt)+'원')+row('필요경비 60%',fmt(expense)+'원')+row('과세소득 (40%)',fmt(taxable)+'원')+row('소득세 20%','-'+fmt(it2)+'원')+row('지방소득세 2%','-'+fmt(lt2)+'원');
+    rows+='<div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">실수령액</span><span class="value">'+fmt(net)+'원</span></div>';
+    note='기타소득 필요경비 60% 공제 후 순소득의 22% 원천징수. 실질세율 8.8%.';
+  } else {
+    var it3=amt*0.20;var lt3=amt*0.02;tax=it3+lt3;net=amt-tax;
+    rows=row('용역대금',fmt(amt)+'원')+row('소득세 20%','-'+fmt(it3)+'원')+row('지방소득세 2%','-'+fmt(lt3)+'원');
+    rows+='<div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">실수령액</span><span class="value">'+fmt(net)+'원</span></div>';
+    note='필요경비 미인정 인적용역 기타소득. 총액의 22% 원천징수.';
+  }
+  document.getElementById('ctNet').textContent=fmt(net)+'원';
+  document.getElementById('ctRows').innerHTML=rows;
+  document.getElementById('ctNote').textContent=note;
+  document.getElementById('ctResult').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
