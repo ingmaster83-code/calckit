@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연말정산 환급액 계산기 — 예상 환급·추납 세액 | WooaCalc</title>
+<meta name="description" content="총급여와 기납부세액, 공제 항목을 입력해 연말정산 예상 환급액 또는 추가납부세액을 간편 계산합니다.">
+<meta name="keywords" content="연말정산계산기,환급액계산,연말정산환급,추납세액,근로소득세계산,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/year-end-tax.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/year-end-tax.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/year-end-tax.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/year-end-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연말정산 환급액 계산기 — 예상 환급·추납 세액 | WooaCalc">
+<meta property="og:description" content="총급여와 기납부세액, 공제 항목을 입력해 연말정산 예상 환급액 또는 추가납부세액을 간편 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/year-end-tax.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="연말정산 환급액 계산기 — 예상 환급·추납 세액 | WooaCalc">
+<meta name="twitter:description" content="총급여와 기납부세액, 공제 항목을 입력해 연말정산 예상 환급액 또는 추가납부세액을 간편 계산합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"연말정산 환급액 계산기","url":"https://calckit.wooahouse.com/year-end-tax.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"금융·세금 계산기","item":"https://calckit.wooahouse.com/#finance"},{"@type":"ListItem","position":3,"name":"연말정산 환급액 계산기","item":"https://calckit.wooahouse.com/year-end-tax.html"}]}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#finance">금융·세금 계산기</a><span>›</span>연말정산 환급액 계산기</div>
+<div class="tool-header"><div class="tool-icon">💸</div><div><h1>연말정산 환급액 계산기</h1><p>총급여와 공제 입력으로 예상 환급액을 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="ytSalary">총급여 (원)</label><input type="number" id="ytSalary" placeholder="예: 40000000" min="0"></div>
+      <div class="form-group"><label for="ytPaid">기납부 세액 (원)</label><input type="number" id="ytPaid" placeholder="예: 1200000" min="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="ytPersons">인적공제 인원 (본인 포함)</label><input type="number" id="ytPersons" value="1" min="1" max="20"></div>
+      <div class="form-group"><label for="ytCard">신용카드 등 사용액 (원)</label><input type="number" id="ytCard" placeholder="예: 10000000" min="0" value="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="ytMedical">의료비 (원)</label><input type="number" id="ytMedical" placeholder="예: 500000" min="0" value="0"></div>
+      <div class="form-group"><label for="ytInsurance">보험료 공제 (원)</label><input type="number" id="ytInsurance" placeholder="예: 1000000" min="0" value="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcYet()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="ytResult">
+    <div class="result-main" id="ytRefund"></div>
+    <div class="result-label" id="ytRefundLabel">예상 환급액</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">근로소득공제 후 소득</span><span class="value" id="ytAfterWd"></span></div>
+      <div class="result-row"><span class="label">총 공제액</span><span class="value" id="ytDeduct"></span></div>
+      <div class="result-row"><span class="label">과세표준</span><span class="value" id="ytBase"></span></div>
+      <div class="result-row"><span class="label">산출세액</span><span class="value" id="ytTax"></span></div>
+      <div class="result-row"><span class="label">기납부세액</span><span class="value" id="ytPaid2"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label" id="ytLabel2">환급액</span><span class="value" id="ytFinal"></span></div>
+    </div>
+    <p style="color:#94a3b8;font-size:.82rem;margin-top:12px">※ 간이 계산 결과입니다. 실제와 다를 수 있으며 정확한 금액은 홈택스를 이용하세요.</p>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>신용카드 공제는 총급여의 25% 초과분의 15%입니다. 체크카드·현금영수증은 30%로 더 유리합니다.</li><li>의료비 공제는 총급여의 3% 초과분의 15%입니다. 안경·렌즈 구입비도 포함됩니다.</li><li>기납부세액은 매월 급여 명세서의 '소득세' 항목 합계로 확인할 수 있습니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>환급은 언제 받나요?</summary><p>보통 2월 급여일에 환급 또는 추납됩니다. 회사 일정에 따라 다를 수 있습니다.</p></details><details><summary>계산 결과가 실제와 다를 수 있나요?</summary><p>네. 이 계산기는 주요 공제만 반영한 간이 추정입니다. 정확한 금액은 홈택스 연말정산 간소화 서비스를 이용하세요.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"환급은 언제 받나요?","acceptedAnswer":{"@type":"Answer","text":"보통 2월 급여일에 환급 또는 추납됩니다. 회사 일정에 따라 다를 수 있습니다."}},{"@type":"Question","name":"계산 결과가 실제와 다를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 이 계산기는 주요 공제만 반영한 간이 추정입니다. 정확한 금액은 홈택스 연말정산 간소화 서비스를 이용하세요."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+
+<script>
+function fmt(n){return Math.round(Math.abs(n)).toLocaleString();}
+function empDeduct(s){
+  if(s<=5000000) return s*0.7;
+  if(s<=15000000) return 3500000+(s-5000000)*0.4;
+  if(s<=45000000) return 7500000+(s-15000000)*0.15;
+  if(s<=100000000) return 12000000+(s-45000000)*0.05;
+  return 14750000+(s-100000000)*0.02;
+}
+function taxRate(base){
+  if(base<=12000000) return base*0.06;
+  if(base<=46000000) return 720000+(base-12000000)*0.15;
+  if(base<=88000000) return 5820000+(base-46000000)*0.24;
+  if(base<=150000000) return 15900000+(base-88000000)*0.35;
+  if(base<=300000000) return 37600000+(base-150000000)*0.38;
+  if(base<=500000000) return 94600000+(base-300000000)*0.40;
+  return 174600000+(base-500000000)*0.42;
+}
+function calcYet(){
+  var salary=parseFloat(document.getElementById('ytSalary').value)||0;
+  var paid=parseFloat(document.getElementById('ytPaid').value)||0;
+  var persons=parseInt(document.getElementById('ytPersons').value)||1;
+  var card=parseFloat(document.getElementById('ytCard').value)||0;
+  var medical=parseFloat(document.getElementById('ytMedical').value)||0;
+  var insurance=parseFloat(document.getElementById('ytInsurance').value)||0;
+  if(!salary){alert('총급여를 입력해주세요.');return;}
+  var wd=empDeduct(salary);
+  var afterWd=salary-wd;
+  var basicDeduct=persons*1500000;
+  var cardDeduct=Math.max(0,(card-salary*0.25)*0.15);
+  cardDeduct=Math.min(cardDeduct,3000000);
+  var medDeduct=Math.max(0,(medical-salary*0.03)*0.15);
+  var insDeduct=Math.min(insurance,1000000);
+  var totalDeduct=basicDeduct+cardDeduct+medDeduct+insDeduct;
+  var base=Math.max(0,afterWd-totalDeduct);
+  var tax=taxRate(base);
+  var diff=paid-tax;
+  document.getElementById('ytAfterWd').textContent=fmt(afterWd)+'원';
+  document.getElementById('ytDeduct').textContent=fmt(totalDeduct)+'원';
+  document.getElementById('ytBase').textContent=fmt(base)+'원';
+  document.getElementById('ytTax').textContent=fmt(tax)+'원';
+  document.getElementById('ytPaid2').textContent=fmt(paid)+'원';
+  if(diff>=0){
+    document.getElementById('ytRefund').textContent=fmt(diff)+'원';
+    document.getElementById('ytRefundLabel').textContent='예상 환급액';
+    document.getElementById('ytLabel2').textContent='환급액';
+    document.getElementById('ytFinal').textContent='+'+fmt(diff)+'원';
+    document.getElementById('ytFinal').style.color='#10B981';
+  } else {
+    document.getElementById('ytRefund').textContent=fmt(-diff)+'원';
+    document.getElementById('ytRefundLabel').textContent='예상 추납세액';
+    document.getElementById('ytLabel2').textContent='추가납부';
+    document.getElementById('ytFinal').textContent='-'+fmt(-diff)+'원';
+    document.getElementById('ytFinal').style.color='#F87171';
+  }
+  document.getElementById('ytResult').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>

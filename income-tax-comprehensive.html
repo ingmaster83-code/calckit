@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>종합소득세 계산기 — 소득 유형별 합산 세액 | WooaCalc</title>
+<meta name="description" content="근로·사업·이자·배당·기타소득을 합산해 종합소득세 과세표준과 예상 세액을 계산합니다.">
+<meta name="keywords" content="종합소득세계산기,종합소득세,사업소득세,이자소득세,배당소득세,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/income-tax-comprehensive.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/income-tax-comprehensive.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/income-tax-comprehensive.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/income-tax-comprehensive.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="종합소득세 계산기 — 소득 유형별 합산 세액 | WooaCalc">
+<meta property="og:description" content="근로·사업·이자·배당·기타소득을 합산해 종합소득세 과세표준과 예상 세액을 계산합니다.">
+<meta property="og:url" content="https://calckit.wooahouse.com/income-tax-comprehensive.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="종합소득세 계산기 — 소득 유형별 합산 세액 | WooaCalc">
+<meta name="twitter:description" content="근로·사업·이자·배당·기타소득을 합산해 종합소득세 과세표준과 예상 세액을 계산합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"종합소득세 계산기","url":"https://calckit.wooahouse.com/income-tax-comprehensive.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"금융·세금 계산기","item":"https://calckit.wooahouse.com/#finance"},{"@type":"ListItem","position":3,"name":"종합소득세 계산기","item":"https://calckit.wooahouse.com/income-tax-comprehensive.html"}]}
+</script>
+</head>
+<body>
+<script src="js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴">☰</button><nav class="nav"><a href="/#finance">💰 금융</a><a href="/#health">🏥 건강</a><a href="/#date">📅 날짜</a><a href="/#unit">📐 단위변환</a><a href="/#life">🏠 생활</a></nav></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="#finance">금융·세금 계산기</a><span>›</span>종합소득세 계산기</div>
+<div class="tool-header"><div class="tool-icon">📊</div><div><h1>종합소득세 계산기</h1><p>소득 유형별 합산으로 예상 종합소득세를 계산합니다</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <h3 style="color:#e2e8f0;font-size:.95rem;margin-bottom:12px">소득 입력 (해당 항목만 입력)</h3>
+    <div class="form-row">
+      <div class="form-group"><label for="citEmp">근로소득 (총급여, 원)</label><input type="number" id="citEmp" placeholder="0" min="0" value="0"></div>
+      <div class="form-group"><label for="citBiz">사업소득 (수입금액, 원)</label><input type="number" id="citBiz" placeholder="0" min="0" value="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="citInt">이자·배당소득 (원)</label><input type="number" id="citInt" placeholder="0" min="0" value="0"></div>
+      <div class="form-group"><label for="citOther">기타소득 (원)</label><input type="number" id="citOther" placeholder="0" min="0" value="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="citPersons">인적공제 인원 (본인 포함)</label><input type="number" id="citPersons" value="1" min="1" max="20"></div>
+      <div class="form-group"><label for="citExtra">추가 공제 (원)</label><input type="number" id="citExtra" placeholder="노란우산 등" min="0" value="0"></div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcCit()">계산하기</button>
+  </div>
+  <div class="result-box hidden" id="citResult">
+    <div class="result-main" id="citTax"></div>
+    <div class="result-label">예상 종합소득세</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">합산 소득</span><span class="value" id="citTotal"></span></div>
+      <div class="result-row"><span class="label">소득공제 합계</span><span class="value" id="citDeduct"></span></div>
+      <div class="result-row"><span class="label">과세표준</span><span class="value" id="citBase"></span></div>
+      <div class="result-row"><span class="label">적용 세율</span><span class="value" id="citRate"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">산출세액</span><span class="value" id="citTax2"></span></div>
+    </div>
+    <p style="color:#94a3b8;font-size:.82rem;margin-top:12px">※ 사업소득 필요경비, 금융소득 2천만원 초과 분리과세 등은 반영되지 않습니다. 간이 추정치입니다.</p>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>금융소득(이자+배당)이 2천만원을 초과하면 종합과세 대상이 됩니다.</li><li>사업소득은 수입금액이 아닌 필요경비를 뺀 순이익에 세율이 적용됩니다. 이 계산기는 경비 없이 계산합니다.</li><li>노란우산공제·개인연금 등 추가 공제를 '추가 공제' 란에 입력하면 세액이 줄어듭니다.</li></ul></div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>종합소득세 신고 기간은 언제인가요?</summary><p>매년 5월 1일~31일이 종합소득세 확정신고 기간입니다. 성실신고확인 대상자는 6월 30일까지입니다.</p></details><details><summary>근로소득만 있으면 종합소득세 신고를 해야 하나요?</summary><p>근로소득만 있고 연말정산을 완료했다면 별도 종합소득세 신고는 불필요합니다.</p></details><details><summary>입력한 정보가 저장되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"종합소득세 신고 기간은 언제인가요?","acceptedAnswer":{"@type":"Answer","text":"매년 5월 1일~31일이 종합소득세 확정신고 기간입니다. 성실신고확인 대상자는 6월 30일까지입니다."}},{"@type":"Question","name":"근로소득만 있으면 종합소득세 신고를 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"근로소득만 있고 연말정산을 완료했다면 별도 종합소득세 신고는 불필요합니다."}},{"@type":"Question","name":"입력한 정보가 저장되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송되지 않습니다."}}]}</script>
+<footer class="footer"></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString();}
+function empDed(s){
+  if(s<=5000000) return s*0.7;
+  if(s<=15000000) return 3500000+(s-5000000)*0.4;
+  if(s<=45000000) return 7500000+(s-15000000)*0.15;
+  if(s<=100000000) return 12000000+(s-45000000)*0.05;
+  return 14750000+(s-100000000)*0.02;
+}
+function taxAmt(base){
+  if(base<=12000000) return {tax:base*0.06,rate:'6%'};
+  if(base<=46000000) return {tax:720000+(base-12000000)*0.15,rate:'15%'};
+  if(base<=88000000) return {tax:5820000+(base-46000000)*0.24,rate:'24%'};
+  if(base<=150000000) return {tax:15900000+(base-88000000)*0.35,rate:'35%'};
+  if(base<=300000000) return {tax:37600000+(base-150000000)*0.38,rate:'38%'};
+  if(base<=500000000) return {tax:94600000+(base-300000000)*0.40,rate:'40%'};
+  return {tax:174600000+(base-500000000)*0.42,rate:'42%'};
+}
+function calcCit(){
+  var emp=parseFloat(document.getElementById('citEmp').value)||0;
+  var biz=parseFloat(document.getElementById('citBiz').value)||0;
+  var intDiv=parseFloat(document.getElementById('citInt').value)||0;
+  var other=parseFloat(document.getElementById('citOther').value)||0;
+  var persons=parseInt(document.getElementById('citPersons').value)||1;
+  var extra=parseFloat(document.getElementById('citExtra').value)||0;
+  var total=emp+biz+intDiv+other;
+  if(!total){alert('소득을 하나 이상 입력해주세요.');return;}
+  var empDeductAmt=emp>0?empDed(emp):0;
+  var basicDeduct=persons*1500000;
+  var totalDeduct=empDeductAmt+basicDeduct+extra;
+  var base=Math.max(0,total-totalDeduct);
+  var res=taxAmt(base);
+  document.getElementById('citTotal').textContent=fmt(total)+'원';
+  document.getElementById('citDeduct').textContent=fmt(totalDeduct)+'원';
+  document.getElementById('citBase').textContent=fmt(base)+'원';
+  document.getElementById('citRate').textContent=res.rate;
+  document.getElementById('citTax').textContent=fmt(res.tax)+'원';
+  document.getElementById('citTax2').textContent=fmt(res.tax)+'원';
+  document.getElementById('citResult').classList.remove('hidden');
+}
+</script>
+<script src="js/wooahouse-originals-tool.js"></script>
+<script src="js/wooa-sidebar.js"></script>
+<script src="js/wooa-footer.js"></script>
+</body>
+</html>
