@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Property Tax Calculator</title>
+<meta name="description" content="Calculate Korea's annual property tax (재산세) from the government-assessed value — fair market ratio, progressive rates, single-home owner discount, local education tax. No installation required.">
+<meta name="keywords" content="Korean property tax calculator, 재산세 계산기, Korea housing tax, assessed value tax, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/property-tax.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/property-tax.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/property-tax.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/property-tax.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korean Property Tax Calculator – Free No Install | WooaCalc">
+<meta property="og:description" content="Calculate Korea's annual property tax (재산세) from the government-assessed value — fair market ratio, progressive rates, single-home owner discount, local education tax. No installation required.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/property-tax.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korean Property Tax Calculator – Free No Install | WooaCalc">
+<meta name="twitter:description" content="Calculate Korea's annual property tax (재산세) from the government-assessed value — fair market ratio, progressive rates, single-home owner discount, local education tax. No installation required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korean Property Tax Calculator","url":"https://calckit.wooahouse.com/en/property-tax.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"Finance Calculators","item":"https://calckit.wooahouse.com/#finance"},{"@type":"ListItem","position":3,"name":"Property Tax Calculator","item":"https://calckit.wooahouse.com/en/property-tax.html"}]}
+</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px}.lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s}.lang-switcher a.active{color:white;background:rgba(255,255,255,0.25)}.lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18)}.lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem}
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit</a><a href="/#life">🏠 Life</a></nav><div class="lang-switcher"><a href="../property-tax.html">KO</a><span>|</span><a href="property-tax.html" class="active">EN</a></div></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>Property Tax Calculator</div>
+<div class="tool-header"><div class="tool-icon">🏛️</div><div><h1>Korean Property Tax Calculator</h1><p>Enter the assessed value to calculate property tax, local education tax, and urban area tax</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="ptPrice">Assessed Value (10k KRW)</label><input type="number" id="ptPrice" placeholder="e.g. 60000" min="0"></div>
+      <div class="form-group"><label for="ptType">Home Ownership Type</label>
+        <select id="ptType">
+          <option value="single">Single home (1 household)</option>
+          <option value="multi">Multiple homes / corporation</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="ptUrban">Include Urban Area Tax</label>
+        <select id="ptUrban"><option value="1">Include (property in urban planning zone)</option><option value="0">Exclude</option></select>
+      </div>
+    </div>
+    <div style="background:#0f172a;border-radius:8px;padding:12px 16px;margin-bottom:16px;color:#94a3b8;font-size:.88rem">
+      ※ Single-home owners with an assessed value of KRW 900M or less automatically get the discounted rate (fair market ratio 43–45%, tax rate 0.05–0.35%). Above KRW 900M, or for multiple-home owners/corporations, the standard fair market ratio of 60% and rate of 0.1–0.4% apply.
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcPropertyTax()">Calculate Property Tax</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resTotal"></div>
+    <div class="result-label">Annual Property Tax Total (split 50/50 in July & September)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Assessed Value</span><span class="value" id="resPrice"></span></div>
+      <div class="result-row"><span class="label">Fair Market Ratio</span><span class="value" id="resRatio"></span></div>
+      <div class="result-row"><span class="label">Taxable Base</span><span class="value" id="resTaxBase"></span></div>
+      <div class="result-row"><span class="label">Property Tax</span><span class="value" id="resPropTax"></span></div>
+      <div class="result-row"><span class="label">Local Education Tax (20% of property tax)</span><span class="value" id="resEduTax"></span></div>
+      <div class="result-row"><span class="label">Urban Area Tax (0.14% of base)</span><span class="value" id="resUrbanTax"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">Annual Total</span><span class="value" id="resTotal2"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Property Tax Tips (2026)</h3><ul>
+  <li>Assessed to the owner of record as of June 1 each year, billed in two installments: July (buildings/half of housing) and September (land/remaining half).</li>
+  <li>The single-home discount only applies up to an assessed value of KRW 900M — any amount above that is taxed at standard rates.</li>
+  <li>Jointly-owned homes (e.g. married couples) are judged for single-home status based on the household's total number of homes.</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">When is property tax due?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Bills are issued twice a year, in July and September, each covering half the annual amount. Amounts under KRW 200,000 may be billed in full in July.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">How does the single-home discount work?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Single-home owners with an assessed value up to KRW 900M get a reduced fair market ratio (43–45%) and reduced tax rate (0.05–0.35%), lowering their overall burden compared to the standard rate.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">Does joint ownership reduce property tax?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Property tax is billed proportionally by ownership share, so the total doesn't change much. However, joint ownership can meaningfully reduce comprehensive real estate tax (종부세) by using each owner's individual deduction.</p>
+  </details>
+</div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When is property tax due?","acceptedAnswer":{"@type":"Answer","text":"Bills are issued in July and September, each covering half the annual amount. Amounts under KRW 200,000 may be billed in full in July."}},{"@type":"Question","name":"How does the single-home discount work?","acceptedAnswer":{"@type":"Answer","text":"Single-home owners with an assessed value up to KRW 900M get a reduced fair market ratio and tax rate, lowering their overall burden."}},{"@type":"Question","name":"Does joint ownership reduce property tax?","acceptedAnswer":{"@type":"Answer","text":"Property tax itself changes little, but joint ownership can reduce comprehensive real estate tax via per-owner deductions."}}]}</script>
+  <div class="related-tools">
+  <h2>Related Tools</h2>
+  <div class="related-grid">
+    <a href="comprehensive-real-estate-tax.html" class="related-card"><span class="related-icon">🔧</span><span>comprehensive-real-estate-tax</span></a>
+    <a href="acquisition-tax.html" class="related-card"><span class="related-icon">🔧</span><span>acquisition-tax</span></a>
+    <a href="capital-gains-tax.html" class="related-card"><span class="related-icon">🔧</span><span>capital-gains-tax</span></a>
+    <a href="jeonse-conversion.html" class="related-card"><span class="related-icon">🔧</span><span>jeonse-conversion</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
+<footer class="footer"></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcPropertyTax(){
+  const price = parseFloat(document.getElementById('ptPrice').value)*10000;
+  const type = document.getElementById('ptType').value;
+  const urban = document.getElementById('ptUrban').value === '1';
+  if(!price){alert('Enter the assessed value.');return;}
+
+  const isSpecial = (type === 'single' && price <= 900000000);
+  const ratio = isSpecial ? (price<=300000000?0.43:price<=600000000?0.44:0.45) : 0.60;
+  const taxBase = price * ratio;
+
+  let tax;
+  if(isSpecial){
+    if(taxBase<=60000000) tax = taxBase*0.0005;
+    else if(taxBase<=150000000) tax = 30000 + (taxBase-60000000)*0.001;
+    else if(taxBase<=300000000) tax = 120000 + (taxBase-150000000)*0.002;
+    else tax = 420000 + (taxBase-300000000)*0.0035;
+  } else {
+    if(taxBase<=60000000) tax = taxBase*0.001;
+    else if(taxBase<=150000000) tax = 60000 + (taxBase-60000000)*0.0015;
+    else if(taxBase<=300000000) tax = 195000 + (taxBase-150000000)*0.0025;
+    else tax = 570000 + (taxBase-300000000)*0.004;
+  }
+  tax = Math.round(tax);
+
+  const eduTax = Math.round(tax * 0.20);
+  const urbanTax = urban ? Math.round(taxBase * 0.0014) : 0;
+  const total = tax + eduTax + urbanTax;
+
+  document.getElementById('resTotal').textContent = 'KRW '+fmt(total);
+  document.getElementById('resPrice').textContent = 'KRW '+fmt(price);
+  document.getElementById('resRatio').textContent = (ratio*100).toFixed(0)+'%'+(isSpecial?' (discounted)':' (standard)');
+  document.getElementById('resTaxBase').textContent = 'KRW '+fmt(taxBase);
+  document.getElementById('resPropTax').textContent = 'KRW '+fmt(tax);
+  document.getElementById('resEduTax').textContent = 'KRW '+fmt(eduTax);
+  document.getElementById('resUrbanTax').textContent = urban ? 'KRW '+fmt(urbanTax) : 'N/A';
+  document.getElementById('resTotal2').textContent = 'KRW '+fmt(total);
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>

@@ -80,6 +80,11 @@
   <url><loc>https://calckit.wooahouse.com/bac.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calckit.wooahouse.com/discount.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calckit.wooahouse.com/sleep-cycle.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <!-- New calculators 2026-07-22 -->
+  <url><loc>https://calckit.wooahouse.com/inheritance-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calckit.wooahouse.com/property-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calckit.wooahouse.com/comprehensive-real-estate-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calckit.wooahouse.com/dsr-dti.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calckit.wooahouse.com/en/capital-gains-tax.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calckit.wooahouse.com/en/acquisition-tax.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calckit.wooahouse.com/en/jeonse-conversion.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -90,6 +95,10 @@
   <url><loc>https://calckit.wooahouse.com/en/bac.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calckit.wooahouse.com/en/discount.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calckit.wooahouse.com/en/sleep-cycle.html</loc><lastmod>2026-05-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calckit.wooahouse.com/en/inheritance-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calckit.wooahouse.com/en/property-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calckit.wooahouse.com/en/comprehensive-real-estate-tax.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calckit.wooahouse.com/en/dsr-dti.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <!-- New calculators 2026-05-29 -->
   <url><loc>https://calckit.wooahouse.com/income-tax.html</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calckit.wooahouse.com/financial-income-tax.html</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>

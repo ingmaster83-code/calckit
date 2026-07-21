@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="naver-site-verification" content="7396a327607b884b9bef1283dfd3a5c6115a2b50">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea DSR/DTI Loan Ratio Calculator</title>
+<meta name="description" content="Calculate Korea's DSR (Debt Service Ratio) and DTI from your income and loan payments — check against the 40%/50% regulatory caps. No installation required.">
+<meta name="keywords" content="Korea DSR calculator, DTI calculator, debt service ratio, Korea mortgage limit, WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/dsr-dti.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/dsr-dti.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/dsr-dti.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/dsr-dti.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Korea DSR/DTI Loan Ratio Calculator – Free | WooaCalc">
+<meta property="og:description" content="Calculate Korea's DSR (Debt Service Ratio) and DTI from your income and loan payments — check against the 40%/50% regulatory caps. No installation required.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/dsr-dti.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Korea DSR/DTI Loan Ratio Calculator – Free | WooaCalc">
+<meta name="twitter:description" content="Calculate Korea's DSR (Debt Service Ratio) and DTI from your income and loan payments — check against the 40%/50% regulatory caps. No installation required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Korea DSR/DTI Loan Ratio Calculator","url":"https://calckit.wooahouse.com/en/dsr-dti.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calckit.wooahouse.com/"},{"@type":"ListItem","position":2,"name":"Finance Calculators","item":"https://calckit.wooahouse.com/#finance"},{"@type":"ListItem","position":3,"name":"DSR/DTI Calculator","item":"https://calckit.wooahouse.com/en/dsr-dti.html"}]}
+</script>
+<style>
+  .lang-switcher{display:flex;align-items:center;gap:4px}.lang-switcher a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.8rem;font-weight:600;padding:3px 8px;border-radius:12px;transition:background 0.15s}.lang-switcher a.active{color:white;background:rgba(255,255,255,0.25)}.lang-switcher a:hover{color:white;background:rgba(255,255,255,0.18)}.lang-switcher span{color:rgba(255,255,255,0.3);font-size:0.75rem}
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit</a><a href="/#life">🏠 Life</a></nav><div class="lang-switcher"><a href="../dsr-dti.html">KO</a><span>|</span><a href="dsr-dti.html" class="active">EN</a></div></div></header>
+
+<div class="mobile-top-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/#finance">Finance Calculators</a><span>›</span>DSR/DTI Calculator</div>
+<div class="tool-header"><div class="tool-icon">📉</div><div><h1>Korea DSR/DTI Calculator</h1><p>Check your debt-to-income ratios against Korea's regulatory loan caps</p></div></div>
+
+<div class="panel">
+  <div class="calc-form">
+    <div class="form-row">
+      <div class="form-group"><label for="ddIncome">Annual Income (10k KRW)</label><input type="number" id="ddIncome" placeholder="e.g. 5000" min="0"></div>
+      <div class="form-group"><label for="ddBank">Lender Type</label>
+        <select id="ddBank"><option value="0.40">Bank / Tier-1 lender (40% cap)</option><option value="0.50">Savings bank / Tier-2 lender (50% cap)</option></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="ddMortgage">Mortgage Annual Payment — principal+interest (10k KRW)</label><input type="number" id="ddMortgage" placeholder="e.g. 1200" min="0" value="0"></div>
+      <div class="form-group"><label for="ddOtherPrincipal">Other Loans Annual Payment — principal+interest (10k KRW)</label><input type="number" id="ddOtherPrincipal" placeholder="e.g. 300" min="0" value="0"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="ddOtherInterest">Other Loans Annual Interest Only (10k KRW)</label><input type="number" id="ddOtherInterest" placeholder="e.g. 80" min="0" value="0"></div>
+    </div>
+    <div style="background:#0f172a;border-radius:8px;padding:12px 16px;margin-bottom:16px;color:#94a3b8;font-size:.88rem">
+      ※ DSR counts principal+interest on all loans; DTI counts mortgage principal+interest plus only the interest portion of other loans. Stress-DSR and other detailed rules are not reflected in this simplified estimate.
+    </div>
+    <button class="btn btn-primary btn-full" onclick="calcDsrDti()">Calculate DSR/DTI</button>
+  </div>
+  <div class="result-box hidden" id="result">
+    <div class="result-main" id="resDsr"></div>
+    <div class="result-label">DSR (Debt Service Ratio)</div>
+    <div class="result-rows">
+      <div class="result-row"><span class="label">Annual Income</span><span class="value" id="resIncome"></span></div>
+      <div class="result-row"><span class="label">Total Annual Payment (DSR basis)</span><span class="value" id="resDsrDebt"></span></div>
+      <div class="result-row"><span class="label">DSR</span><span class="value" id="resDsr2"></span></div>
+      <div class="result-row"><span class="label">Regulatory Cap (selected lender)</span><span class="value" id="resBankLimit"></span></div>
+      <div class="result-row" style="border-top:2px solid rgba(16,185,129,.4);font-weight:700"><span class="label">DSR Verdict</span><span class="value" id="resVerdict"></span></div>
+      <div class="result-row"><span class="label">DTI (reference)</span><span class="value" id="resDti"></span></div>
+    </div>
+    <div id="ddMsg" style="margin-top:12px;padding:10px 14px;border-radius:8px;font-size:.88rem;line-height:1.6"></div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 DSR/DTI Tips</h3><ul>
+  <li>DSR = (sum of all annual loan payments) ÷ annual income × 100</li>
+  <li>DTI = (mortgage payment + other loans' interest) ÷ annual income × 100</li>
+  <li>Once total borrowing exceeds KRW 100M, borrower-level DSR caps apply: 40% at banks, 50% at savings banks/tier-2 lenders.</li>
+</ul></div>
+</div></div>
+
+<aside class="tool-sidebar"></aside>
+</div>
+
+<div style="max-width:720px;margin:32px auto;padding:0 16px 32px">
+<h2 style="font-size:1.1rem;font-weight:700;color:#e2e8f0;margin-bottom:16px">Frequently Asked Questions</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">What's the difference between DSR and DTI?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">DTI only counts mortgage principal+interest and other loans' interest. DSR is stricter — it counts principal+interest on every loan you carry, including credit loans and card loans.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">When does the 40% DSR cap apply?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Once a borrower's total loan balance exceeds KRW 100M, banks apply a 40% DSR cap and savings banks/tier-2 lenders apply 50%.</p>
+  </details>
+  <details style="border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:12px 16px;background:#1a2235">
+    <summary style="cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none">How can I lower my DSR?</summary>
+    <p style="margin:8px 0 0;color:#94a3b8;line-height:1.7">Extending the loan term reduces the annual payment, and paying off small credit loans first reduces the "other loans" portion of the ratio.</p>
+  </details>
+</div>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What's the difference between DSR and DTI?","acceptedAnswer":{"@type":"Answer","text":"DTI counts mortgage principal+interest and other loans' interest only. DSR counts principal+interest on every loan, making it stricter."}},{"@type":"Question","name":"When does the 40% DSR cap apply?","acceptedAnswer":{"@type":"Answer","text":"Once total borrowing exceeds KRW 100M, banks apply 40% and savings banks/tier-2 lenders apply 50%."}},{"@type":"Question","name":"How can I lower my DSR?","acceptedAnswer":{"@type":"Answer","text":"Extend the loan term to reduce annual payments, or pay off small credit loans first."}}]}</script>
+  <div class="related-tools">
+  <h2>Related Tools</h2>
+  <div class="related-grid">
+    <a href="loan-interest.html" class="related-card"><span class="related-icon">🔧</span><span>loan-interest</span></a>
+    <a href="mortgage-limit.html" class="related-card"><span class="related-icon">🔧</span><span>mortgage-limit</span></a>
+    <a href="early-repayment-fee.html" class="related-card"><span class="related-icon">🔧</span><span>early-repayment-fee</span></a>
+    <a href="acquisition-tax.html" class="related-card"><span class="related-icon">🔧</span><span>acquisition-tax</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
+<footer class="footer"></footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('ko-KR');}
+function calcDsrDti(){
+  const income = parseFloat(document.getElementById('ddIncome').value)*10000;
+  const bankLimit = parseFloat(document.getElementById('ddBank').value);
+  const mortgage = parseFloat(document.getElementById('ddMortgage').value)*10000 || 0;
+  const otherPrincipal = parseFloat(document.getElementById('ddOtherPrincipal').value)*10000 || 0;
+  const otherInterest = parseFloat(document.getElementById('ddOtherInterest').value)*10000 || 0;
+  if(!income){alert('Enter your annual income.');return;}
+
+  const dsrDebt = mortgage + otherPrincipal;
+  const dtiDebt = mortgage + otherInterest;
+  const dsr = (dsrDebt / income) * 100;
+  const dti = (dtiDebt / income) * 100;
+  const ok = dsr <= bankLimit * 100;
+
+  document.getElementById('resDsr').textContent = dsr.toFixed(1)+'%';
+  document.getElementById('resIncome').textContent = 'KRW '+fmt(income);
+  document.getElementById('resDsrDebt').textContent = 'KRW '+fmt(dsrDebt);
+  document.getElementById('resDsr2').textContent = dsr.toFixed(1)+'%';
+  document.getElementById('resBankLimit').textContent = (bankLimit*100).toFixed(0)+'%';
+  document.getElementById('resVerdict').textContent = ok ? '✅ Within cap' : '❌ Over cap';
+  document.getElementById('resVerdict').style.color = ok ? '#10B981' : '#F87171';
+  document.getElementById('resDti').textContent = dti.toFixed(1)+'%';
+
+  const msg = document.getElementById('ddMsg');
+  if(ok){
+    msg.style.background='rgba(16,185,129,.1)';msg.style.color='#10B981';
+    const room = (bankLimit*income) - dsrDebt;
+    msg.textContent = 'You have about KRW '+fmt(room)+' of annual payment room left before hitting the cap.';
+  } else {
+    msg.style.background='rgba(248,113,113,.1)';msg.style.color='#F87171';
+    const over = dsrDebt - (bankLimit*income);
+    msg.textContent = 'You exceed the cap by about KRW '+fmt(over)+' in annual payments. Your loan amount may be restricted.';
+  }
+  document.getElementById('result').classList.remove('hidden');
+}
+</script>
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>
