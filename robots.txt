@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+
+User-agent: Daum
+Allow: /
+
 Sitemap: https://calckit.wooahouse.com/sitemap.xml
 
 #DaumWebMasterTool:3d0ea5400d6af61f1f225b5c7cfe0c1cb757b69e831f03c690434199bef5073b:5OHFs/qHHlfCvAas17iLzw==
