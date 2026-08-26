@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZGENFSXWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9ZGENFSXWC');
+</script>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="tNM8tmr_6DFold03YSScWz4KEtu5Zo0Fsqc03u5Afms">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Splitter — Split Costs & Settle Up Free | WooaCalc</title>
+<meta name="description" content="Enter how much each person paid and instantly get each person's fair share plus a simplified settle-up list of who should pay whom.">
+<meta name="keywords" content="bill splitter,split the bill,settle up calculator,dutch pay,group expense split,WooaCalc">
+<link rel="canonical" href="https://calckit.wooahouse.com/en/bill-split.html">
+<link rel="alternate" hreflang="ko" href="https://calckit.wooahouse.com/bill-split.html">
+<link rel="alternate" hreflang="en" href="https://calckit.wooahouse.com/en/bill-split.html">
+<link rel="alternate" hreflang="x-default" href="https://calckit.wooahouse.com/en/bill-split.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bill Splitter — Split Costs & Settle Up Free | WooaCalc">
+<meta property="og:description" content="Enter how much each person paid and instantly get each person's fair share plus a settle-up list.">
+<meta property="og:url" content="https://calckit.wooahouse.com/en/bill-split.html">
+<meta property="og:image" content="https://calckit.wooahouse.com/og-image.png">
+<meta property="og:site_name" content="WooaCalc">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bill Splitter — Split Costs & Settle Up Free | WooaCalc">
+<meta name="twitter:description" content="Enter how much each person paid and instantly get each person's fair share plus a settle-up list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+<script src="../js/ad-dev-placeholder.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bill Splitter","url":"https://calckit.wooahouse.com/en/bill-split.html","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calckit.wooahouse.com/en/"},{"@type":"ListItem","position":2,"name":"Life Calculators","item":"https://calckit.wooahouse.com/en/#life"},{"@type":"ListItem","position":3,"name":"Bill Splitter","item":"https://calckit.wooahouse.com/en/bill-split.html"}]}</script>
+<style>
+.tool-page{min-width:0}
+.bs-row{display:flex;gap:8px;align-items:center;margin-bottom:8px;min-width:0}
+.bs-row input[type=text]{flex:1.2;min-width:0;padding:10px 12px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:.92rem}
+.bs-row input[type=number]{flex:1;min-width:0;padding:10px 12px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:.92rem}
+.bs-remove{background:#FEE2E2;color:#DC2626;border:none;border-radius:6px;padding:9px 12px;cursor:pointer;font-size:.9rem;flex-shrink:0}
+.bs-remove:hover{background:#FECACA}
+.settle-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.settle-item{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;border-radius:8px;padding:12px;font-size:.95rem;font-weight:600}
+.settle-arrow{color:#10B981;font-size:1.1rem}
+</style>
+</head>
+<body>
+<script src="../js/wooa-sites-bar.js"></script>
+<header class="header"><div class="container"><a href="/" class="logo">🧮 WooaCalc <span>WooaCalc</span></a><button class="mobile-menu-btn" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="/#finance">💰 Finance</a><a href="/#health">🏥 Health</a><a href="/#date">📅 Date</a><a href="/#unit">📐 Unit</a><a href="/#life">🏠 Life</a></nav><div class="lang-switcher"><a href="../bill-split.html">KO</a><span>|</span><a href="bill-split.html" class="active">EN</a></div></div></header>
+<div class="mobile-top-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6464921081676309" data-ad-slot="7080296704" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div class="page-with-sidebar">
+<div class="tool-page"><div class="container">
+<div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="#life">Life Calculators</a><span>›</span>Bill Splitter</div>
+<div class="tool-header"><div class="tool-icon">🧾</div><div><h1>Bill Splitter</h1><p>Enter what each person paid to get the fair share and settle-up list</p></div></div>
+
+<div class="panel">
+  <div id="bsList" style="margin-bottom:12px"></div>
+  <button class="btn" onclick="addPerson()" style="width:100%;background:#F3F4F6;color:#374151;margin-bottom:12px">+ Add Person</button>
+  <button class="btn btn-primary btn-full" onclick="calcSplit()">Split the Bill</button>
+
+  <div class="result-box hidden" id="bsResult" style="margin-top:16px">
+    <div class="result-main" id="bsTotal"></div>
+    <div class="result-label">Total Amount</div>
+    <div class="result-rows" id="bsShares"></div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(16,185,129,.3)">
+      <div style="font-weight:700;color:#065F46;margin-bottom:8px;font-size:.92rem" id="bsSettleTitle">Settle Up</div>
+      <div class="settle-list" id="bsSettleList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="tips-panel"><h3>💡 Tips</h3><ul><li>If no one has paid yet, leave everyone at 0 to just see each person's fair share.</li><li>If one person already paid the full amount, enter the total in their "amount paid" field.</li><li>The settle-up list is computed to reduce the number of transfers needed.</li></ul></div>
+<div class="related-tools">
+  <h2>Tools you might also like</h2>
+  <div class="related-grid">
+    <a href="percentage.html" class="related-card"><span class="related-icon">%</span><span>Percentage Calculator</span></a>
+    <a href="subscription-cost.html" class="related-card"><span class="related-icon">📱</span><span>Subscription Cost Calculator</span></a>
+    <a href="moving-cost.html" class="related-card"><span class="related-icon">🏠</span><span>Moving Cost Calculator</span></a>
+    <a href="fraction.html" class="related-card"><span class="related-icon">½</span><span>Fraction Calculator</span></a>
+  </div>
+</div>
+<div class="wooa-orig-anchor"></div>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><details><summary>What happens if the total doesn't divide evenly?</summary><p>Any leftover cents (or won) from dividing the total by the number of people are automatically assigned one at a time to the first people in the list, so the total always adds up exactly.</p></details><details><summary>How is the settle-up list calculated?</summary><p>People who are owed money and people who owe money are matched largest-to-largest to reduce the number of transfers needed.</p></details><details><summary>Is my data saved anywhere?</summary><p>No. All calculations happen locally in your browser and nothing is sent to a server.</p></details></div>
+</div></div>
+<aside class="tool-sidebar"></aside>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens if the total doesn't divide evenly?","acceptedAnswer":{"@type":"Answer","text":"Any leftover amount from dividing the total by the number of people is automatically assigned one unit at a time to the first people in the list, so the total always adds up exactly."}},{"@type":"Question","name":"How is the settle-up list calculated?","acceptedAnswer":{"@type":"Answer","text":"People who are owed money and people who owe money are matched largest-to-largest to reduce the number of transfers needed."}},{"@type":"Question","name":"Is my data saved anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations happen locally in your browser and nothing is sent to a server."}}]}</script>
+<footer class="footer"></footer>
+
+<script>
+var bsId=0;
+function addPerson(name,paid){
+  var id='bp'+(bsId++);
+  var idx=document.querySelectorAll('#bsList > div').length+1;
+  var html='<div class="bs-row" id="'+id+'">'
+    +'<input type="text" id="'+id+'n" placeholder="Name" value="'+(name||('Person '+idx))+'">'
+    +'<input type="number" id="'+id+'p" placeholder="Amount paid" value="'+(paid||0)+'" min="0">'
+    +'<button class="bs-remove" onclick="removePerson(\''+id+'\')">✕</button>'
+    +'</div>';
+  document.getElementById('bsList').insertAdjacentHTML('beforeend', html);
+}
+function removePerson(id){
+  var rows=document.querySelectorAll('#bsList > div');
+  if(rows.length<=2){alert('At least 2 people are required.');return;}
+  document.getElementById(id).remove();
+}
+function fmt(n){return '$'+(Math.round(n*100)/100).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
+
+function fairShares(total,n){
+  var baseCents=Math.floor(total*100/n);
+  var remCents=Math.round(total*100)-baseCents*n;
+  var shares=[];
+  for(var i=0;i<n;i++) shares.push((baseCents+(i<remCents?1:0))/100);
+  return shares;
+}
+
+function settleUp(balances){
+  var creditors=balances.filter(function(b){return b.amount>0.005;}).map(function(b){return {name:b.name,amt:b.amount};}).sort(function(a,b){return b.amt-a.amt;});
+  var debtors=balances.filter(function(b){return b.amount<-0.005;}).map(function(b){return {name:b.name,amt:-b.amount};}).sort(function(a,b){return b.amt-a.amt;});
+  var transactions=[];
+  var i=0,j=0;
+  while(i<debtors.length && j<creditors.length){
+    var pay=Math.min(debtors[i].amt,creditors[j].amt);
+    if(pay>0.005) transactions.push({from:debtors[i].name,to:creditors[j].name,amount:pay});
+    debtors[i].amt-=pay;
+    creditors[j].amt-=pay;
+    if(debtors[i].amt<0.005) i++;
+    if(creditors[j].amt<0.005) j++;
+  }
+  return transactions;
+}
+
+function calcSplit(){
+  var rows=document.querySelectorAll('#bsList > div');
+  var people=[];
+  rows.forEach(function(r){
+    var name=document.getElementById(r.id+'n').value.trim()||'Unnamed';
+    var paid=parseFloat(document.getElementById(r.id+'p').value)||0;
+    people.push({name:name,paid:paid});
+  });
+  var total=people.reduce(function(s,p){return s+p.paid;},0);
+  if(total<=0){alert('Please enter at least one amount greater than 0. (If no one has paid yet, temporarily enter the total under one person.)');return;}
+
+  var shares=fairShares(total,people.length);
+  var shareRows='';
+  var balances=[];
+  people.forEach(function(p,i){
+    var balance=p.paid-shares[i];
+    balances.push({name:p.name,amount:balance});
+    var balText = balance>0.005 ? ('<span style="color:#059669">+'+fmt(balance)+' owed to them</span>') : (balance<-0.005 ? ('<span style="color:#DC2626">-'+fmt(Math.abs(balance))+' owes</span>') : 'Settled');
+    shareRows+='<div class="result-row"><span class="label">'+p.name+' (share '+fmt(shares[i])+')</span><span class="value">'+balText+'</span></div>';
+  });
+  document.getElementById('bsShares').innerHTML=shareRows;
+  document.getElementById('bsTotal').textContent=fmt(total);
+
+  var tx=settleUp(balances);
+  var settleHtml='';
+  if(!tx.length){
+    settleHtml='<div style="text-align:center;color:#065F46;padding:8px">Already settled up 🎉</div>';
+  }else{
+    tx.forEach(function(t){
+      settleHtml+='<div class="settle-item"><span>'+t.from+'</span><span class="settle-arrow">→ '+fmt(t.amount)+' →</span><span>'+t.to+'</span></div>';
+    });
+  }
+  document.getElementById('bsSettleList').innerHTML=settleHtml;
+  document.getElementById('bsResult').classList.remove('hidden');
+}
+
+addPerson('Person 1',0);
+addPerson('Person 2',0);
+</script>
+
+<script src="../js/wooahouse-originals-tool-en.js"></script>
+<script src="../js/wooa-sidebar-en.js"></script>
+<script src="../js/wooa-footer-en.js"></script>
+</body>
+</html>
