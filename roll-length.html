@@ -28,14 +28,6 @@
 .roll-grid .form-group input{background:#FFF9C4;border:1.5px solid #E5C100;font-weight:700;font-size:1.05rem}
 .roll-grid .form-group label small{color:#6B7280;font-weight:500;margin-left:4px}
 .roll-result .result-main{font-size:2.4rem}
-.roll-formula{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:12px 16px;font-size:.88rem;line-height:1.9;color:#374151;margin-top:14px}
-.roll-ref-wrap{overflow-x:auto;margin-top:10px}
-.roll-ref{border-collapse:collapse;width:100%;font-size:.88rem;background:#fff}
-.roll-ref th,.roll-ref td{border:1px solid #E5E7EB;padding:7px 10px;text-align:center;white-space:nowrap}
-.roll-ref thead th{background:#F3F4F6}
-.roll-ref tbody th{text-align:left;background:#FAFAFA;font-weight:600}
-details.roll-ref-box{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 16px;margin-top:18px}
-details.roll-ref-box summary{cursor:pointer;font-weight:700}
 </style>
 </head>
 <body>
@@ -45,10 +37,10 @@ details.roll-ref-box summary{cursor:pointer;font-weight:700}
 <div class="page-with-sidebar">
 <div class="tool-page"><div class="container">
 <div class="breadcrumb"><a href="/">홈</a><span>›</span>원단 잔량 계산기</div>
-<div class="tool-header"><div class="tool-icon" style="font-size:2.2rem">🎞️</div><div><h1>원단 잔량 계산기</h1><p>노란 칸 4개만 입력하면 롤에 감긴 필름 길이가 바로 계산됩니다</p></div></div>
+<div class="tool-header"><div class="tool-icon" style="font-size:2.2rem">🎞️</div><div><h1>원단 잔량 계산기</h1><p>노란 칸만 입력하면 필름 길이가 바로 계산됩니다</p></div></div>
 
 <div class="panel">
-  <h3>입력값 <small style="font-weight:500;color:#6B7280">(노란 칸)</small></h3>
+  <h3>입력값</h3>
   <div class="calc-form roll-grid">
     <div class="form-group"><label for="a">필름 반지름(a) <small>mm</small></label><input type="number" inputmode="decimal" id="a" value="5" step="any" min="0"></div>
     <div class="form-group"><label for="th">필름 두께 <small>µm</small></label><input type="number" inputmode="decimal" id="th" value="38" step="any" min="0"></div>
@@ -61,29 +53,15 @@ details.roll-ref-box summary{cursor:pointer;font-weight:700}
   <h3>계산값</h3>
   <div class="result-box" id="result">
     <div class="result-main" id="resLen">—</div>
-    <div class="result-label">필름 길이 (m)</div>
+    <div class="result-label">필름 길이</div>
     <div class="result-rows">
-      <div class="result-row"><span class="label">필름 길이 (소수 둘째 자리)</span><span class="value" id="resLen2">—</span></div>
-      <div class="result-row"><span class="label">직경 D (롤 바깥지름)</span><span class="value" id="resD">—</span></div>
-      <div class="result-row"><span class="label">직경 d (지관 바깥지름)</span><span class="value" id="resd">—</span></div>
+      <div class="result-row"><span class="label">직경 D</span><span class="value" id="resD">—</span></div>
+      <div class="result-row"><span class="label">직경 d</span><span class="value" id="resd">—</span></div>
     </div>
-  </div>
-  <div class="roll-formula">
-    <b>계산식</b><br>
-    직경 d = 지관 크기(인치) × 25.4 + 지관 두께 × 2<br>
-    직경 D = 필름 반지름 × 2 + d<br>
-    필름 길이(m) = (D² − d²) × π ÷ 4 ÷ 필름 두께(µm)
   </div>
 </div>
 
-<div class="tips-panel"><h3>💡 Tips</h3><ul><li>입력값을 바꾸면 계산값이 바로 갱신됩니다. 계산 버튼은 없습니다.</li><li>필름 반지름(a)은 지관 바깥쪽에 감긴 필름 층의 두께(mm)입니다. 롤 바깥지름 D = 2a + d 입니다.</li><li>길이는 필름이 빈틈없이 균일하게 감겼다고 보고 계산한 이론값이라, 실제 잔량과 약간 다를 수 있습니다.</li></ul></div>
-
-<details class="roll-ref-box"><summary>품명별 기준값 표 (엑셀 Sheet2 그대로)</summary>
-<div class="roll-ref-wrap"><table class="roll-ref"><thead><tr><th>품명</th><th>MAIN</th><th>NO.1</th><th>NO.2</th><th>NO.3</th><th>NO.4</th><th>NO.5</th><th>NO.6</th></tr></thead><tbody><tr><th scope="row">YKR-7601</th><td>175</td><td>80</td><td>125</td><td>145</td><td>130</td><td>120</td><td>80</td></tr><tr><th scope="row">YKR-3502GA</th><td>180</td><td>100</td><td>130</td><td>150</td><td>140</td><td>120</td><td>80</td></tr><tr><th scope="row">YKR-3701GA</th><td>180</td><td>100</td><td>130</td><td>150</td><td>140</td><td>120</td><td>90</td></tr><tr><th scope="row">YKR-2005M(그라비아)</th><td>150</td><td>90</td><td>120</td><td>135</td><td>120</td><td>110</td><td>70</td></tr><tr><th scope="row">YKR-5007(그라비아)</th><td>170</td><td>120</td><td>140</td><td>140</td><td>130</td><td>100</td><td>70</td></tr><tr><th scope="row">배면 38</th><td>130</td><td>80</td><td>100</td><td>110</td><td>110</td><td>100</td><td>70</td></tr><tr><th scope="row">배면 50</th><td>140</td><td>90</td><td>110</td><td>120</td><td>110</td><td>100</td><td>70</td></tr><tr><th scope="row">NS 하이텍</th><td>175</td><td>100</td><td>135</td><td>150</td><td>130</td><td>125</td><td>75</td></tr><tr><th scope="row">YKR-3308GDA</th><td>180</td><td>100</td><td>140</td><td>160</td><td>140</td><td>125</td><td>75</td></tr><tr><th scope="row">21TO4AS</th><td>145</td><td>80</td><td>120</td><td>130</td><td>120</td><td>110</td><td>75</td></tr><tr><th scope="row">YKR-3330BDA</th><td>210</td><td>105</td><td>125</td><td>170</td><td>145</td><td>130</td><td>100</td></tr><tr><th scope="row">YKR-3501BA</th><td>205</td><td>100</td><td>120</td><td>170</td><td>145</td><td>130</td><td>100</td></tr></tbody></table></div>
-</details>
-
 <div class="wooa-orig-anchor"></div>
-<div class="faq-section"><h2>자주 묻는 질문</h2><details><summary>계산 결과의 단위는 무엇인가요?</summary><p>필름 길이는 미터(m), 직경 D와 d는 밀리미터(mm)입니다. 필름 두께는 마이크로미터(µm)로 입력합니다.</p></details><details><summary>지관 크기는 안지름인가요 바깥지름인가요?</summary><p>지관 크기(b)는 안지름(인치)이고, 지관 두께(t)를 양쪽으로 더해 바깥지름 d를 구합니다. 예: 3인치 지관에 두께 7mm이면 d = 3×25.4 + 7×2 = 90.2mm 입니다.</p></details><details><summary>입력한 값은 서버로 전송되나요?</summary><p>아니요. 모든 계산은 브라우저 안에서만 이루어지며 입력값은 어디에도 저장되거나 전송되지 않습니다.</p></details></div>
 </div></div>
 <aside class="tool-sidebar"></aside>
 </div>
@@ -95,16 +73,14 @@ details.roll-ref-box summary{cursor:pointer;font-weight:700}
   function fmt(x, max){ return x.toLocaleString('ko-KR', {maximumFractionDigits: max}); }
   function calc(){
     var a = val('a'), th = val('th'), b = val('b'), w = val('w');
-    var ids = ['resLen','resLen2','resD','resd'];
     if (a === null || th === null || b === null || w === null || a < 0 || b < 0 || w < 0 || th <= 0) {
-      ids.forEach(function(i){ document.getElementById(i).textContent = '—'; });
+      ['resLen','resD','resd'].forEach(function(i){ document.getElementById(i).textContent = '—'; });
       return;
     }
-    var d = b * 25.4 + w * 2;          // 직경 d (mm)
-    var D = a * 2 + d;                  // 직경 D (mm)
+    var d = b * 25.4 + w * 2;                       // 직경 d (mm)
+    var D = a * 2 + d;                              // 직경 D (mm)
     var len = (D * D - d * d) * Math.PI / 4 / th;   // 필름 길이 (m)
-    document.getElementById('resLen').textContent = fmt(len, 0) + ' m';
-    document.getElementById('resLen2').textContent = fmt(len, 2) + ' m';
+    document.getElementById('resLen').textContent = fmt(len, 2) + ' m';
     document.getElementById('resD').textContent = fmt(D, 2) + ' mm';
     document.getElementById('resd').textContent = fmt(d, 2) + ' mm';
   }
